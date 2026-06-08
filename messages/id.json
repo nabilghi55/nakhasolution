@@ -1,0 +1,220 @@
+{
+  "Navbar": {
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "services": "Layanan",
+    "portfolio": "Portofolio",
+    "contact": "Kontak",
+    "talk": "Hubungi Kami"
+  },
+  "Hero": {
+    "badge": "Mitra Digital Inovatif",
+    "titlePrefix": "Mitra Terbaik untuk",
+    "subtitle": "Kami tidak hanya membangun perangkat lunak. Kami merekayasa pertumbuhan. Nakha Solution mengubah ide visioner Anda menjadi produk digital berkinerja tinggi yang memimpin pasar.",
+    "ctaPrimary": "Mulai Proyek Anda",
+    "ctaSecondary": "Jelajahi Layanan",
+    "clients": "100+ Klien",
+    "clutch": "Peringkat Tinggi di Clutch",
+    "growth": "Tingkat Pertumbuhan"
+  },
+  "Typewriter": {
+    "words": [
+      "Solusi CCTV",
+      "Digital Marketing Tools",
+      "Device Bundling",
+      "Campaign Activation",
+      "Web Development",
+      "Business Application"
+    ]
+  },
+  "About": {
+    "badge": "Tentang Nakha Solution",
+    "title": "Kami Lebih Dari Sekadar Perusahaan Teknologi",
+    "description": "Nakha Solution adalah perusahaan penyedia solusi transformasi teknologi terkemuka yang berbasis di Kota Padang, Sumatra Barat. Kami lahir dari visi untuk menjembatani kesenjangan teknologi melalui solusi IT yang cerdas, terintegrasi, dan berkelanjutan. Kami berkomitmen menyediakan solusi IT yang Tepat dan Sesuai dengan bisnis Anda.",
+    "missionTitle": "Misi Kami",
+    "missionDesc": "Memberikan layanan dan solusi terintegrasi yang tepat dan sesuai dengan kebutuhan bisnis pelanggan dengan memastikan implementasi teknologi yang efisien, cerdas, dan berkelanjutan.",
+    "visionTitle": "Visi Kami",
+    "visionDesc": "Menjadi Perusahaan Digital Transformation Partner Terbesar di Sumatra dalam mendukung pencapaian bisnis pelanggan yang lebih baik.",
+    "cultureTitle": "Budaya Kami",
+    "cultureDesc": "Tim ahli yang beragam dan penuh semangat yang didedikasikan untuk pembelajaran berkelanjutan dan kesuksesan pelanggan.",
+    "yearsExcellence": "Klien Tertangani"
+  },
+  "Services": {
+    "badge": "Keahlian Kami",
+    "title": "SOLUSI TEPAT UNTUK BISNIS HEBAT",
+    "description": "Kami menawarkan berbagai layanan yang dirancang untuk membantu bisnis berkembang dalam lanskap kompetitif saat ini. Tim ahli kami siap membawa proyek Anda ke tingkat berikutnya.",
+    "items": {
+      "cctv": {
+        "title": "CCTV",
+        "desc": "Memberikan solusi jaringan CCTV untuk menjamin keselamatan dan pemantauan bisnis Anda.",
+        "slug": "cctv",
+        "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=1200",
+        "features": [
+          "Pemantauan Real-time 24/7",
+          "Kamera Kualitas High-Definition (HD)",
+          "Akses Remote via Smartphone",
+          "Penyimpanan Cloud & Lokal Aman",
+          "Deteksi Gerak & Notifikasi Pintar",
+          "Instalasi Profesional & Rapi"
+        ]
+      },
+      "digital-marketing": {
+        "title": "Digital Marketing Tools",
+        "desc": "Solusi Tools digital marketing terintegrasi dan efisien dalam mendukung Social Media Management, Multimedia project, dan Broadcast engine.",
+        "slug": "digital-marketing",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+        "features": [
+          "Manajemen Social Media Terpadu",
+          "Optimasi Konten Multimedia",
+          "Sistem Broadcast Otomatis",
+          "Analitik Performa Campaign",
+          "Tools Riset Target Audiens",
+          "Efisiensi Workflow Marketing"
+        ]
+      },
+      "device-bundling": {
+        "title": "Device Bundling",
+        "desc": "Solusi kebutuhan perangkat elektronik perkantoran dengan penawaran kompetitif dan bundling sesuai kebutuhan bisnis Anda.",
+        "slug": "device-bundling",
+        "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200",
+        "features": [
+          "Paket Laptop & Desktop Performa Tinggi",
+          "Peralatan Jaringan & Server",
+          "Printer & Scanner Multifungsi",
+          "Lisensi Software Original",
+          "Garansi Resmi & Support On-site",
+          "Opsi Cicilan & Sewa Menarik"
+        ]
+      },
+      "campaign-activation": {
+        "title": "Campaign Activation Platform",
+        "desc": "Platform campaign activation berbasis data yang membantu media dan brand menjalankan giveaway, engagement campaign, dan audience interaction secara transparan, otomatis, dan terukur melalui fitur comment picker, live draw system, analytics dashboard, serta AI-based participant filtering.",
+        "slug": "campaign-activation",
+        "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
+        "features": [
+          "Comment Picker Otomatis",
+          "Sistem Live Draw Transparan",
+          "Filtering Peserta Berbasis AI",
+          "Dashboard Analitik Real-time",
+          "Integrasi Multi-platform Sosmed",
+          "Laporan Campaign Lengkap & Akurat"
+        ]
+      },
+      "web-development": {
+        "title": "Web Development",
+        "desc": "Mewujudkan website bisnis sesuai kebutuhan dan keinginan Anda dalam efisiensi pengembangan usaha.",
+        "slug": "web-development",
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200",
+        "features": [
+          "Desain UI/UX Modern & Responsif",
+          "Optimasi SEO & Kecepatan",
+          "Sistem Manajemen Konten (CMS)",
+          "Integrasi E-commerce & Payment",
+          "Maintenance & Update Berkala",
+          "Keamanan Website Tingkat Tinggi"
+        ]
+      },
+      "business-application": {
+        "title": "Business Application",
+        "desc": "Solusi kebutuhan softwere dan aplikasi yang terintegritas untuk pendukung bisnis Anda dengan tepat, aman, dan efisien.",
+        "slug": "business-application",
+        "image": "https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=1200",
+        "features": [
+          "Aplikasi ERP & CRM Custom",
+          "Sistem Inventaris & Pergudangan",
+          "Dashboard Manajemen Bisnis",
+          "Integrasi Database Aman",
+          "Akses Multi-platform (Web/Mobile)",
+          "Otomasi Proses Bisnis Internal"
+        ]
+      }
+    },
+    "learnMore": "Pelajari Lebih Lanjut",
+    "ready": "Siap untuk memulai proyek Anda berikutnya?",
+    "readyDesc": "Hubungi kami hari ini untuk konsultasi gratis dan mari diskusikan bagaimana kami dapat membantu bisnis Anda berkembang.",
+    "cta": "Hubungi Kami Sekarang",
+    "backToHome": "Kembali ke Beranda",
+    "whyChoose": "Mengapa Memilih Layanan Kami?",
+    "consultTitle": "Konsultasikan Kebutuhan Anda Sekarang",
+    "consultDesc": "Tim ahli kami siap membantu Anda merancang solusi IT yang paling tepat untuk skala bisnis Anda."
+  },
+  "Portfolio": {
+    "badge": "Studi Kasus",
+    "title": "Mahakarya Kami",
+    "description": "Kami bangga dengan setiap proyek yang kami berikan. Berikut adalah beberapa kolaborasi kami yang paling berdampak.",
+    "launch": "Buka Website",
+    "viewProject": "Baca Studi Kasus",
+    "viewMore": "Lihat Lebih Banyak Proyek",
+    "backToHome": "Kembali ke Beranda",
+    "caseStudy": "Studi Kasus",
+    "challenge": "Tantangan",
+    "solution": "Solusi Kami",
+    "impact": "Dampak",
+    "projects": {
+      "raya": {
+        "title": "Raya Law Firm",
+        "slug": "raya-law-firm",
+        "desc": "Halaman landas profesional dan elegan untuk firma hukum, menampilkan daftar layanan, profil pengacara, dan sistem kontak.",
+        "challengeText": "Raya Law Firm membutuhkan kehadiran online yang kuat untuk membangun kredibilitas dan menarik klien baru. Jejak digital mereka sebelumnya tidak ada, membuat calon klien kesulitan menemukan informasi tentang layanan hukum dan keahlian pengacara mereka.",
+        "solutionText": "Kami merancang dan mengembangkan situs web modern, cepat, dan dioptimalkan untuk SEO menggunakan Next.js. Situs ini menampilkan estetika yang bersih dan profesional yang sesuai untuk firma hukum, dengan bagian yang jelas untuk area praktik, profil pengacara, dan formulir permintaan konsultasi yang mudah digunakan.",
+        "impactText": "Situs web baru berhasil membangun otoritas digital Raya Law Firm. Mereka melihat peningkatan 40% dalam permintaan konsultasi online dalam tiga bulan pertama, dan peringkat mesin pencari mereka meningkat secara signifikan untuk layanan hukum lokal."
+      },
+      "putra": {
+        "title": "Putra Wijaya Mandiri",
+        "slug": "putra-wijaya-mandiri",
+        "desc": "Situs web perusahaan untuk perusahaan kontraktor umum, menampilkan proyek konstruksi dan layanan industri.",
+        "challengeText": "Sebagai kontraktor umum yang berkembang, Putra Wijaya Mandiri kesulitan memamerkan portofolio ekstensif proyek industri dan konstruksi mereka kepada calon klien berskala besar. Mereka membutuhkan platform perusahaan yang mengkomunikasikan keandalan, skala, dan profesionalisme.",
+        "solutionText": "Kami membangun situs web perusahaan yang tangguh dengan fokus pada penyampaian cerita visual. Kami menerapkan bagian portofolio proyek dinamis yang memungkinkan mereka mengkategorikan dan menampilkan gambar berkualitas tinggi serta detail dari proyek yang telah diselesaikan. Situs ini sepenuhnya responsif dan dioptimalkan untuk akuisisi klien B2B.",
+        "impactText": "Platform ini telah menjadi alat utama mereka untuk pitching ke klien baru. Ini secara signifikan mengurangi waktu yang dihabiskan untuk mengirim portofolio offline, dan kehadiran digital yang profesional membantu mereka mengamankan dua kontrak industri besar tak lama setelah peluncuran."
+      },
+      "alfajr": {
+        "title": "Alfajr Umroh",
+        "slug": "alfajr-umroh",
+        "desc": "Situs web perjalanan dan tur komprehensif khusus untuk layanan Umroh, menampilkan detail paket dan informasi pemesanan.",
+        "challengeText": "Alfajr Umroh menghadapi tantangan dalam mengelola pertanyaan pelanggan dan menjelaskan paket Umroh yang kompleks secara manual. Mereka membutuhkan platform digital terpusat di mana calon jamaah dapat dengan mudah menelusuri paket, melihat rencana perjalanan, dan memahami persyaratan.",
+        "solutionText": "Kami mengembangkan portal perjalanan komprehensif yang disesuaikan untuk layanan Umroh. Situs web ini menampilkan daftar paket terperinci, rencana perjalanan hari demi hari, harga transparan, dan sistem pertanyaan yang terintegrasi. Kami berfokus pada antarmuka yang ramah pengguna yang membangun kepercayaan dan memberikan informasi yang jelas.",
+        "impactText": "Situs web menyederhanakan operasi layanan pelanggan mereka, mengurangi pertanyaan berulang sebesar 60%. Presentasi paket yang jelas menghasilkan tingkat konversi yang lebih tinggi, memudahkan jamaah untuk memilih dan berkomitmen pada perjalanan spiritual mereka."
+      }
+    }
+  },
+  "Contact": {
+    "badge": "Hubungi Kami",
+    "title": "Mari Bangun Sesuatu yang Luar Biasa Bersama",
+    "description": "Punya pertanyaan atau proyek dalam pikiran? Kami ingin mendengar dari Anda. Isi formulir dan tim kami akan menghubungi Anda secepatnya.",
+    "emailLabel": "Email Kami",
+    "phoneLabel": "Hubungi Kami",
+    "addressLabel": "Kunjungi Kami",
+    "form": {
+      "firstName": "Nama Depan",
+      "lastName": "Nama Belakang",
+      "email": "Alamat Email",
+      "subject": "Subjek",
+      "message": "Pesan",
+      "placeholderFirstName": "John",
+      "placeholderLastName": "Doe",
+      "placeholderEmail": "john@example.com",
+      "placeholderMessage": "Bagaimana kami bisa membantu Anda?",
+      "send": "Kirim Pesan",
+      "subjects": {
+        "general": "Pertanyaan Umum",
+        "proposal": "Proposal Proyek",
+        "partnership": "Kemitraan",
+        "support": "Dukungan"
+      }
+    }
+  },
+  "Footer": {
+    "desc": "Penyedia solusi transformasi teknologi terkemuka yang berbasis di Padang, Sumatera Barat. Berkomitmen menyediakan solusi IT yang tepat dan sesuai dengan bisnis Anda.",
+    "quickLinks": "Tautan Cepat",
+    "ourServices": "Layanan Kami",
+    "contactUs": "Hubungi Kami",
+    "rights": "Seluruh hak cipta.",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat Layanan"
+  },
+  "ContactInfo": {
+    "email": "nakhasolution@gmail.com",
+    "phone": "081166016611",
+    "address": "Padang, Sumatera Barat, Indonesia"
+  }
+}

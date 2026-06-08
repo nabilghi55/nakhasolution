@@ -1,38 +1,44 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { ExternalLink, ArrowRight, ChevronRight } from "lucide-react";
+import { Link } from "@/i18n/routing";
+import { ExternalLink, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
-
-const projects = [
-  {
-    title: "Raya Law Firm",
-    description: "A professional and elegant landing page for a law firm, featuring service listings, attorney profiles, and a contact system.",
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800",
-    logo: "https://rayalawfirm.vercel.app/logo.png",
-    link: "http://rayalawfirm.vercel.app/",
-    tags: ["Legal", "Next.js"],
-  },
-  {
-    title: "Putra Wijaya Mandiri",
-    description: "Corporate website for a general contractor company, showcasing construction projects and industrial services.",
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=800",
-    logo: "https://putrawijayamandiri.id/wp-content/uploads/2024/11/PWM-Logo.png",
-    link: "https://putrawijayamandiri.id/",
-    tags: ["Industrial", "Contractor"],
-  },
-  {
-    title: "Alfajr Umroh",
-    description: "A comprehensive travel and tour website specifically for Umrah services, featuring package details and booking information.",
-    image: "https://images.unsplash.com/photo-1564769662533-4f00a87b4056?auto=format&fit=crop&q=80&w=800",
-    logo: "https://alfajrumroh.co.id/wp-content/uploads/2024/05/logo-alfajr.png",
-    link: "https://alfajrumroh.co.id/",
-    tags: ["Travel", "Umrah"],
-  },
-];
+import { useTranslations } from "next-intl";
 
 const Portfolio = () => {
+  const t = useTranslations("Portfolio");
+
+  const projects = [
+    {
+      title: "Raya Law Firm",
+      slug: t("projects.raya.slug"),
+      description: t("projects.raya.desc"),
+      image: "/assets/backgroundportofolio/RAYA 1.png",
+      logo: "/assets/logoportofolio/logorayalawfirm.webp",
+      link: "http://rayalawfirm.vercel.app/",
+      tags: ["Legal", "Next.js"],
+    },
+    {
+      title: "Putra Wijaya Mandiri",
+      slug: t("projects.putra.slug"),
+      description: t("projects.putra.desc"),
+      image: "/assets/backgroundportofolio/PWM3.png",
+      logo: "/assets/logoportofolio/logo-pwm.webp",
+      link: "https://putrawijayamandiri.id/",
+      tags: ["Industrial", "Contractor"],
+    },
+    {
+      title: "Alfajr Umroh",
+      slug: t("projects.alfajr.slug"),
+      description: t("projects.alfajr.desc"),
+      image: "/assets/backgroundportofolio/ALFJR2.png",
+      logo: "/assets/logoportofolio/logoalfajr.png",
+      link: "https://alfajrumroh.co.id/",
+      tags: ["Travel", "Umrah"],
+    },
+  ];
+
   return (
     <section id="portfolio" className="py-24 bg-white dark:bg-[#020617] transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -43,7 +49,7 @@ const Portfolio = () => {
             viewport={{ once: true }}
             className="text-blue-600 dark:text-blue-500 font-bold tracking-wider uppercase text-sm mb-4"
           >
-            Case Studies
+            {t("badge")}
           </motion.h2>
           <motion.h3 
             initial={{ opacity: 0, y: 20 }}
@@ -52,7 +58,7 @@ const Portfolio = () => {
             transition={{ delay: 0.1 }}
             className="text-5xl lg:text-6xl font-black text-slate-900 dark:text-white leading-tight tracking-tight"
           >
-            Our Masterpieces
+            {t("title")}
           </motion.h3>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -61,7 +67,7 @@ const Portfolio = () => {
             transition={{ delay: 0.2 }}
             className="mt-6 text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium"
           >
-            We take pride in every project we deliver. Here are some of our most impactful collaborations.
+            {t("description")}
           </motion.p>
         </div>
 
@@ -81,6 +87,7 @@ const Portfolio = () => {
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
@@ -90,7 +97,7 @@ const Portfolio = () => {
                     rel="noopener noreferrer"
                     className="bg-white text-slate-900 px-8 py-3 rounded-full font-black text-sm flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-xl active:scale-95"
                   >
-                    Launch Website <ExternalLink size={16} />
+                    {t("launch")} <ExternalLink size={16} />
                   </a>
                 </div>
               </div>
@@ -103,6 +110,7 @@ const Portfolio = () => {
                       src={project.logo}
                       alt={`${project.title} Logo`}
                       fill
+                      sizes="48px"
                       className="object-contain p-2"
                     />
                   </div>
@@ -124,14 +132,12 @@ const Portfolio = () => {
                 </p>
                 
                 <div className="pt-6 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
-                  <a 
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link 
+                    href={`/portfolio/${project.slug}`}
                     className="inline-flex items-center text-slate-900 dark:text-white font-black text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   >
-                    View Project <ChevronRight size={18} className="ml-1" />
-                  </a>
+                    {t("viewProject")} <ChevronRight size={18} className="ml-1" />
+                  </Link>
                   <span className="text-slate-400 dark:text-slate-600 font-bold text-xs uppercase tracking-widest">
                     #{index + 1}
                   </span>
@@ -139,16 +145,6 @@ const Portfolio = () => {
               </div>
             </motion.div>
           ))}
-        </div>
-        
-        <div className="mt-20 text-center">
-          <Link 
-            href="/portfolio" 
-            className="inline-flex items-center justify-center bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-10 py-5 rounded-3xl font-black text-lg hover:scale-105 transition-all shadow-xl active:scale-95"
-          >
-            View More Projects
-            <ArrowRight className="ml-2" />
-          </Link>
         </div>
       </div>
     </section>

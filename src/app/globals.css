@@ -30,3 +30,11 @@ body {
   background: var(--background);
   color: var(--foreground);
 }
+
+@layer base {
+  button, 
+  [role="button"],
+  .cursor-pointer {
+    cursor: pointer !important;
+  }
+}

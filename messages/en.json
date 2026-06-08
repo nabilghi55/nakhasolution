@@ -1,0 +1,220 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "talk": "Let's Talk"
+  },
+  "Hero": {
+    "badge": "Innovative Digital Partner",
+    "titlePrefix": "Your Best Partner for",
+    "subtitle": "We don't just build software. We engineer growth. Nakha Solution transforms your visionary ideas into high-performance digital products that lead the market.",
+    "ctaPrimary": "Start Your Project",
+    "ctaSecondary": "Explore Services",
+    "clients": "100+ Clients",
+    "clutch": "Highly Rated on Clutch",
+    "growth": "Growth Rate"
+  },
+  "Typewriter": {
+    "words": [
+      "CCTV Solutions",
+      "Digital Marketing Tools",
+      "Device Bundling",
+      "Campaign Activation",
+      "Web Development",
+      "Business Application"
+    ]
+  },
+  "About": {
+    "badge": "About Nakha Solution",
+    "title": "We Are More Than Just A Tech Company",
+    "description": "Nakha Solution is a leading provider of technology transformation solutions based in Padang City, West Sumatra. We were born from a vision to bridge the technology gap through smart, integrated, and sustainable IT solutions. We are committed to providing IT solutions that are Right and Appropriate for your business.",
+    "missionTitle": "Our Mission",
+    "missionDesc": "To provide integrated services and solutions that are right and appropriate to customers' business needs by ensuring efficient, smart, and sustainable technology implementation.",
+    "visionTitle": "Our Vision",
+    "visionDesc": "To become the largest Digital Transformation Partner Company in Sumatra in supporting better customer business achievement.",
+    "cultureTitle": "Our Culture",
+    "cultureDesc": "A diverse team of passionate experts dedicated to continuous learning and customer success.",
+    "yearsExcellence": "Handled Clients"
+  },
+  "Services": {
+    "badge": "Our Expertise",
+    "title": "RIGHT SOLUTIONS FOR GREAT BUSINESS",
+    "description": "We offer a wide range of services designed to help businesses thrive in today's competitive landscape. Our team of experts is ready to take your project to the next level.",
+    "items": {
+      "cctv": {
+        "title": "CCTV",
+        "desc": "Providing CCTV network solutions to ensure the safety and monitoring of your business.",
+        "slug": "cctv",
+        "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=1200",
+        "features": [
+          "24/7 Real-time Monitoring",
+          "High-Definition (HD) Quality Cameras",
+          "Remote Access via Smartphone",
+          "Secure Cloud & Local Storage",
+          "Motion Detection & Smart Alerts",
+          "Professional & Neat Installation"
+        ]
+      },
+      "digital-marketing": {
+        "title": "Digital Marketing Tools",
+        "desc": "Integrated and efficient digital marketing tool solutions supporting Social Media Management, Multimedia projects, and Broadcast engines.",
+        "slug": "digital-marketing",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+        "features": [
+          "Unified Social Media Management",
+          "Multimedia Content Optimization",
+          "Automated Broadcast Systems",
+          "Campaign Performance Analytics",
+          "Target Audience Research Tools",
+          "Marketing Workflow Efficiency"
+        ]
+      },
+      "device-bundling": {
+        "title": "Device Bundling",
+        "desc": "Solutions for office electronic device needs with competitive offers and bundling according to your business needs.",
+        "slug": "device-bundling",
+        "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200",
+        "features": [
+          "High-Performance Laptop & Desktop Bundles",
+          "Network & Server Equipment",
+          "Multifunction Printers & Scanners",
+          "Original Software Licenses",
+          "Official Warranty & On-site Support",
+          "Attractive Installment & Rental Options"
+        ]
+      },
+      "campaign-activation": {
+        "title": "Campaign Activation Platform",
+        "desc": "Data-based campaign activation platform helping media and brands run giveaways, engagement campaigns, and audience interaction transparently, automatically, and measurably through features like comment picker, live draw system, analytics dashboard, and AI-based participant filtering.",
+        "slug": "campaign-activation",
+        "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
+        "features": [
+          "Automated Comment Picker",
+          "Transparent Live Draw System",
+          "AI-Based Participant Filtering",
+          "Real-time Analytics Dashboard",
+          "Multi-platform Social Media Integration",
+          "Comprehensive Campaign Reporting"
+        ]
+      },
+      "web-development": {
+        "title": "Web Development",
+        "desc": "Realizing business websites according to your needs and desires for business development efficiency.",
+        "slug": "web-development",
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200",
+        "features": [
+          "Modern & Responsive UI/UX Design",
+          "SEO & Speed Optimization",
+          "Content Management System (CMS)",
+          "E-commerce & Payment Integration",
+          "Regular Maintenance & Updates",
+          "High-Level Website Security"
+        ]
+      },
+      "business-application": {
+        "title": "Business Application",
+        "desc": "Solutions for integrated software and application needs to support your business accurately, safely, and efficiently.",
+        "slug": "business-application",
+        "image": "https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=1200",
+        "features": [
+          "Custom ERP & CRM Applications",
+          "Inventory & Warehouse Systems",
+          "Business Management Dashboards",
+          "Secure Database Integration",
+          "Multi-platform Access (Web/Mobile)",
+          "Internal Business Process Automation"
+        ]
+      }
+    },
+    "learnMore": "Learn More",
+    "ready": "Ready to start your next project?",
+    "readyDesc": "Contact us today for a free consultation and let's discuss how we can help your business grow.",
+    "cta": "Contact Us Now",
+    "backToHome": "Back to Home",
+    "whyChoose": "Why Choose Our Services?",
+    "consultTitle": "Consult Your Needs Now",
+    "consultDesc": "Our team of experts is ready to help you design the most appropriate IT solution for your business scale."
+  },
+  "Portfolio": {
+    "badge": "Case Studies",
+    "title": "Our Masterpieces",
+    "description": "We take pride in every project we deliver. Here are some of our most impactful collaborations.",
+    "launch": "Launch Website",
+    "viewProject": "Read Case Study",
+    "viewMore": "View More Projects",
+    "backToHome": "Back to Home",
+    "caseStudy": "Case Study",
+    "challenge": "The Challenge",
+    "solution": "Our Solution",
+    "impact": "The Impact",
+    "projects": {
+      "raya": {
+        "title": "Raya Law Firm",
+        "slug": "raya-law-firm",
+        "desc": "A professional and elegant landing page for a law firm, featuring service listings, attorney profiles, and a contact system.",
+        "challengeText": "Raya Law Firm needed a strong online presence to establish credibility and attract new clients. Their previous digital footprint was non-existent, making it difficult for potential clients to find information about their legal services and attorney expertise.",
+        "solutionText": "We designed and developed a modern, fast, and SEO-optimized website using Next.js. The site features a clean, professional aesthetic appropriate for a law firm, with clear sections for practice areas, attorney profiles, and an easy-to-use consultation request form.",
+        "impactText": "The new website successfully established Raya Law Firm's digital authority. They saw a 40% increase in online consultation requests within the first three months, and their search engine ranking improved significantly for local legal services."
+      },
+      "putra": {
+        "title": "Putra Wijaya Mandiri",
+        "slug": "putra-wijaya-mandiri",
+        "desc": "Corporate website for a general contractor company, showcasing construction projects and industrial services.",
+        "challengeText": "As a growing general contractor, Putra Wijaya Mandiri struggled to showcase their extensive portfolio of industrial and construction projects to potential large-scale clients. They needed a corporate platform that communicated reliability, scale, and professionalism.",
+        "solutionText": "We built a robust corporate website focusing on visual storytelling. We implemented a dynamic project portfolio section that allows them to categorize and display high-quality images and details of their completed projects. The site is fully responsive and optimized for B2B client acquisition.",
+        "impactText": "The platform has become their primary tool for pitching to new clients. It significantly reduced the time spent sending offline portfolios, and the professional digital presence helped them secure two major industrial contracts shortly after launch."
+      },
+      "alfajr": {
+        "title": "Alfajr Umroh",
+        "slug": "alfajr-umroh",
+        "desc": "A comprehensive travel and tour website specifically for Umrah services, featuring package details and booking information.",
+        "challengeText": "Alfajr Umroh faced challenges in managing customer inquiries and explaining complex Umrah packages manually. They needed a centralized digital platform where prospective pilgrims could easily browse packages, view itineraries, and understand the requirements.",
+        "solutionText": "We developed a comprehensive travel portal tailored for Umrah services. The website features detailed package listings, day-by-day itineraries, transparent pricing, and an integrated inquiry system. We focused on a user-friendly interface that builds trust and provides clear information.",
+        "impactText": "The website streamlined their customer service operations, reducing repetitive inquiries by 60%. The clear presentation of packages led to a higher conversion rate, making it easier for pilgrims to choose and commit to their spiritual journey."
+      }
+    }
+  },
+  "Contact": {
+    "badge": "Contact Us",
+    "title": "Let's Build Something Amazing Together",
+    "description": "Have a question or a project in mind? We'd love to hear from you. Fill out the form and our team will get back to you quickly.",
+    "emailLabel": "Email Us",
+    "phoneLabel": "Call Us",
+    "addressLabel": "Visit Us",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "placeholderFirstName": "John",
+      "placeholderLastName": "Doe",
+      "placeholderEmail": "john@example.com",
+      "placeholderMessage": "How can we help you?",
+      "send": "Send Message",
+      "subjects": {
+        "general": "General Inquiry",
+        "proposal": "Project Proposal",
+        "partnership": "Partnership",
+        "support": "Support"
+      }
+    }
+  },
+  "Footer": {
+    "desc": "A leading technology transformation solution provider based in Padang, West Sumatra. Committed to providing IT solutions that are right and appropriate for your business.",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "contactUs": "Contact Us",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "ContactInfo": {
+    "email": "nakhasolution@gmail.com",
+    "phone": "081166016611",
+    "address": "Padang, West Sumatra, Indonesia"
+  }
+}

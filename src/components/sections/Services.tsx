@@ -1,57 +1,67 @@
 "use client";
 
-import { Monitor, Smartphone, Cloud, Shield, Database, Globe } from "lucide-react";
-
-const services = [
-  {
-    title: "Web Development",
-    description: "Custom websites and web applications built with the latest technologies for optimal performance and scale.",
-    icon: <Monitor size={32} />,
-    color: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
-  },
-  {
-    title: "Mobile Solutions",
-    description: "Intuitive and powerful native or cross-platform mobile apps that provide seamless user experiences.",
-    icon: <Smartphone size={32} />,
-    color: "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400",
-  },
-  {
-    title: "Cloud Infrastructure",
-    description: "Secure and scalable cloud services to optimize your business operations and reduce overhead.",
-    icon: <Cloud size={32} />,
-    color: "bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400",
-  },
-  {
-    title: "Cyber Security",
-    description: "Comprehensive security audits and implementation to protect your valuable business data and assets.",
-    icon: <Shield size={32} />,
-    color: "bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400",
-  },
-  {
-    title: "Data Analytics",
-    description: "Transform your raw data into actionable insights with our advanced analytics and BI solutions.",
-    icon: <Database size={32} />,
-    color: "bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400",
-  },
-  {
-    title: "Digital Marketing",
-    description: "Results-driven digital strategies to increase your online presence and reach your target audience.",
-    icon: <Globe size={32} />,
-    color: "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400",
-  },
-];
+import { Camera, Share2, Package, Trophy, Monitor, AppWindow } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 const Services = () => {
+  const t = useTranslations("Services");
+
+  const services = [
+    {
+      title: t("items.cctv.title"),
+      description: t("items.cctv.desc"),
+      slug: t("items.cctv.slug"),
+      icon: <Camera size={32} />,
+      color: "bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400",
+    },
+    {
+      title: t("items.digital-marketing.title"),
+      description: t("items.digital-marketing.desc"),
+      slug: t("items.digital-marketing.slug"),
+      icon: <Share2 size={32} />,
+      color: "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400",
+    },
+    {
+      title: t("items.device-bundling.title"),
+      description: t("items.device-bundling.desc"),
+      slug: t("items.device-bundling.slug"),
+      icon: <Package size={32} />,
+      color: "bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400",
+    },
+    {
+      title: t("items.campaign-activation.title"),
+      description: t("items.campaign-activation.desc"),
+      slug: t("items.campaign-activation.slug"),
+      icon: <Trophy size={32} />,
+      color: "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400",
+    },
+    {
+      title: t("items.web-development.title"),
+      description: t("items.web-development.desc"),
+      slug: t("items.web-development.slug"),
+      icon: <Monitor size={32} />,
+      color: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
+    },
+    {
+      title: t("items.business-application.title"),
+      description: t("items.business-application.desc"),
+      slug: t("items.business-application.slug"),
+      icon: <AppWindow size={32} />,
+      color: "bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400",
+    },
+  ];
+
   return (
     <section id="services" className="py-24 bg-white dark:bg-slate-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-blue-600 dark:text-blue-400 font-bold tracking-wider uppercase text-sm mb-4">Our Expertise</h2>
+          <h2 className="text-blue-600 dark:text-blue-400 font-bold tracking-wider uppercase text-sm mb-4">{t("badge")}</h2>
           <h3 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">
-            Comprehensive Solutions For Every Need
+            {t("title")}
           </h3>
           <p className="text-lg text-slate-600 dark:text-slate-400">
-            We offer a wide range of services designed to help businesses thrive in today's competitive landscape. Our team of experts is ready to take your project to the next level.
+            {t("description")}
           </p>
         </div>
 
@@ -65,16 +75,16 @@ const Services = () => {
                 {service.icon}
               </div>
               <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">{service.title}</h4>
-              <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6 min-h-[80px]">
                 {service.description}
               </p>
-              <a
-                href="#"
+              <Link
+                href={`/services/${service.slug}`}
                 className="inline-flex items-center text-blue-600 dark:text-blue-400 font-bold hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
               >
-                Learn More
+                {t("learnMore")}
                 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-              </a>
+              </Link>
             </div>
           ))}
         </div>
@@ -83,17 +93,19 @@ const Services = () => {
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full -mr-20 -mt-20 opacity-50"></div>
           
           <div className="relative z-10 text-center lg:text-left mb-8 lg:mb-0 lg:max-w-xl">
-            <h4 className="text-3xl font-bold text-white mb-4">Ready to start your next project?</h4>
+            <h4 className="text-3xl font-bold text-white mb-4">{t("ready")}</h4>
             <p className="text-blue-100 text-lg">
-              Contact us today for a free consultation and let's discuss how we can help your business grow.
+              {t("readyDesc")}
             </p>
           </div>
           <div className="relative z-10">
             <a
-              href="#contact"
+              href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20ingin%20berkonsultasi."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-white text-blue-600 dark:text-blue-700 px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all shadow-lg"
             >
-              Contact Us Now
+              {t("cta")}
             </a>
           </div>
         </div>
