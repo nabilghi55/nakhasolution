@@ -25,10 +25,10 @@ const WhatsAppButton = () => {
       transition={{ delay: 1, type: "spring", stiffness: 260, damping: 20 }}
       whileHover={{ scale: 1.05, y: -5 }}
       whileTap={{ scale: 0.95 }}
-      className="fixed bottom-6 right-6 lg:bottom-10 lg:right-10 z-[100] flex items-center gap-3 px-6 py-4 bg-[#0052CC] hover:bg-[#0747A6] text-white rounded-full shadow-[0_10px_40px_-10px_rgba(0,82,204,0.6)] hover:shadow-[0_20px_50px_-10px_rgba(0,82,204,0.8)] transition-all duration-300 group"
+      className="fixed bottom-6 right-6 lg:bottom-10 lg:right-10 z-[100] flex items-center justify-center gap-3 w-14 h-14 md:w-auto md:h-auto md:px-6 md:py-4 bg-[#0052CC] hover:bg-[#0747A6] text-white rounded-full shadow-[0_10px_40px_-10px_rgba(0,82,204,0.6)] hover:shadow-[0_20px_50px_-10px_rgba(0,82,204,0.8)] transition-all duration-300 group"
       aria-label="Chat on WhatsApp"
     >
-      <div className="relative">
+      <div className="relative flex items-center justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -41,7 +41,7 @@ const WhatsAppButton = () => {
         </svg>
         <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 rounded-full scale-150 animate-ping transition-opacity duration-300"></span>
       </div>
-      <span className="font-bold text-[15px] tracking-wide pr-1">
+      <span className="hidden md:inline font-bold text-[15px] tracking-wide pr-1">
         {navT("talk")}
       </span>
     </motion.a>
