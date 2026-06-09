@@ -48,54 +48,54 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-slate-50 dark:bg-slate-900/50 transition-colors duration-300">
+    <section id="contact" className="py-16 sm:py-24 bg-slate-50 dark:bg-slate-900/50 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <div>
-            <h2 className="text-blue-600 dark:text-blue-400 font-bold tracking-wider uppercase text-sm mb-4">{t("badge")}</h2>
-            <h3 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          <div className="text-center lg:text-left">
+            <h2 className="text-blue-600 dark:text-blue-400 font-bold tracking-wider uppercase text-xs sm:text-sm mb-3 sm:mb-4">{t("badge")}</h2>
+            <h3 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 sm:mb-6 leading-tight">
               {t("title")}
             </h3>
-            <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 mb-8 sm:mb-10 leading-relaxed mx-auto lg:mx-0 max-w-xl">
               {t("description")}
             </p>
 
-            <div className="space-y-8">
-              <div className="flex items-center space-x-6">
-                <div className="bg-blue-600 dark:bg-blue-700 p-4 rounded-2xl text-white shadow-lg">
-                  <Mail size={24} />
+            <div className="space-y-6 sm:space-y-8 text-left">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
+                <div className="bg-blue-600 dark:bg-blue-700 p-3 sm:p-4 rounded-2xl text-white shadow-lg shrink-0">
+                  <Mail size={24} className="sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{t("emailLabel")}</h4>
-                  <p className="text-xl font-bold text-slate-900 dark:text-white">{infoT("email")}</p>
+                  <h4 className="text-xs sm:text-sm font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{t("emailLabel")}</h4>
+                  <p className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white break-all">{infoT("email")}</p>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-6">
-                <div className="bg-blue-600 dark:bg-blue-700 p-4 rounded-2xl text-white shadow-lg">
-                  <Phone size={24} />
+              <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
+                <div className="bg-blue-600 dark:bg-blue-700 p-3 sm:p-4 rounded-2xl text-white shadow-lg shrink-0">
+                  <Phone size={24} className="sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{t("phoneLabel")}</h4>
-                  <p className="text-xl font-bold text-slate-900 dark:text-white">{infoT("phone")}</p>
+                  <h4 className="text-xs sm:text-sm font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{t("phoneLabel")}</h4>
+                  <p className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">{infoT("phone")}</p>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-6">
-                <div className="bg-blue-600 dark:bg-blue-700 p-4 rounded-2xl text-white shadow-lg">
-                  <MapPin size={24} />
+              <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
+                <div className="bg-blue-600 dark:bg-blue-700 p-3 sm:p-4 rounded-2xl text-white shadow-lg shrink-0">
+                  <MapPin size={24} className="sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{t("addressLabel")}</h4>
-                  <p className="text-xl font-bold text-slate-900 dark:text-white">{infoT("address")}</p>
+                  <h4 className="text-xs sm:text-sm font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{t("addressLabel")}</h4>
+                  <p className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">{infoT("address")}</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-white dark:bg-slate-900 p-8 lg:p-12 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
-            <form className="space-y-6" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="bg-white dark:bg-slate-900 p-6 sm:p-8 lg:p-12 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
+            <form className="space-y-5 sm:space-y-6" onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                 <div>
                   <label htmlFor="first-name" className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">{t("form.firstName")}</label>
                   <input

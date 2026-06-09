@@ -40,14 +40,14 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-24 bg-white dark:bg-[#020617] transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-20">
+    <section id="portfolio" className="py-16 sm:py-24 bg-white dark:bg-[#020617] transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-20">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-blue-600 dark:text-blue-500 font-bold tracking-wider uppercase text-sm mb-4"
+            className="text-blue-600 dark:text-blue-500 font-bold tracking-wider uppercase text-xs sm:text-sm mb-3 sm:mb-4"
           >
             {t("badge")}
           </motion.h2>
@@ -56,7 +56,7 @@ const Portfolio = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-5xl lg:text-6xl font-black text-slate-900 dark:text-white leading-tight tracking-tight"
+            className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white leading-tight tracking-tight"
           >
             {t("title")}
           </motion.h3>
@@ -65,13 +65,13 @@ const Portfolio = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mt-6 text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium"
+            className="mt-4 sm:mt-6 text-base sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium"
           >
             {t("description")}
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -79,10 +79,10 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group flex flex-col h-full bg-slate-50 dark:bg-slate-900/50 rounded-[40px] overflow-hidden border border-slate-100 dark:border-slate-800 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500"
+              className="group flex flex-col h-full bg-slate-50 dark:bg-slate-900/50 rounded-[32px] sm:rounded-[40px] overflow-hidden border border-slate-100 dark:border-slate-800 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500"
             >
               {/* Project Image Header */}
-              <div className="relative h-64 w-full overflow-hidden">
+              <div className="relative h-48 sm:h-64 w-full overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -95,17 +95,17 @@ const Portfolio = () => {
                     href={project.link} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="bg-white text-slate-900 px-8 py-3 rounded-full font-black text-sm flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-xl active:scale-95"
+                    className="bg-white text-slate-900 px-6 sm:px-8 py-2 sm:py-3 rounded-full font-black text-xs sm:text-sm flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-xl active:scale-95"
                   >
                     {t("launch")} <ExternalLink size={16} />
                   </a>
                 </div>
               </div>
               
-              <div className="p-10 flex flex-col flex-grow">
+              <div className="p-6 sm:p-10 flex flex-col flex-grow">
                 {/* Logo & Tags Row */}
-                <div className="flex justify-between items-start mb-6">
-                  <div className="relative h-12 w-12 bg-white dark:bg-white p-2 rounded-2xl shadow-sm overflow-hidden">
+                <div className="flex flex-col sm:flex-row justify-between items-start mb-4 sm:mb-6 gap-4 sm:gap-0">
+                  <div className="relative h-10 w-10 sm:h-12 sm:w-12 bg-white dark:bg-white p-2 rounded-xl sm:rounded-2xl shadow-sm overflow-hidden shrink-0">
                     <Image
                       src={project.logo}
                       alt={`${project.title} Logo`}
@@ -114,29 +114,29 @@ const Portfolio = () => {
                       className="object-contain p-2"
                     />
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-                      <span key={tag} className="text-[10px] font-bold uppercase tracking-widest bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full">
+                      <span key={tag} className="text-[10px] font-bold uppercase tracking-widest bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-2 sm:px-3 py-1 rounded-full whitespace-nowrap">
                         {tag}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <h4 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-3 sm:mb-4 leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {project.title}
                 </h4>
                 
-                <p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-8 flex-grow">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed mb-6 sm:mb-8 flex-grow text-justify">
                   {project.description}
                 </p>
                 
-                <div className="pt-6 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
+                <div className="pt-4 sm:pt-6 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
                   <Link 
                     href={`/portfolio/${project.slug}`}
-                    className="inline-flex items-center text-slate-900 dark:text-white font-black text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    className="inline-flex items-center text-slate-900 dark:text-white font-black text-xs sm:text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   >
-                    {t("viewProject")} <ChevronRight size={18} className="ml-1" />
+                    {t("viewProject")} <ChevronRight size={16} className="ml-1" />
                   </Link>
                   <span className="text-slate-400 dark:text-slate-600 font-bold text-xs uppercase tracking-widest">
                     #{index + 1}

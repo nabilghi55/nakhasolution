@@ -30,13 +30,13 @@
   "About": {
     "badge": "About Nakha Solution",
     "title": "We Are More Than Just A Tech Company",
-    "description": "Nakha Solution is a leading provider of technology transformation solutions based in Padang City, West Sumatra. We were born from a vision to bridge the technology gap through smart, integrated, and sustainable IT solutions. We are committed to providing IT solutions that are Right and Appropriate for your business.",
+    "description": "Nakha Solution is a leading technology transformation provider based in Padang, West Sumatra. We bridge the technology gap through smart, integrated, and sustainable IT solutions. Committed to delivering the right and appropriate solutions, we help your business achieve maximum efficiency through a professional and personalized approach.",
     "missionTitle": "Our Mission",
-    "missionDesc": "To provide integrated services and solutions that are right and appropriate to customers' business needs by ensuring efficient, smart, and sustainable technology implementation.",
+    "missionDesc": "To provide integrated services and solutions that are right and appropriate to customers' business needs by ensuring efficient, smart, and sustainable technology implementation. We strive to continuously innovate in every aspect of our services, from initial consultation to post-implementation technical support, to ensure maximum customer satisfaction and long-term business growth.",
     "visionTitle": "Our Vision",
-    "visionDesc": "To become the largest Digital Transformation Partner Company in Sumatra in supporting better customer business achievement.",
+    "visionDesc": "To become the largest Digital Transformation Partner Company in Sumatra in supporting better customer business achievement. We aspire to be the standard of excellence in the information technology industry, known for our integrity, our quality of service, and our positive contribution to the development of the digital economy in the Sumatra region and beyond.",
     "cultureTitle": "Our Culture",
-    "cultureDesc": "A diverse team of passionate experts dedicated to continuous learning and customer success.",
+    "cultureDesc": "A diverse team of passionate experts dedicated to continuous learning and customer success. We uphold the values of collaboration, transparency, and professional responsibility. At Nakha Solution, we believe that the individual growth of our team members is the key to providing extraordinary added value for every client we serve.",
     "yearsExcellence": "Handled Clients"
   },
   "Services": {
@@ -46,7 +46,7 @@
     "items": {
       "cctv": {
         "title": "CCTV",
-        "desc": "Providing CCTV network solutions to ensure the safety and monitoring of your business.",
+        "desc": "Providing CCTV network solutions to ensure the safety and monitoring of your business. Our services include consultation on needs, strategic placement planning, and installation of high-quality hardware that can be accessed in real-time from anywhere via your mobile device. We ensure your security system runs smoothly with reliable technical support.",
         "slug": "cctv",
         "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=1200",
         "features": [
@@ -60,7 +60,7 @@
       },
       "digital-marketing": {
         "title": "Digital Marketing Tools",
-        "desc": "Integrated and efficient digital marketing tool solutions supporting Social Media Management, Multimedia projects, and Broadcast engines.",
+        "desc": "Integrated and efficient digital marketing tool solutions supporting Social Media Management, Multimedia projects, and Broadcast engines. We help your business reach a wider audience through marketing automation and deep analytics, allowing you to make more accurate data-driven decisions in your digital marketing campaigns.",
         "slug": "digital-marketing",
         "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
         "features": [
@@ -74,7 +74,7 @@
       },
       "device-bundling": {
         "title": "Device Bundling",
-        "desc": "Solutions for office electronic device needs with competitive offers and bundling according to your business needs.",
+        "desc": "Solutions for office electronic device needs with competitive offers and bundling according to your business needs. We provide complete packages ranging from computers, networking devices, to productivity software that are pre-configured and ready to use. With our service, you no longer need to worry about device compatibility or the complexities of IT infrastructure procurement.",
         "slug": "device-bundling",
         "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200",
         "features": [
@@ -88,7 +88,7 @@
       },
       "campaign-activation": {
         "title": "Campaign Activation Platform",
-        "desc": "Data-based campaign activation platform helping media and brands run giveaways, engagement campaigns, and audience interaction transparently, automatically, and measurably through features like comment picker, live draw system, analytics dashboard, and AI-based participant filtering.",
+        "desc": "Data-based campaign activation platform helping media and brands run giveaways, engagement campaigns, and audience interaction transparently, automatically, and measurably through features like comment picker, live draw system, analytics dashboard, and AI-based participant filtering. Our platform is designed to increase audience trust while making it easier for your team to manage mass interactions efficiently.",
         "slug": "campaign-activation",
         "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
         "features": [
@@ -102,7 +102,7 @@
       },
       "web-development": {
         "title": "Web Development",
-        "desc": "Realizing business websites according to your needs and desires for business development efficiency.",
+        "desc": "Realizing business websites according to your needs and desires for business development efficiency. We build websites that are not only beautiful to look at but also fast, secure, and search engine optimized (SEO). From company profiles to complex e-commerce platforms, our development team uses the latest technology to ensure your website becomes a valuable digital asset for business growth.",
         "slug": "web-development",
         "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200",
         "features": [
@@ -116,7 +116,7 @@
       },
       "business-application": {
         "title": "Business Application",
-        "desc": "Solutions for integrated software and application needs to support your business accurately, safely, and efficiently.",
+        "desc": "Solutions for integrated software and application needs to support your business accurately, safely, and efficiently. We develop custom applications tailored to your company's specific workflow, helping to automate routine tasks, increase data accuracy, and speed up the decision-making process. With an integrated system, all departments within your company can work more synergistically.",
         "slug": "business-application",
         "image": "https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=1200",
         "features": [
@@ -154,7 +154,7 @@
       "raya": {
         "title": "Raya Law Firm",
         "slug": "raya-law-firm",
-        "desc": "A professional and elegant landing page for a law firm, featuring service listings, attorney profiles, and a contact system.",
+        "desc": "A professional and elegant landing page for a law firm, featuring service listings, attorney profiles, and a contact system. We designed every visual element to reflect authority and trust, ensuring that every potential client feels confident in their legal choice from the first visit.",
         "challengeText": "Raya Law Firm needed a strong online presence to establish credibility and attract new clients. Their previous digital footprint was non-existent, making it difficult for potential clients to find information about their legal services and attorney expertise.",
         "solutionText": "We designed and developed a modern, fast, and SEO-optimized website using Next.js. The site features a clean, professional aesthetic appropriate for a law firm, with clear sections for practice areas, attorney profiles, and an easy-to-use consultation request form.",
         "impactText": "The new website successfully established Raya Law Firm's digital authority. They saw a 40% increase in online consultation requests within the first three months, and their search engine ranking improved significantly for local legal services."
@@ -162,7 +162,7 @@
       "putra": {
         "title": "Putra Wijaya Mandiri",
         "slug": "putra-wijaya-mandiri",
-        "desc": "Corporate website for a general contractor company, showcasing construction projects and industrial services.",
+        "desc": "Corporate website for a general contractor company, showcasing construction projects and industrial services. Our primary focus was to showcase the scale and quality of the work completed through a stunning visual portfolio, providing tangible proof of the company's capability in handling large infrastructure projects.",
         "challengeText": "As a growing general contractor, Putra Wijaya Mandiri struggled to showcase their extensive portfolio of industrial and construction projects to potential large-scale clients. They needed a corporate platform that communicated reliability, scale, and professionalism.",
         "solutionText": "We built a robust corporate website focusing on visual storytelling. We implemented a dynamic project portfolio section that allows them to categorize and display high-quality images and details of their completed projects. The site is fully responsive and optimized for B2B client acquisition.",
         "impactText": "The platform has become their primary tool for pitching to new clients. It significantly reduced the time spent sending offline portfolios, and the professional digital presence helped them secure two major industrial contracts shortly after launch."
@@ -170,7 +170,7 @@
       "alfajr": {
         "title": "Alfajr Umroh",
         "slug": "alfajr-umroh",
-        "desc": "A comprehensive travel and tour website specifically for Umrah services, featuring package details and booking information.",
+        "desc": "A comprehensive travel and tour website specifically for Umrah services, featuring package details and booking information. We integrated a transparent information system to make it easier for pilgrims to plan their spiritual journey, creating a sense of safety and comfort through a user-friendly interface.",
         "challengeText": "Alfajr Umroh faced challenges in managing customer inquiries and explaining complex Umrah packages manually. They needed a centralized digital platform where prospective pilgrims could easily browse packages, view itineraries, and understand the requirements.",
         "solutionText": "We developed a comprehensive travel portal tailored for Umrah services. The website features detailed package listings, day-by-day itineraries, transparent pricing, and an integrated inquiry system. We focused on a user-friendly interface that builds trust and provides clear information.",
         "impactText": "The website streamlined their customer service operations, reducing repetitive inquiries by 60%. The clear presentation of packages led to a higher conversion rate, making it easier for pilgrims to choose and commit to their spiritual journey."

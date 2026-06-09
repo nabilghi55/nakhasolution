@@ -53,29 +53,29 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-white dark:bg-slate-950 transition-colors duration-300">
+    <section id="services" className="py-16 sm:py-24 bg-white dark:bg-slate-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-blue-600 dark:text-blue-400 font-bold tracking-wider uppercase text-sm mb-4">{t("badge")}</h2>
-          <h3 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20">
+          <h2 className="text-blue-600 dark:text-blue-400 font-bold tracking-wider uppercase text-xs sm:text-sm mb-3 sm:mb-4">{t("badge")}</h2>
+          <h3 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 sm:mb-6">
             {t("title")}
           </h3>
-          <p className="text-lg text-slate-600 dark:text-slate-400">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 px-4 sm:px-0">
             {t("description")}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group p-8 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+              className="group p-6 sm:p-8 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center sm:text-left"
             >
-              <div className={`w-16 h-16 rounded-2xl ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`w-14 h-14 sm:w-16 sm:h-16 mx-auto sm:mx-0 rounded-2xl ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 {service.icon}
               </div>
-              <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">{service.title}</h4>
-              <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6 min-h-[80px]">
+              <h4 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4">{service.title}</h4>
+              <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed mb-6 min-h-0 sm:min-h-[80px] text-justify">
                 {service.description}
               </p>
               <Link
@@ -89,21 +89,21 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="mt-20 bg-blue-600 dark:bg-blue-700 rounded-3xl p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between shadow-2xl overflow-hidden relative">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full -mr-20 -mt-20 opacity-50"></div>
+        <div className="mt-16 sm:mt-20 bg-blue-600 dark:bg-blue-700 rounded-3xl p-8 sm:p-12 flex flex-col lg:flex-row items-center justify-between shadow-2xl overflow-hidden relative text-center lg:text-left">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full -mr-20 -mt-20 opacity-50 hidden sm:block"></div>
           
-          <div className="relative z-10 text-center lg:text-left mb-8 lg:mb-0 lg:max-w-xl">
-            <h4 className="text-3xl font-bold text-white mb-4">{t("ready")}</h4>
-            <p className="text-blue-100 text-lg">
+          <div className="relative z-10 mb-8 lg:mb-0 lg:max-w-xl w-full">
+            <h4 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">{t("ready")}</h4>
+            <p className="text-blue-100 text-base sm:text-lg">
               {t("readyDesc")}
             </p>
           </div>
-          <div className="relative z-10">
+          <div className="relative z-10 w-full lg:w-auto">
             <a
               href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20ingin%20berkonsultasi."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-white text-blue-600 dark:text-blue-700 px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all shadow-lg"
+              className="inline-block w-full sm:w-auto bg-white text-blue-600 dark:text-blue-700 px-8 sm:px-10 py-4 rounded-xl sm:rounded-full font-bold text-base sm:text-lg hover:bg-blue-50 transition-all shadow-lg"
             >
               {t("cta")}
             </a>

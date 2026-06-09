@@ -30,13 +30,13 @@
   "About": {
     "badge": "Tentang Nakha Solution",
     "title": "Kami Lebih Dari Sekadar Perusahaan Teknologi",
-    "description": "Nakha Solution adalah perusahaan penyedia solusi transformasi teknologi terkemuka yang berbasis di Kota Padang, Sumatra Barat. Kami lahir dari visi untuk menjembatani kesenjangan teknologi melalui solusi IT yang cerdas, terintegrasi, dan berkelanjutan. Kami berkomitmen menyediakan solusi IT yang Tepat dan Sesuai dengan bisnis Anda.",
+    "description": "Nakha Solution adalah penyedia solusi transformasi teknologi terkemuka di Padang, Sumatera Barat. Kami hadir menjembatani kesenjangan teknologi melalui solusi IT yang cerdas, terintegrasi, dan berkelanjutan. Berkomitmen menghadirkan solusi yang Tepat dan Sesuai, kami membantu bisnis Anda mencapai efisiensi maksimal melalui pendekatan personal yang profesional.",
     "missionTitle": "Misi Kami",
-    "missionDesc": "Memberikan layanan dan solusi terintegrasi yang tepat dan sesuai dengan kebutuhan bisnis pelanggan dengan memastikan implementasi teknologi yang efisien, cerdas, dan berkelanjutan.",
+    "missionDesc": "Memberikan layanan dan solusi terintegrasi yang tepat dan sesuai dengan kebutuhan bisnis pelanggan dengan memastikan implementasi teknologi yang efisien, cerdas, dan berkelanjutan. Kami berupaya untuk terus berinovasi dalam setiap aspek layanan kami, mulai dari konsultasi awal hingga dukungan teknis pasca-implementasi, guna memastikan kepuasan pelanggan yang maksimal.",
     "visionTitle": "Visi Kami",
-    "visionDesc": "Menjadi Perusahaan Digital Transformation Partner Terbesar di Sumatra dalam mendukung pencapaian bisnis pelanggan yang lebih baik.",
+    "visionDesc": "Menjadi Perusahaan Digital Transformation Partner Terbesar di Sumatra dalam mendukung pencapaian bisnis pelanggan yang lebih baik. Kami bercita-cita untuk menjadi standar keunggulan dalam industri teknologi informasi, dikenal karena integritas kami, kualitas layanan kami, dan kontribusi positif kami terhadap perkembangan ekonomi digital di wilayah Sumatra dan sekitarnya.",
     "cultureTitle": "Budaya Kami",
-    "cultureDesc": "Tim ahli yang beragam dan penuh semangat yang didedikasikan untuk pembelajaran berkelanjutan dan kesuksesan pelanggan.",
+    "cultureDesc": "Tim ahli yang beragam dan penuh semangat yang didedikasikan untuk pembelajaran berkelanjutan and kesuksesan pelanggan. Kami menjunjung tinggi nilai-nilai kolaborasi, transparansi, dan tanggung jawab profesional. Di Nakha Solution, kami percaya bahwa pertumbuhan individu anggota tim kami adalah kunci untuk memberikan nilai tambah yang luar biasa bagi setiap klien yang kami layani.",
     "yearsExcellence": "Klien Tertangani"
   },
   "Services": {
@@ -46,7 +46,7 @@
     "items": {
       "cctv": {
         "title": "CCTV",
-        "desc": "Memberikan solusi jaringan CCTV untuk menjamin keselamatan dan pemantauan bisnis Anda.",
+        "desc": "Memberikan solusi jaringan CCTV untuk menjamin keselamatan dan pemantauan bisnis Anda. Layanan kami mencakup konsultasi kebutuhan, perencanaan titik pasang yang strategis, hingga instalasi perangkat keras berkualitas tinggi yang dapat diakses secara real-time dari mana saja melalui perangkat mobile Anda. Kami memastikan sistem keamanan Anda berjalan tanpa hambatan dengan dukungan teknis yang handal.",
         "slug": "cctv",
         "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=1200",
         "features": [
@@ -60,7 +60,7 @@
       },
       "digital-marketing": {
         "title": "Digital Marketing Tools",
-        "desc": "Solusi Tools digital marketing terintegrasi dan efisien dalam mendukung Social Media Management, Multimedia project, dan Broadcast engine.",
+        "desc": "Solusi Tools digital marketing terintegrasi dan efisien dalam mendukung Social Media Management, Multimedia project, dan Broadcast engine. Kami membantu bisnis Anda untuk menjangkau audiens yang lebih luas melalui automasi pemasaran dan analitik yang mendalam, memungkinkan Anda untuk membuat keputusan berbasis data yang lebih akurat dalam kampanye pemasaran digital Anda.",
         "slug": "digital-marketing",
         "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
         "features": [
@@ -74,7 +74,7 @@
       },
       "device-bundling": {
         "title": "Device Bundling",
-        "desc": "Solusi kebutuhan perangkat elektronik perkantoran dengan penawaran kompetitif dan bundling sesuai kebutuhan bisnis Anda.",
+        "desc": "Solusi kebutuhan perangkat elektronik perkantoran dengan penawaran kompetitif dan bundling sesuai kebutuhan bisnis Anda. Kami menyediakan paket lengkap mulai dari komputer, perangkat jaringan, hingga perangkat lunak produktivitas yang sudah dikonfigurasi dan siap pakai. Dengan layanan kami, Anda tidak perlu lagi khawatir tentang kompatibilitas perangkat atau kerumitan dalam pengadaan infrastruktur IT.",
         "slug": "device-bundling",
         "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200",
         "features": [
@@ -88,7 +88,7 @@
       },
       "campaign-activation": {
         "title": "Campaign Activation Platform",
-        "desc": "Platform campaign activation berbasis data yang membantu media dan brand menjalankan giveaway, engagement campaign, dan audience interaction secara transparan, otomatis, dan terukur melalui fitur comment picker, live draw system, analytics dashboard, serta AI-based participant filtering.",
+        "desc": "Platform campaign activation berbasis data yang membantu media dan brand menjalankan giveaway, engagement campaign, dan audience interaction secara transparan, otomatis, dan terukur melalui fitur comment picker, live draw system, analytics dashboard, serta AI-based participant filtering. Platform kami didesain untuk meningkatkan kepercayaan audiens sekaligus mempermudah tim Anda dalam mengelola interaksi massal secara efisien.",
         "slug": "campaign-activation",
         "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
         "features": [
@@ -102,7 +102,7 @@
       },
       "web-development": {
         "title": "Web Development",
-        "desc": "Mewujudkan website bisnis sesuai kebutuhan dan keinginan Anda dalam efisiensi pengembangan usaha.",
+        "desc": "Mewujudkan website bisnis sesuai kebutuhan dan keinginan Anda dalam efisiensi pengembangan usaha. Kami membangun situs web yang tidak hanya indah dipandang, tetapi juga cepat, aman, dan dioptimalkan untuk mesin pencari (SEO). Mulai dari profil perusahaan hingga platform e-commerce kompleks, tim pengembang kami menggunakan teknologi terbaru untuk memastikan website Anda menjadi aset digital yang berharga bagi pertumbuhan bisnis.",
         "slug": "web-development",
         "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200",
         "features": [
@@ -116,7 +116,7 @@
       },
       "business-application": {
         "title": "Business Application",
-        "desc": "Solusi kebutuhan softwere dan aplikasi yang terintegritas untuk pendukung bisnis Anda dengan tepat, aman, dan efisien.",
+        "desc": "Solusi kebutuhan software dan aplikasi yang terintegrasi untuk pendukung bisnis Anda dengan tepat, aman, dan efisien. Kami mengembangkan aplikasi kustom yang disesuaikan dengan alur kerja spesifik perusahaan Anda, membantu mengotomasi tugas-tugas rutin, meningkatkan akurasi data, dan mempercepat proses pengambilan keputusan. Dengan sistem yang terintegrasi, seluruh departemen dalam perusahaan Anda dapat bekerja lebih sinergis.",
         "slug": "business-application",
         "image": "https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=1200",
         "features": [
@@ -154,7 +154,7 @@
       "raya": {
         "title": "Raya Law Firm",
         "slug": "raya-law-firm",
-        "desc": "Halaman landas profesional dan elegan untuk firma hukum, menampilkan daftar layanan, profil pengacara, dan sistem kontak.",
+        "desc": "Halaman landas profesional dan elegan untuk firma hukum, menampilkan daftar layanan, profil pengacara, dan sistem kontak. Kami merancang setiap elemen visual untuk mencerminkan wibawa dan kepercayaan, memastikan bahwa setiap calon klien merasa yakin dengan pilihan hukum mereka sejak kunjungan pertama.",
         "challengeText": "Raya Law Firm membutuhkan kehadiran online yang kuat untuk membangun kredibilitas dan menarik klien baru. Jejak digital mereka sebelumnya tidak ada, membuat calon klien kesulitan menemukan informasi tentang layanan hukum dan keahlian pengacara mereka.",
         "solutionText": "Kami merancang dan mengembangkan situs web modern, cepat, dan dioptimalkan untuk SEO menggunakan Next.js. Situs ini menampilkan estetika yang bersih dan profesional yang sesuai untuk firma hukum, dengan bagian yang jelas untuk area praktik, profil pengacara, dan formulir permintaan konsultasi yang mudah digunakan.",
         "impactText": "Situs web baru berhasil membangun otoritas digital Raya Law Firm. Mereka melihat peningkatan 40% dalam permintaan konsultasi online dalam tiga bulan pertama, dan peringkat mesin pencari mereka meningkat secara signifikan untuk layanan hukum lokal."
@@ -162,7 +162,7 @@
       "putra": {
         "title": "Putra Wijaya Mandiri",
         "slug": "putra-wijaya-mandiri",
-        "desc": "Situs web perusahaan untuk perusahaan kontraktor umum, menampilkan proyek konstruksi dan layanan industri.",
+        "desc": "Situs web perusahaan untuk perusahaan kontraktor umum, menampilkan proyek konstruksi dan layanan industri. Fokus utama kami adalah memamerkan skala dan kualitas pekerjaan yang telah diselesaikan melalui portofolio visual yang memukau, memberikan bukti nyata akan kapabilitas perusahaan dalam menangani proyek infrastruktur besar.",
         "challengeText": "Sebagai kontraktor umum yang berkembang, Putra Wijaya Mandiri kesulitan memamerkan portofolio ekstensif proyek industri dan konstruksi mereka kepada calon klien berskala besar. Mereka membutuhkan platform perusahaan yang mengkomunikasikan keandalan, skala, dan profesionalisme.",
         "solutionText": "Kami membangun situs web perusahaan yang tangguh dengan fokus pada penyampaian cerita visual. Kami menerapkan bagian portofolio proyek dinamis yang memungkinkan mereka mengkategorikan dan menampilkan gambar berkualitas tinggi serta detail dari proyek yang telah diselesaikan. Situs ini sepenuhnya responsif dan dioptimalkan untuk akuisisi klien B2B.",
         "impactText": "Platform ini telah menjadi alat utama mereka untuk pitching ke klien baru. Ini secara signifikan mengurangi waktu yang dihabiskan untuk mengirim portofolio offline, dan kehadiran digital yang profesional membantu mereka mengamankan dua kontrak industri besar tak lama setelah peluncuran."
@@ -170,7 +170,7 @@
       "alfajr": {
         "title": "Alfajr Umroh",
         "slug": "alfajr-umroh",
-        "desc": "Situs web perjalanan dan tur komprehensif khusus untuk layanan Umroh, menampilkan detail paket dan informasi pemesanan.",
+        "desc": "Situs web perjalanan dan tur komprehensif khusus untuk layanan Umroh, menampilkan detail paket dan informasi pemesanan. Kami mengintegrasikan sistem informasi yang transparan untuk memudahkan para jamaah dalam merencanakan perjalanan ibadah mereka, menciptakan rasa aman dan nyaman melalui antarmuka yang ramah pengguna.",
         "challengeText": "Alfajr Umroh menghadapi tantangan dalam mengelola pertanyaan pelanggan dan menjelaskan paket Umroh yang kompleks secara manual. Mereka membutuhkan platform digital terpusat di mana calon jamaah dapat dengan mudah menelusuri paket, melihat rencana perjalanan, dan memahami persyaratan.",
         "solutionText": "Kami mengembangkan portal perjalanan komprehensif yang disesuaikan untuk layanan Umroh. Situs web ini menampilkan daftar paket terperinci, rencana perjalanan hari demi hari, harga transparan, dan sistem pertanyaan yang terintegrasi. Kami berfokus pada antarmuka yang ramah pengguna yang membangun kepercayaan dan memberikan informasi yang jelas.",
         "impactText": "Situs web menyederhanakan operasi layanan pelanggan mereka, mengurangi pertanyaan berulang sebesar 60%. Presentasi paket yang jelas menghasilkan tingkat konversi yang lebih tinggi, memudahkan jamaah untuk memilih dan berkomitmen pada perjalanan spiritual mereka."
