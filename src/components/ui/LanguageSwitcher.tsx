@@ -27,8 +27,8 @@ export default function LanguageSwitcher() {
   };
 
   const langs = [
-    { id: 'en', flag: '🇺🇸', label: 'English' },
     { id: 'id', flag: '🇮🇩', label: 'Indonesia' },
+    { id: 'en', flag: '🇺🇸', label: 'English' },
   ];
 
   const currentLang = langs.find(l => l.id === locale) || langs[0];

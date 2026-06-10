@@ -9,7 +9,10 @@ export const routing = defineRouting({
   defaultLocale: 'id',
   
   // Don't show locale in URL
-  localePrefix: 'never'
+  localePrefix: 'never',
+
+  // Disable locale detection to force defaultLocale
+  localeDetection: false
 });
  
 // Lightweight wrappers around Next.js' navigation APIs

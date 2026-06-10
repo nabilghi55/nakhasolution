@@ -88,7 +88,7 @@
       },
       "campaign-activation": {
         "title": "Campaign Activation Platform",
-        "desc": "Platform campaign activation berbasis data yang membantu media dan brand menjalankan giveaway, engagement campaign, dan audience interaction secara transparan, otomatis, dan terukur melalui fitur comment picker, live draw system, analytics dashboard, serta AI-based participant filtering. Platform kami didesain untuk meningkatkan kepercayaan audiens sekaligus mempermudah tim Anda dalam mengelola interaksi massal secara efisien.",
+        "desc": "Platform campaign activation berbasis data yang membantu media dan brand menjalankan giveaway, tebak skor Piala Dunia, engagement campaign, dan audience interaction secara transparan, otomatis, dan terukur melalui fitur comment picker, live draw system, analytics dashboard, serta AI-based participant filtering. Platform kami didesain untuk meningkatkan kepercayaan audiens sekaligus mempermudah tim Anda dalam mengelola interaksi massal secara efisien.",
         "slug": "campaign-activation",
         "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
         "features": [
@@ -136,7 +136,21 @@
     "backToHome": "Kembali ke Beranda",
     "whyChoose": "Mengapa Memilih Layanan Kami?",
     "consultTitle": "Konsultasikan Kebutuhan Anda Sekarang",
-    "consultDesc": "Tim ahli kami siap membantu Anda merancang solusi IT yang paling tepat untuk skala bisnis Anda."
+    "consultDesc": "Tim ahli kami siap membantu Anda merancang solusi IT yang paling tepat untuk skala bisnis Anda.",
+    "campaignDemo": {
+      "title": "Demo Instagram Comment Picker",
+      "subtitle": "Hentikan cara manual cek ribuan komentar. Tool kami menarik data, memfilter skor benar, dan memilih pemenang secara instan.",
+      "steps": {
+        "match": "Skor Akhir: Brasil 2 - 1 Prancis",
+        "fetch": "Tarik Komentar Instagram",
+        "fetching": "Menarik 5.420 komentar...",
+        "filtered": "124 Tebakan Benar Ditemukan",
+        "draw": "Mulai Undian Pemenang",
+        "winner": "Selamat! Pemenang Ditemukan",
+        "reset": "Coba Pertandingan Lain"
+      },
+      "cta": "Minta Demo untuk Brand Anda"
+    }
   },
   "Portfolio": {
     "badge": "Studi Kasus",

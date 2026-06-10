@@ -88,7 +88,7 @@
       },
       "campaign-activation": {
         "title": "Campaign Activation Platform",
-        "desc": "Data-based campaign activation platform helping media and brands run giveaways, engagement campaigns, and audience interaction transparently, automatically, and measurably through features like comment picker, live draw system, analytics dashboard, and AI-based participant filtering. Our platform is designed to increase audience trust while making it easier for your team to manage mass interactions efficiently.",
+        "desc": "Data-driven campaign activation platform helping media and brands run giveaways, World Cup score guessing, engagement campaigns, and audience interaction transparently, automatically, and measurably through features like comment picker, live draw system, analytics dashboard, and AI-based participant filtering. Our platform is designed to increase audience trust while making it easier for your team to manage mass interactions efficiently.",
         "slug": "campaign-activation",
         "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
         "features": [
@@ -136,7 +136,21 @@
     "backToHome": "Back to Home",
     "whyChoose": "Why Choose Our Services?",
     "consultTitle": "Consult Your Needs Now",
-    "consultDesc": "Our team of experts is ready to help you design the most appropriate IT solution for your business scale."
+    "consultDesc": "Our team of experts is ready to help you design the most appropriate IT solution for your business scale.",
+    "campaignDemo": {
+      "title": "Instagram Comment Picker Demo",
+      "subtitle": "Stop manually checking thousands of comments. Our tool fetches data, filters correct scores, and picks winners instantly.",
+      "steps": {
+        "match": "Final Score: Brazil 2 - 1 France",
+        "fetch": "Fetch Instagram Comments",
+        "fetching": "Fetching 5,420 comments...",
+        "filtered": "124 Correct Predictions Found",
+        "draw": "Start Winner Draw",
+        "winner": "Congratulation! Winner Found",
+        "reset": "Try Another Match"
+      },
+      "cta": "Request Demo for Your Brand"
+    }
   },
   "Portfolio": {
     "badge": "Case Studies",

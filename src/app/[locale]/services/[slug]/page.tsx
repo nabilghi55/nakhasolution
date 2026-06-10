@@ -8,6 +8,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import CampaignDemo from "@/components/sections/CampaignDemo";
 
 const ServiceDetailPage = () => {
   const t = useTranslations("Services");
@@ -154,6 +155,8 @@ const ServiceDetailPage = () => {
             </div>
           </div>
         </section>
+
+        {slug === "campaign-activation" && <CampaignDemo />}
       </main>
 
       <Footer />
