@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   description: "Nakha Solution is a leading technology transformation provider based in Padang. We offer CCTV, Web Development, Digital Marketing, and Business Applications.",
   keywords: "Nakha Solution, IT Consultant Padang, Web Development Sumatra, CCTV Installation Padang, Digital Marketing Agency, Software Development Padang",
   openGraph: {
+  
     title: "Nakha Solution | Your Best Digital Partner",
     description: "Empowering businesses with smart, integrated, and sustainable IT solutions.",
     url: "https://nakhasolution.com",

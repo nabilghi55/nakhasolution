@@ -82,7 +82,7 @@ const CampaignDemo = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-6 leading-tight"
           >
             {t("title")}
           </motion.h2>
@@ -91,7 +91,7 @@ const CampaignDemo = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto"
           >
             {t("subtitle")}
           </motion.p>
@@ -102,15 +102,15 @@ const CampaignDemo = () => {
             {/* Demo Header */}
             <div className="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-100 dark:border-slate-700 px-5 md:px-8 py-4 md:py-6 flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-2 md:gap-3">
-                <div className="flex gap-1.5">
+                <div className="flex gap-1.5 shrink-0">
                   <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
                   <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
                   <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
                 </div>
-                <span className="ml-2 md:ml-4 text-[10px] md:text-sm font-bold text-slate-400 font-mono truncate max-w-[150px] md:max-w-none">nakha-picker-v2.0.exe</span>
+                <span className="ml-1 md:ml-4 text-[10px] md:text-sm font-bold text-slate-400 font-mono truncate max-w-[120px] xs:max-w-[150px] md:max-w-none">nakha-picker-v2.0.exe</span>
               </div>
-              <div className="flex items-center gap-4 text-xs md:text-sm font-black text-slate-600 dark:text-slate-300">
-                <span className="px-2 md:px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 rounded-lg">
+              <div className="flex items-center gap-2 md:gap-4 text-[10px] md:text-sm font-black text-slate-600 dark:text-slate-300">
+                <span className="px-2 md:px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 rounded-lg whitespace-normal text-center leading-tight max-w-[140px] md:max-w-none">
                   {t("steps.match")}
                 </span>
               </div>
@@ -137,8 +137,8 @@ const CampaignDemo = () => {
                       onClick={() => setStep(1)}
                       className="group flex items-center justify-center gap-3 w-full md:w-auto px-8 md:px-10 py-4 md:py-5 bg-pink-600 hover:bg-pink-700 text-white rounded-2xl font-black text-base md:text-lg shadow-xl shadow-pink-500/20 transition-all mx-auto"
                     >
-                      {t("steps.fetch")}
-                      <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                      <span className="whitespace-nowrap">{t("steps.fetch")}</span>
+                      <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform shrink-0" />
                     </button>
                   </motion.div>
                 )}
@@ -165,7 +165,7 @@ const CampaignDemo = () => {
                       <h3 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-2">
                         {fetchCount.toLocaleString()}
                       </h3>
-                      <p className="text-sm md:text-base text-slate-500 dark:text-slate-400 font-bold">{t("steps.fetching")}</p>
+                      <p className="text-sm md:text-base text-slate-500 dark:text-slate-400 font-bold leading-tight break-words">{t("steps.fetching")}</p>
                     </div>
                     <div className="h-2 w-full bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
                       <motion.div
@@ -185,11 +185,11 @@ const CampaignDemo = () => {
                     exit={{ opacity: 0, x: -20 }}
                     className="w-full space-y-6 md:space-y-8"
                   >
-                    <div className="flex items-center justify-center gap-3 md:gap-4 text-green-500 font-black text-lg md:text-xl">
-                      <Filter size={20} className="md:w-6 md:h-6" />
-                      {t("steps.filtered")}
+                    <div className="flex items-center justify-center gap-3 md:gap-4 text-green-500 font-black text-lg md:text-xl px-4">
+                      <Filter size={20} className="md:w-6 md:h-6 shrink-0" />
+                      <span className="leading-tight">{t("steps.filtered")}</span>
                     </div>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4 px-2">
                       {users.map((user, i) => (
                         <motion.div
                           key={i}
@@ -206,8 +206,8 @@ const CampaignDemo = () => {
                       onClick={() => setStep(3)}
                       className="group flex items-center justify-center gap-3 w-full md:w-auto px-8 md:px-10 py-4 md:py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-black text-base md:text-lg shadow-xl shadow-blue-500/20 transition-all mx-auto"
                     >
-                      <Trophy size={20} />
-                      {t("steps.draw")}
+                      <Trophy size={20} className="shrink-0" />
+                      <span className="whitespace-nowrap">{t("steps.draw")}</span>
                     </button>
                   </motion.div>
                 )}
@@ -220,7 +220,7 @@ const CampaignDemo = () => {
                     onUpdate={() => {
                       setTimeout(() => setStep(4), 3000);
                     }}
-                    className="space-y-8 md:space-y-10"
+                    className="space-y-8 md:space-y-10 w-full"
                   >
                     <div className="relative w-36 h-36 md:w-48 md:h-48 mx-auto">
                       <motion.div
@@ -234,7 +234,7 @@ const CampaignDemo = () => {
                         <Loader2 className="w-10 h-10 md:w-12 md:h-12 text-blue-600 animate-spin" />
                       </div>
                     </div>
-                    <h3 className="text-xl md:text-2xl font-black text-slate-900 dark:text-white animate-pulse">
+                    <h3 className="text-xl md:text-2xl font-black text-slate-900 dark:text-white animate-pulse px-4 leading-tight">
                       Picking a random winner...
                     </h3>
                   </motion.div>
@@ -245,7 +245,7 @@ const CampaignDemo = () => {
                     key="step4"
                     initial={{ scale: 0.5, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
-                    className="space-y-6 md:space-y-8 w-full"
+                    className="space-y-6 md:space-y-8 w-full px-4"
                   >
                     <div className="relative">
                       <motion.div
@@ -259,11 +259,11 @@ const CampaignDemo = () => {
                       <div className="absolute -bottom-2 -right-2 md:-bottom-4 md:-right-4 w-8 h-8 md:w-12 md:h-12 bg-pink-500 rounded-full animate-bounce" />
                     </div>
                     
-                    <div>
-                      <span className="text-green-500 font-black uppercase tracking-widest text-[10px] md:text-sm mb-1 md:mb-2 block">
+                    <div className="w-full">
+                      <span className="text-green-500 font-black uppercase tracking-widest text-[10px] md:text-sm mb-1 md:mb-2 block leading-tight">
                         {t("steps.winner")}
                       </span>
-                      <h3 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white">@rizky_m</h3>
+                      <h3 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white truncate max-w-full">@rizky_m</h3>
                     </div>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4">
@@ -271,8 +271,8 @@ const CampaignDemo = () => {
                         onClick={resetDemo}
                         className="flex items-center justify-center gap-2 w-full sm:w-auto px-6 md:px-8 py-3.5 md:py-4 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-2xl font-bold hover:bg-slate-200 transition-all"
                       >
-                        <RefreshCw size={18} />
-                        {t("steps.reset")}
+                        <RefreshCw size={18} className="shrink-0" />
+                        <span className="whitespace-nowrap">{t("steps.reset")}</span>
                       </button>
                       <a 
                         href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20tertarik%20dengan%20Instagram%20Picker%20Platform."
@@ -280,8 +280,8 @@ const CampaignDemo = () => {
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-2 w-full sm:w-auto px-6 md:px-8 py-3.5 md:py-4 bg-blue-600 text-white rounded-2xl font-black shadow-lg shadow-blue-500/20 hover:scale-105 transition-all"
                       >
-                        <CheckCircle2 size={18} />
-                        {t("cta")}
+                        <CheckCircle2 size={18} className="shrink-0" />
+                        <span className="whitespace-nowrap">{t("cta")}</span>
                       </a>
                     </div>
                   </motion.div>
@@ -290,25 +290,25 @@ const CampaignDemo = () => {
             </div>
 
             {/* Demo Footer / Stats */}
-            <div className="bg-slate-50/50 dark:bg-slate-900/50 px-5 md:px-8 py-4 md:py-6 border-t border-slate-100 dark:border-slate-700 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+            <div className="bg-slate-50/50 dark:bg-slate-900/50 px-4 md:px-8 py-4 md:py-6 border-t border-slate-100 dark:border-slate-700 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
               <div className="space-y-1">
                 <p className="text-[8px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest">Status</p>
                 <div className="flex items-center gap-1.5 md:gap-2">
-                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-[10px] md:text-xs font-bold text-slate-600 dark:text-slate-300">Live API Connection</span>
+                  <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-green-500 animate-pulse shrink-0" />
+                  <span className="text-[9px] md:text-xs font-bold text-slate-600 dark:text-slate-300 leading-tight">Live API Connection</span>
                 </div>
               </div>
               <div className="space-y-1">
                 <p className="text-[8px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest">Speed</p>
-                <p className="text-[10px] md:text-xs font-bold text-slate-600 dark:text-slate-300">~2,500 comments/sec</p>
+                <p className="text-[9px] md:text-xs font-bold text-slate-600 dark:text-slate-300 leading-tight">~2,500 comments/sec</p>
               </div>
               <div className="space-y-1">
                 <p className="text-[8px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest">Security</p>
-                <p className="text-[10px] md:text-xs font-bold text-slate-600 dark:text-slate-300">256-bit AES Encryption</p>
+                <p className="text-[9px] md:text-xs font-bold text-slate-600 dark:text-slate-300 leading-tight">256-bit AES Encryption</p>
               </div>
               <div className="space-y-1">
                 <p className="text-[8px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest">Engine</p>
-                <p className="text-[10px] md:text-xs font-bold text-slate-600 dark:text-slate-300 truncate">AI-Based Filtering v4</p>
+                <p className="text-[9px] md:text-xs font-bold text-slate-600 dark:text-slate-300 truncate">AI-Based Filtering v4</p>
               </div>
             </div>
           </div>
@@ -326,8 +326,8 @@ const CampaignDemo = () => {
               <Users size={28} className="md:w-8 md:h-8" />
             </div>
             <div>
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-black mb-1">Scale Your Engagement</h3>
-              <p className="text-pink-100 text-sm md:text-lg opacity-80">Used by 500+ brands and agencies globally.</p>
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-black mb-1 leading-tight">Scale Your Engagement</h3>
+              <p className="text-pink-100 text-sm md:text-lg opacity-80 leading-relaxed">Used by 500+ brands and agencies globally.</p>
             </div>
           </div>
           <a
@@ -336,7 +336,7 @@ const CampaignDemo = () => {
             rel="noopener noreferrer"
             className="w-full md:w-auto px-8 md:px-10 py-4 md:py-5 bg-white text-pink-600 rounded-2xl font-black text-base md:text-lg hover:scale-105 transition-transform shadow-xl text-center"
           >
-            {t("cta")}
+            <span className="whitespace-nowrap">{t("cta")}</span>
           </a>
         </motion.div>
       </div>

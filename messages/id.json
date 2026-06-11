@@ -138,18 +138,18 @@
     "consultTitle": "Konsultasikan Kebutuhan Anda Sekarang",
     "consultDesc": "Tim ahli kami siap membantu Anda merancang solusi IT yang paling tepat untuk skala bisnis Anda.",
     "campaignDemo": {
-      "title": "Demo Instagram Comment Picker",
-      "subtitle": "Hentikan cara manual cek ribuan komentar. Tool kami menarik data, memfilter skor benar, dan memilih pemenang secara instan.",
+      "title": "Demo Instagram Picker",
+      "subtitle": "Otomasi giveaway Anda. Tarik data, filter skor, dan pilih pemenang secara instan.",
       "steps": {
-        "match": "Skor Akhir: Brasil 2 - 1 Prancis",
-        "fetch": "Tarik Komentar Instagram",
-        "fetching": "Menarik 5.420 komentar...",
-        "filtered": "124 Tebakan Benar Ditemukan",
-        "draw": "Mulai Undian Pemenang",
-        "winner": "Selamat! Pemenang Ditemukan",
-        "reset": "Coba Pertandingan Lain"
+        "match": "Skor: Brasil 2 - 1 Prancis",
+        "fetch": "Tarik Komentar",
+        "fetching": "Menarik data...",
+        "filtered": "124 Skor Benar",
+        "draw": "Undi Pemenang",
+        "winner": "Pemenang Ditemukan!",
+        "reset": "Coba Lagi"
       },
-      "cta": "Minta Demo untuk Brand Anda"
+      "cta": "Minta Demo"
     }
   },
   "Portfolio": {

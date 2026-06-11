@@ -35,9 +35,9 @@ const Hero = () => {
               <span>{t("badge")}</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white leading-[1.2] mb-4 sm:mb-6 tracking-tight flex flex-col items-center lg:items-start">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white leading-[1.2] mb-4 sm:mb-6 tracking-tight flex flex-col items-center lg:items-start">
               <span className="mb-2">{t("titlePrefix")}</span>
-              <span className="text-blue-600 dark:text-blue-500 w-full block text-center lg:text-left">
+              <span className="text-blue-600 dark:text-blue-500 w-full block text-center lg:text-left text-balance">
                 <TypewriterEffect />
               </span>
             </h1>

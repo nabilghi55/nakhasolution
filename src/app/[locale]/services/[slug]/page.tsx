@@ -38,9 +38,9 @@ const ServiceDetailPage = () => {
     <div className="flex min-h-screen flex-col bg-white dark:bg-slate-950">
       <Navbar />
       
-      <main className="flex-grow pt-20 md:pt-24">
+      <main className="flex-grow pt-24 md:pt-32">
         {/* Hero Section with Image */}
-        <section className="relative h-[50vh] md:h-[60vh] min-h-[400px] flex items-center overflow-hidden">
+        <section className="relative min-h-[500px] md:h-[70vh] flex items-center overflow-hidden py-12 md:py-0">
           <Image
             src={service.image}
             alt={service.title}
@@ -49,11 +49,11 @@ const ServiceDetailPage = () => {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-slate-900/65 backdrop-blur-[2px]"></div>
           <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
             <Link 
               href="/#services" 
-              className="inline-flex items-center text-sm font-bold text-white/70 hover:text-white transition-colors mb-6 md:mb-8 group"
+              className="inline-flex items-center text-sm font-bold text-white/70 hover:text-white transition-colors mb-8 md:mb-12 group"
             >
               <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" />
               {t("backToHome")}
@@ -63,10 +63,10 @@ const ServiceDetailPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-4 md:mb-6 leading-[1.1] max-w-3xl">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 md:mb-8 leading-[1.2] md:leading-[1.1] max-w-4xl text-balance">
                 {service.title}
               </h1>
-              <p className="text-lg md:text-xl text-slate-200 max-w-2xl leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-slate-200 max-w-2xl leading-relaxed text-pretty">
                 {service.desc}
               </p>
             </motion.div>
