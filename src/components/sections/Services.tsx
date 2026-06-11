@@ -89,8 +89,8 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="mt-16 sm:mt-20 bg-blue-600 dark:bg-blue-700 rounded-3xl p-8 sm:p-12 flex flex-col lg:flex-row items-center justify-between shadow-2xl overflow-hidden relative text-center lg:text-left">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full -mr-20 -mt-20 opacity-50 hidden sm:block"></div>
+        <div className="mt-16 sm:mt-20 bg-blue-600 dark:bg-blue-700 rounded-3xl p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between shadow-2xl overflow-hidden relative text-center lg:text-left">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full -mr-20 -mt-20 opacity-50 hidden md:block"></div>
           
           <div className="relative z-10 mb-8 lg:mb-0 lg:max-w-xl w-full">
             <h4 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">{t("ready")}</h4>
@@ -103,7 +103,7 @@ const Services = () => {
               href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20ingin%20berkonsultasi."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block w-full sm:w-auto bg-white text-blue-600 dark:text-blue-700 px-8 sm:px-10 py-4 rounded-xl sm:rounded-full font-bold text-base sm:text-lg hover:bg-blue-50 transition-all shadow-lg"
+              className="inline-block w-full sm:w-auto bg-white text-blue-600 dark:text-blue-700 px-8 sm:px-10 py-4 rounded-xl sm:rounded-full font-bold text-base sm:text-lg hover:bg-blue-50 transition-all shadow-lg text-center"
             >
               {t("cta")}
             </a>
