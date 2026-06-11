@@ -3,9 +3,24 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
 const WhatsAppButton = () => {
   const infoT = useTranslations("ContactInfo");
   const navT = useTranslations("Navbar");
+  
+  const handleWhatsAppClick = () => {
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq("track", "Lead", { 
+        content_name: "WhatsApp Inquiry from Floating Button",
+        content_category: "Support"
+      });
+    }
+  };
   
   // Format phone number
   let waNumber = infoT("phone").replace(/\D/g, '');

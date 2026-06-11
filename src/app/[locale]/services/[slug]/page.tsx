@@ -124,6 +124,7 @@ const ServiceDetailPage = () => {
                       href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20ingin%20berkonsultasi."
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={handleWhatsAppClick}
                       className="inline-flex items-center justify-center gap-3 bg-blue-600 text-white w-full py-4 md:py-5 rounded-2xl font-black text-base md:text-lg hover:bg-blue-700 shadow-xl shadow-blue-500/20 transition-all active:scale-95 group"
                     >
                       <MessageCircle size={24} />
@@ -150,6 +151,22 @@ const ServiceDetailPage = () => {
                       </p>
                     </div>
                   </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {slug === "campaign-activation" && <CampaignDemo />}
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default ServiceDetailPage;
+</div>
                 </div>
               </motion.div>
             </div>

@@ -9,11 +9,26 @@ import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
 const Navbar = () => {
   const t = useTranslations("Navbar");
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const handleWhatsAppClick = () => {
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq("track", "Lead", { 
+        content_name: "WhatsApp Inquiry from Navbar",
+        content_category: "Navigation"
+      });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -165,7 +180,12 @@ const Navbar = () => {
                   <Link
                     href={link.href}
                     className="block px-4 py-4 text-base font-bold text-[#172B4D] dark:text-slate-200 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl transition-colors"
-                    onClick={() => !link.dropdown && setIsOpen(false)}
+                    onClick={() => {
+                      if (link.href.startsWith("https://wa.me")) {
+                        handleWhatsAppClick();
+                      }
+                      if (!link.dropdown) setIsOpen(false);
+                    }}
                   >
                     {link.name}
                   </Link>
@@ -211,3 +231,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+lt Navbar;

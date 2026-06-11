@@ -4,6 +4,12 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
 const Contact = () => {
   const t = useTranslations("Contact");
   const infoT = useTranslations("ContactInfo");
@@ -26,6 +32,14 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Track Meta Pixel Lead event
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq("track", "Lead", { 
+        content_name: "WhatsApp Inquiry from Contact Form",
+        content_category: "Contact Form"
+      });
+    }
+
     // Default values if empty
     const subjectText = formData.subject || t("form.subjects.general");
     const name = `${formData.firstName} ${formData.lastName}`.trim() || "Calon Klien";

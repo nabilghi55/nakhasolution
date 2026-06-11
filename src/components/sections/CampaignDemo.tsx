@@ -33,10 +33,38 @@ const InstagramIcon = ({ size = 24 }: { size?: number }) => (
   </svg>
 );
 
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
 const CampaignDemo = () => {
   const t = useTranslations("Services.campaignDemo");
   const [step, setStep] = useState(0); // 0: Start, 1: Fetching, 2: Filtered, 3: Drawing, 4: Winner
   const [fetchCount, setFetchCount] = useState(0);
+
+  // Function to track Meta Pixel events
+  const trackEvent = (eventName: string, params?: object) => {
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq("track", eventName, params);
+    }
+  };
+
+  const handleStartDemo = () => {
+    setStep(1);
+    trackEvent("ViewContent", { 
+      content_name: "Instagram Picker Demo",
+      content_category: "Demo Interaction" 
+    });
+  };
+
+  const handleWhatsAppClick = () => {
+    trackEvent("Lead", { 
+      content_name: "WhatsApp Inquiry from Demo",
+      content_category: "Campaign Activation"
+    });
+  };
 
   // Simulated fetching animation
   useEffect(() => {

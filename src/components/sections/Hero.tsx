@@ -51,6 +51,7 @@ const Hero = () => {
                 href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20ingin%20berkonsultasi."
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleWhatsAppClick}
                 className="inline-flex items-center justify-center bg-blue-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-black text-base sm:text-lg hover:bg-blue-700 shadow-xl shadow-blue-200 dark:shadow-none transition-all group active:scale-95 w-full sm:w-auto"
               >
                 {t("ctaPrimary")}
@@ -126,6 +127,16 @@ const Hero = () => {
             </motion.div>
 
             {/* Decorative circles */}
+            <div className="absolute -top-10 -left-10 w-40 h-40 bg-blue-600/5 rounded-full blur-3xl hidden sm:block"></div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
+          {/* Decorative circles */}
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-blue-600/5 rounded-full blur-3xl hidden sm:block"></div>
           </motion.div>
         </div>

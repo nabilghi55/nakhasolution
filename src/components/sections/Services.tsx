@@ -103,7 +103,20 @@ const Services = () => {
               href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20ingin%20berkonsultasi."
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleWhatsAppClick}
               className="inline-block w-full sm:w-auto bg-white text-blue-600 dark:text-blue-700 px-8 sm:px-10 py-4 rounded-xl sm:rounded-full font-bold text-base sm:text-lg hover:bg-blue-50 transition-all shadow-lg text-center"
+            >
+              {t("cta")}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
+ rounded-xl sm:rounded-full font-bold text-base sm:text-lg hover:bg-blue-50 transition-all shadow-lg text-center"
             >
               {t("cta")}
             </a>
