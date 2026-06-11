@@ -10,10 +10,25 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import CampaignDemo from "@/components/sections/CampaignDemo";
 
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
 const ServiceDetailPage = () => {
   const t = useTranslations("Services");
   const params = useParams();
   const slug = params.slug as string;
+
+  const handleWhatsAppClick = () => {
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq("track", "Lead", { 
+        content_name: `WhatsApp Inquiry for ${slug}`,
+        content_category: "Service Detail Page"
+      });
+    }
+  };
 
   // Find the service data based on the slug
   const servicesData = t.raw("items");
@@ -151,22 +166,6 @@ const ServiceDetailPage = () => {
                       </p>
                     </div>
                   </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {slug === "campaign-activation" && <CampaignDemo />}
-      </main>
-
-      <Footer />
-    </div>
-  );
-};
-
-export default ServiceDetailPage;
-</div>
                 </div>
               </motion.div>
             </div>

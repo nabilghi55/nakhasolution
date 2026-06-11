@@ -4,8 +4,23 @@ import { Camera, Share2, Package, Trophy, Monitor, AppWindow } from "lucide-reac
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
 const Services = () => {
   const t = useTranslations("Services");
+
+  const handleWhatsAppClick = () => {
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq("track", "Lead", { 
+        content_name: "WhatsApp Inquiry from Services CTA",
+        content_category: "Services"
+      });
+    }
+  };
 
   const services = [
     {
@@ -105,18 +120,6 @@ const Services = () => {
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
               className="inline-block w-full sm:w-auto bg-white text-blue-600 dark:text-blue-700 px-8 sm:px-10 py-4 rounded-xl sm:rounded-full font-bold text-base sm:text-lg hover:bg-blue-50 transition-all shadow-lg text-center"
-            >
-              {t("cta")}
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Services;
- rounded-xl sm:rounded-full font-bold text-base sm:text-lg hover:bg-blue-50 transition-all shadow-lg text-center"
             >
               {t("cta")}
             </a>

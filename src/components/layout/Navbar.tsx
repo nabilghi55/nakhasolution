@@ -231,4 +231,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-lt Navbar;

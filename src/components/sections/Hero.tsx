@@ -7,8 +7,23 @@ import { TypewriterEffect } from "@/components/ui/TypewriterEffect";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
 const Hero = () => {
   const t = useTranslations("Hero");
+
+  const handleWhatsAppClick = () => {
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq("track", "Lead", { 
+        content_name: "WhatsApp Inquiry from Hero",
+        content_category: "Hero Section"
+      });
+    }
+  };
 
   return (
     <section className="relative pt-28 pb-16 lg:pt-48 lg:pb-32 overflow-hidden bg-white dark:bg-[#020617] transition-colors duration-300">
@@ -127,16 +142,6 @@ const Hero = () => {
             </motion.div>
 
             {/* Decorative circles */}
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-blue-600/5 rounded-full blur-3xl hidden sm:block"></div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Hero;
-          {/* Decorative circles */}
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-blue-600/5 rounded-full blur-3xl hidden sm:block"></div>
           </motion.div>
         </div>
