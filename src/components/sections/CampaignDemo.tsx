@@ -64,6 +64,8 @@ const CampaignDemo = () => {
       content_name: "WhatsApp Inquiry from Demo",
       content_category: "Campaign Activation"
     });
+    // Track generic Contact event for Meta Ads
+    trackEvent("Contact");
   };
 
   // Simulated fetching animation
