@@ -150,6 +150,22 @@
         "reset": "Try Another Match"
       },
       "cta": "Request Demo for Your Brand"
+    },
+    "tebakSkorDemo": {
+      "title": "Interactive Score Guessing Demo",
+      "subtitle": "Simulate a score prediction campaign for sports tournaments. Manage participant predictions, calculate points automatically, and display the leaderboard in real-time.",
+      "steps": {
+        "inputTitle": "Predict Match Scores",
+        "inputDesc": "Enter your predicted scores for this week's matches. Get 3 points for an exact score match, or 1 point if you predict the correct winner.",
+        "submitPred": "Submit Score Predictions",
+        "regTitle": "Participant Information",
+        "regDesc": "Fill in your details below to register and participate in the tournament leaderboard.",
+        "igLabel": "Instagram Username",
+        "waLabel": "WhatsApp Number",
+        "back": "Back",
+        "send": "Register & Submit Predictions",
+        "successTitle": "Predictions Submitted Successfully!"
+      }
     }
   },
   "Portfolio": {

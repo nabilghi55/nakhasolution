@@ -8,7 +8,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import CampaignDemo from "@/components/sections/CampaignDemo";
 
 declare global {
   interface Window {
@@ -55,7 +54,7 @@ const ServiceDetailPage = () => {
       
       <main className="flex-grow pt-24 md:pt-32">
         {/* Hero Section with Image */}
-        <section className="relative min-h-[500px] md:h-[70vh] flex items-center overflow-hidden py-12 md:py-0">
+        <section className="relative min-h-[450px] md:min-h-[550px] flex flex-col justify-center overflow-hidden pt-16 md:pt-24 pb-12">
           <Image
             src={service.image}
             alt={service.title}
@@ -171,8 +170,6 @@ const ServiceDetailPage = () => {
             </div>
           </div>
         </section>
-
-        {slug === "campaign-activation" && <CampaignDemo />}
       </main>
 
       <Footer />

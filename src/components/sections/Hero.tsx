@@ -18,7 +18,7 @@ const Hero = () => {
 
   const handleWhatsAppClick = () => {
     if (typeof window !== "undefined" && window.fbq) {
-      window.fbq("track", "Lead", { 
+      window.fbq("track", "Lead", {
         content_name: "WhatsApp Inquiry from Hero",
         content_category: "Hero Section"
       });
@@ -34,13 +34,13 @@ const Hero = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="max-w-2xl mt-8 lg:mt-0 text-center lg:text-left"
+            className="lg:col-span-7 max-w-2xl mt-8 lg:mt-0 text-center lg:text-left"
           >
             <div className="inline-flex items-center space-x-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/50 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-xs sm:text-sm font-bold mb-6 sm:mb-8 shadow-sm">
               <span className="relative flex h-2 w-2">
@@ -50,7 +50,7 @@ const Hero = () => {
               <span>{t("badge")}</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white leading-[1.2] mb-4 sm:mb-6 tracking-tight flex flex-col items-center lg:items-start">
+            <h1 className="text-3xl sm:text-5xl lg:text-2xl xl:text-5xl font-black text-slate-900 dark:text-white leading-[1.2] mb-4 sm:mb-6 tracking-tight flex flex-col items-center lg:items-start">
               <span className="mb-2">{t("titlePrefix")}</span>
               <span className="text-blue-600 dark:text-blue-500 w-full block text-center lg:text-left text-balance">
                 <TypewriterEffect />
@@ -109,7 +109,7 @@ const Hero = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="relative mt-8 lg:mt-0"
+            className="lg:col-span-5 relative mt-8 lg:mt-0 w-full"
           >
             <div className="relative z-10 rounded-3xl sm:rounded-[40px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] border-4 sm:border-8 border-white dark:border-slate-900">
               <Image

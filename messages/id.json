@@ -150,6 +150,22 @@
         "reset": "Coba Lagi"
       },
       "cta": "Minta Demo"
+    },
+    "tebakSkorDemo": {
+      "title": "Demo Tebak Skor Interaktif",
+      "subtitle": "Simulasikan kampanye tebak skor untuk turnamen olahraga. Kelola prediksi peserta, hitung poin otomatis, dan tampilkan papan klasemen secara real-time.",
+      "steps": {
+        "inputTitle": "Prediksi Skor Pertandingan",
+        "inputDesc": "Masukkan tebakan skor Anda untuk pertandingan seru minggu ini. Dapatkan 3 poin jika skor tepat, atau 1 poin jika tebakan pemenang tepat.",
+        "submitPred": "Kirim Tebakan Skor",
+        "regTitle": "Data Diri Partisipan",
+        "regDesc": "Isi data diri Anda di bawah ini untuk didaftarkan ke sistem Leaderboard / Klasemen turnamen.",
+        "igLabel": "Username Instagram",
+        "waLabel": "Nomor WhatsApp",
+        "back": "Kembali",
+        "send": "Daftar & Submit Prediksi",
+        "successTitle": "Prediksi Skor Terkirim!"
+      }
     }
   },
   "Portfolio": {
