@@ -56,7 +56,59 @@
           "Penyimpanan Cloud & Lokal Aman",
           "Deteksi Gerak & Notifikasi Pintar",
           "Instalasi Profesional & Rapi"
-        ]
+        ],
+        "catalog": {
+          "title": "Paket CCTV Hikvision Tanpa Audio",
+          "subtitle": "Solusi keamanan lengkap dengan perangkat berkualitas tinggi dari Hikvision.",
+          "notes": [
+            "Harga paket TIDAK termasuk Monitor",
+            "Penambahan kabel CCTV Rp 8.000/meter",
+            "Garansi tidak termasuk kabel cctv, adaptor, power supply",
+            "Garansi tidak berlaku akibat bencana alam, konsleting, kelalaian pengguna dan terkena cairan."
+          ],
+          "packageTitle": "Pilihan Paket CCTV",
+          "packageSubtitle": "Pilih paket yang sesuai dengan kebutuhan pengawasan area Anda.",
+          "includedLabel": "Satu paket :",
+          "ctaText": "Pesan Paket Ini",
+          "packages": [
+            {
+              "name": "Paket 4 Kamera CCTV",
+              "price": "Rp 4.500.000",
+              "items": [
+                "4 unit kamera",
+                "1 unit DVR 4ch",
+                "1 unit HDD 500GB",
+                "1 unit PSU 10A",
+                "40 meter kabel cctv",
+                "4 set connector kabel"
+              ]
+            },
+            {
+              "name": "Paket 8 Kamera CCTV",
+              "price": "Rp 7.999.000",
+              "items": [
+                "8 unit kamera",
+                "1 unit DVR 8ch",
+                "1 unit HDD 1TB",
+                "1 unit PSU 10A",
+                "80 meter kabel cctv",
+                "8 set connector kabel"
+              ]
+            },
+            {
+              "name": "Paket 16 Kamera CCTV",
+              "price": "Rp 14.449.000",
+              "items": [
+                "16 unit kamera",
+                "1 unit DVR 16ch",
+                "1 unit HDD 2TB",
+                "1 unit PSU 20A",
+                "160 meter kabel cctv",
+                "16 set connector kabel"
+              ]
+            }
+          ]
+        }
       },
       "digital-marketing": {
         "title": "Digital Marketing Tools",

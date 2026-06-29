@@ -8,6 +8,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import CctvCatalog from "@/components/sections/CctvCatalog";
 
 declare global {
   interface Window {
@@ -86,6 +87,8 @@ const ServiceDetailPage = () => {
             </motion.div>
           </div>
         </section>
+
+        {service.catalog && <CctvCatalog catalog={service.catalog} />}
 
         {/* Content Section */}
         <section className="py-16 md:py-24 bg-white dark:bg-slate-950">

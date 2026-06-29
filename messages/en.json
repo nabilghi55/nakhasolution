@@ -56,7 +56,59 @@
           "Secure Cloud & Local Storage",
           "Motion Detection & Smart Alerts",
           "Professional & Neat Installation"
-        ]
+        ],
+        "catalog": {
+          "title": "Hikvision CCTV Package (No Audio)",
+          "subtitle": "Complete security solution with high-quality devices from Hikvision.",
+          "notes": [
+            "Package price does NOT include Monitor",
+            "Additional CCTV cable Rp 8,000/meter",
+            "Warranty does not cover CCTV cable, adapter, power supply",
+            "Warranty is void due to natural disasters, short circuit, user negligence, and liquid damage."
+          ],
+          "packageTitle": "CCTV Package Options",
+          "packageSubtitle": "Choose a package that suits your area surveillance needs.",
+          "includedLabel": "One package includes:",
+          "ctaText": "Order This Package",
+          "packages": [
+            {
+              "name": "4-Camera CCTV Package",
+              "price": "Rp 4,500,000",
+              "items": [
+                "4 camera units",
+                "1 DVR 4ch unit",
+                "1 HDD 500GB unit",
+                "1 PSU 10A unit",
+                "40 meters CCTV cable",
+                "4 sets of cable connectors"
+              ]
+            },
+            {
+              "name": "8-Camera CCTV Package",
+              "price": "Rp 7,999,000",
+              "items": [
+                "8 camera units",
+                "1 DVR 8ch unit",
+                "1 HDD 1TB unit",
+                "1 PSU 10A unit",
+                "80 meters CCTV cable",
+                "8 sets of cable connectors"
+              ]
+            },
+            {
+              "name": "16-Camera CCTV Package",
+              "price": "Rp 14,449,000",
+              "items": [
+                "16 camera units",
+                "1 DVR 16ch unit",
+                "1 HDD 2TB unit",
+                "1 PSU 20A unit",
+                "160 meters CCTV cable",
+                "16 sets of cable connectors"
+              ]
+            }
+          ]
+        }
       },
       "digital-marketing": {
         "title": "Digital Marketing Tools",
