@@ -34,9 +34,9 @@ const PortfolioDetailPage = () => {
 
   // Map local assets and external links to the dynamic keys
   const images: Record<string, string> = {
-    raya: "/assets/backgroundportofolio/RAYA 1.png",
-    putra: "/assets/backgroundportofolio/PWM3.png",
-    alfajr: "/assets/backgroundportofolio/ALFJR2.png",
+    raya: "/assets/backgroundportofolio/RAYA-1.webp",
+    putra: "/assets/backgroundportofolio/PWM3.webp",
+    alfajr: "/assets/backgroundportofolio/ALFJR2.webp",
   };
   const logos: Record<string, string> = {
     raya: "/assets/logoportofolio/logorayalawfirm.webp",
@@ -44,7 +44,7 @@ const PortfolioDetailPage = () => {
     alfajr: "/assets/logoportofolio/logoalfajr.png",
   };
   const links: Record<string, string> = {
-    raya: "http://rayalawfirm.vercel.app/",
+    raya: "https://rayalawfirm.vercel.app/",
     putra: "https://putrawijayamandiri.id/",
     alfajr: "https://alfajrumroh.co.id/",
   };

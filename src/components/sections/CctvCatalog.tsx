@@ -1,7 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { 
+import { useTranslations } from "next-intl";
+import { buildWhatsAppLink } from "@/lib/whatsapp";
+import {
   Camera, 
   Monitor, 
   HardDrive, 
@@ -35,6 +37,8 @@ interface CctvCatalogProps {
 }
 
 export default function CctvCatalog({ catalog }: CctvCatalogProps) {
+  const infoT = useTranslations("ContactInfo");
+
   if (!catalog) return null;
 
   // Helper to map package item text to a visual icon
@@ -121,10 +125,8 @@ export default function CctvCatalog({ catalog }: CctvCatalogProps) {
         >
           {catalog.packages.map((pkg, idx) => {
             // Build custom WhatsApp text for this package
-            const waMessage = encodeURIComponent(
-              `Halo Nakha Solution, saya tertarik untuk berkonsultasi / memesan paket CCTV:\n\n*${pkg.name}*\nHarga: *${pkg.price}*\n\nMohon info selengkapnya.`
-            );
-            const waUrl = `https://wa.me/6281166016611?text=${waMessage}`;
+            const waMessage = `Halo Nakha Solution, saya tertarik untuk berkonsultasi / memesan paket CCTV:\n\n*${pkg.name}*\nHarga: *${pkg.price}*\n\nMohon info selengkapnya.`;
+            const waUrl = buildWhatsAppLink(infoT("phone"), waMessage);
 
             // Highlight the middle package (8 cameras) as "Most Popular" or "Best Value"
             const isFeatured = idx === 1;

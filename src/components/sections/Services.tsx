@@ -3,15 +3,10 @@
 import { Camera, Share2, Package, Trophy, Monitor, AppWindow } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-
-declare global {
-  interface Window {
-    fbq: any;
-  }
-}
-
+import { buildWhatsAppLink } from "@/lib/whatsapp";
 const Services = () => {
   const t = useTranslations("Services");
+  const infoT = useTranslations("ContactInfo");
 
   const handleWhatsAppClick = () => {
     if (typeof window !== "undefined" && window.fbq) {
@@ -115,7 +110,7 @@ const Services = () => {
           </div>
           <div className="relative z-10 w-full lg:w-auto">
             <a
-              href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20ingin%20berkonsultasi."
+              href={buildWhatsAppLink(infoT("phone"), "Halo Nakha Solution, saya ingin berkonsultasi.")}
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}

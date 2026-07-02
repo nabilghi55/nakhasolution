@@ -6,15 +6,10 @@ import { ArrowRight } from "lucide-react";
 import { TypewriterEffect } from "@/components/ui/TypewriterEffect";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-
-declare global {
-  interface Window {
-    fbq: any;
-  }
-}
-
+import { buildWhatsAppLink } from "@/lib/whatsapp";
 const Hero = () => {
   const t = useTranslations("Hero");
+  const infoT = useTranslations("ContactInfo");
 
   const handleWhatsAppClick = () => {
     if (typeof window !== "undefined" && window.fbq) {
@@ -50,7 +45,7 @@ const Hero = () => {
               <span>{t("badge")}</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-2xl xl:text-5xl font-black text-slate-900 dark:text-white leading-[1.2] mb-4 sm:mb-6 tracking-tight flex flex-col items-center lg:items-start">
+            <h1 className="text-3xl sm:text-5xl xl:text-5xl font-black text-slate-900 dark:text-white leading-[1.2] mb-4 sm:mb-6 tracking-tight flex flex-col items-center lg:items-start">
               <span className="mb-2">{t("titlePrefix")}</span>
               <span className="text-blue-600 dark:text-blue-500 w-full block text-center lg:text-left text-balance">
                 <TypewriterEffect />
@@ -63,7 +58,7 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
-                href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20ingin%20berkonsultasi."
+                href={buildWhatsAppLink(infoT("phone"), "Halo Nakha Solution, saya ingin berkonsultasi.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleWhatsAppClick}

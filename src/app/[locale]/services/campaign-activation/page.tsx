@@ -2,17 +2,13 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import { 
-  ArrowLeft, 
-  CheckCircle2, 
-  MessageCircle, 
-  ArrowRight, 
-  Trophy, 
-  Sparkles,
-  Users,
+import {
+  ArrowLeft,
+  CheckCircle2,
+  MessageCircle,
+  ArrowRight,
+  Trophy,
   Vote,
-  Target,
-  BarChart3,
   Award,
   Zap,
   TrendingUp,
@@ -22,13 +18,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
-declare global {
-  interface Window {
-    fbq: any;
-  }
-}
-
+import { buildWhatsAppLink } from "@/lib/whatsapp";
 const InstagramIcon = ({ size = 24 }: { size?: number }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -49,6 +39,7 @@ const InstagramIcon = ({ size = 24 }: { size?: number }) => (
 
 const CampaignActivationLanding = () => {
   const t = useTranslations("Services");
+  const infoT = useTranslations("ContactInfo");
   
   const service = {
     title: t("items.campaign-activation.title"),
@@ -191,7 +182,7 @@ const CampaignActivationLanding = () => {
                     <ArrowRight size={16} />
                   </Link>
                   <a
-                    href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20tertarik%20dengan%20Instagram%20Picker%20Platform."
+                    href={buildWhatsAppLink(infoT("phone"), "Halo Nakha Solution, saya tertarik dengan Instagram Picker Platform.")}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => handleWhatsAppClick("Instagram Picker")}
@@ -251,7 +242,7 @@ const CampaignActivationLanding = () => {
                     <ArrowRight size={16} />
                   </Link>
                   <a
-                    href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20tertarik%20dengan%20Platform%20Tebak%20Skor."
+                    href={buildWhatsAppLink(infoT("phone"), "Halo Nakha Solution, saya tertarik dengan Platform Tebak Skor.")}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => handleWhatsAppClick("Tebak Skor")}
@@ -443,7 +434,7 @@ const CampaignActivationLanding = () => {
                     Kami siap membantu menyesuaikan platform kuis tebak skor atau instagram picker ini dengan logo, warna, domain, serta alur bisnis yang Anda butuhkan.
                   </p>
                   <a
-                    href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20ingin%20berkonsultasi%20mengenai%20Campaign%20Activation%20Platform."
+                    href={buildWhatsAppLink(infoT("phone"), "Halo Nakha Solution, saya ingin berkonsultasi mengenai Campaign Activation Platform.")}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => handleWhatsAppClick("Consultation")}

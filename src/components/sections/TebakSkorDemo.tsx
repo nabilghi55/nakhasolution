@@ -2,30 +2,20 @@
 
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
-import { 
-  Trophy, 
-  CheckCircle2, 
-  Users, 
+import { useState } from "react";
+import { buildWhatsAppLink } from "@/lib/whatsapp";
+import {
+  Trophy,
+  CheckCircle2,
   ChevronRight,
-  Loader2,
   RefreshCw,
   Award,
   Sparkles,
   Calendar,
   Settings,
-  Lock,
-  ArrowRight,
   TrendingUp,
   Info
 } from "lucide-react";
-
-declare global {
-  interface Window {
-    fbq: any;
-  }
-}
-
 interface Match {
   id: number;
   homeTeam: string;
@@ -50,6 +40,7 @@ interface LeaderboardUser {
 
 const TebakSkorDemo = () => {
   const t = useTranslations("Services.tebakSkorDemo");
+  const infoT = useTranslations("ContactInfo");
   const [step, setStep] = useState(0); // 0: Enter Predictions, 1: Registration, 2: Simulator & Results, 3: Calculating, 4: Standings
   const [predictions, setPredictions] = useState<Record<number, Prediction>>({
     1: { homeScore: "", awayScore: "" },
@@ -803,7 +794,7 @@ const TebakSkorDemo = () => {
                         <span>Reset Simulasi</span>
                       </button>
                       <a 
-                        href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20tertarik%20dengan%20Platform%20Tebak%20Skor."
+                        href={buildWhatsAppLink(infoT("phone"), "Halo Nakha Solution, saya tertarik dengan Platform Tebak Skor.")}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={handleWhatsAppClick}

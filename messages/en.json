@@ -298,5 +298,82 @@
     "email": "nakhasolution@gmail.com",
     "phone": "081166016611",
     "address": "Padang, West Sumatra, Indonesia"
+  },
+  "Legal": {
+    "backToHome": "Back to Home",
+    "lastUpdated": "Last updated",
+    "updatedDate": "July 2, 2026",
+    "privacy": {
+      "title": "Privacy Policy",
+      "intro": "Nakha Solution (\"we\") values the privacy of our visitors and clients. This policy explains what data we collect through this website, how it is used, and how you can contact us about your data.",
+      "sections": [
+        {
+          "title": "1. Data We Collect",
+          "body": "We may collect your name, email address, WhatsApp number, Instagram username, and message content that you voluntarily submit through our contact form, service pages, or campaign demo features on this website. We also collect non-personal technical data such as device type and pages visited through third-party analytics tools."
+        },
+        {
+          "title": "2. How We Use Your Data",
+          "body": "The data you provide is used to respond to your inquiries, follow up on consultation requests via WhatsApp or email, and improve our services. We do not sell or rent your personal data to any third party."
+        },
+        {
+          "title": "3. Meta Pixel, Google Analytics & Cookies",
+          "body": "This website uses Meta Pixel (Facebook/Instagram) and Google Analytics to measure the effectiveness of our advertising campaigns and understand how visitors interact with our site. These tools may store cookies on your device and send interaction data (such as page visits or WhatsApp button clicks) to Meta Platforms, Inc. and Google LLC in accordance with their respective privacy policies. You may disable cookies through your browser settings."
+        },
+        {
+          "title": "4. Sharing Data with Third Parties",
+          "body": "When you contact us via WhatsApp, that conversation is processed through the WhatsApp/Meta platform in accordance with their privacy policy. We do not share your personal data with other third parties for marketing purposes without your consent."
+        },
+        {
+          "title": "5. Data Security",
+          "body": "We take reasonable measures to protect the data you provide from unauthorized access, alteration, or disclosure. However, no method of transmission over the internet is completely secure."
+        },
+        {
+          "title": "6. Your Rights",
+          "body": "You have the right to request access to, correction of, or deletion of your personal data held by us, in accordance with Indonesia's Personal Data Protection Law (UU PDP). To make such a request, please contact us via the email below."
+        },
+        {
+          "title": "7. Changes to This Policy",
+          "body": "We may update this Privacy Policy from time to time. Any changes will be posted on this page along with the latest update date."
+        },
+        {
+          "title": "8. Contact Us",
+          "body": "If you have any questions about this Privacy Policy, please contact us at nakhasolution@gmail.com."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "intro": "By accessing and using the Nakha Solution website, you agree to be bound by the following terms and conditions.",
+      "sections": [
+        {
+          "title": "1. Our Services",
+          "body": "Nakha Solution provides CCTV, Digital Marketing Tools, Device Bundling, Campaign Activation Platform, Web Development, and Business Application services as described on our service pages. Package details, pricing, and specifications are subject to change without prior notice."
+        },
+        {
+          "title": "2. Consultation & Ordering",
+          "body": "Submitting a contact form or WhatsApp message through this website constitutes an initial consultation request only and does not form a legally binding contract. Any cooperation agreement, final pricing, and scope of work will be set out separately between Nakha Solution and the client."
+        },
+        {
+          "title": "3. Intellectual Property",
+          "body": "All content on this website, including text, logos, images, and portfolio case studies, is owned by Nakha Solution or used with permission from the relevant client, and is protected by applicable intellectual property laws."
+        },
+        {
+          "title": "4. Limitation of Liability",
+          "body": "Nakha Solution strives to present accurate information on this website but does not guarantee that all information is always free of error. We are not liable for any loss arising from the use of information on this website outside the context of an officially agreed service."
+        },
+        {
+          "title": "5. Third-Party Links",
+          "body": "This website may display links to client or partner websites (e.g. portfolio examples). We are not responsible for the content or privacy practices of those third-party websites."
+        },
+        {
+          "title": "6. Governing Law",
+          "body": "These Terms of Service are governed by the laws of the Republic of Indonesia. Any dispute will be resolved amicably, or if necessary, through the applicable legal process in Indonesia."
+        },
+        {
+          "title": "7. Contact Us",
+          "body": "For questions about these Terms of Service, please contact us at nakhasolution@gmail.com."
+        }
+      ]
+    }
   }
 }

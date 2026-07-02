@@ -2,7 +2,6 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://nakhasolution.com'; // Change to your actual domain
-  const locales = ['en', 'id'];
   const services = [
     'cctv',
     'digital-marketing',
@@ -17,7 +16,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'alfajr-umroh',
   ];
 
-  const routes = ['', '/#about', '/#services', '/#portfolio', '/#contact'];
+  const routes = [
+    '',
+    '/#about',
+    '/#services',
+    '/#portfolio',
+    '/#contact',
+    '/privacy-policy',
+    '/terms-of-service',
+  ];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 

@@ -36,7 +36,7 @@
     "visionTitle": "Visi Kami",
     "visionDesc": "Menjadi Perusahaan Digital Transformation Partner Terbesar di Sumatra dalam mendukung pencapaian bisnis pelanggan yang lebih baik. Kami bercita-cita untuk menjadi standar keunggulan dalam industri teknologi informasi, dikenal karena integritas kami, kualitas layanan kami, dan kontribusi positif kami terhadap perkembangan ekonomi digital di wilayah Sumatra dan sekitarnya.",
     "cultureTitle": "Budaya Kami",
-    "cultureDesc": "Tim ahli yang beragam dan penuh semangat yang didedikasikan untuk pembelajaran berkelanjutan and kesuksesan pelanggan. Kami menjunjung tinggi nilai-nilai kolaborasi, transparansi, dan tanggung jawab profesional. Di Nakha Solution, kami percaya bahwa pertumbuhan individu anggota tim kami adalah kunci untuk memberikan nilai tambah yang luar biasa bagi setiap klien yang kami layani.",
+    "cultureDesc": "Tim ahli yang beragam dan penuh semangat yang didedikasikan untuk pembelajaran berkelanjutan dan kesuksesan pelanggan. Kami menjunjung tinggi nilai-nilai kolaborasi, transparansi, dan tanggung jawab profesional. Di Nakha Solution, kami percaya bahwa pertumbuhan individu anggota tim kami adalah kunci untuk memberikan nilai tambah yang luar biasa bagi setiap klien yang kami layani.",
     "yearsExcellence": "Klien Tertangani"
   },
   "Services": {
@@ -298,5 +298,82 @@
     "email": "nakhasolution@gmail.com",
     "phone": "081166016611",
     "address": "Padang, Sumatera Barat, Indonesia"
+  },
+  "Legal": {
+    "backToHome": "Kembali ke Beranda",
+    "lastUpdated": "Terakhir diperbarui",
+    "updatedDate": "2 Juli 2026",
+    "privacy": {
+      "title": "Kebijakan Privasi",
+      "intro": "Nakha Solution (\"kami\") menghargai privasi pengunjung dan klien kami. Kebijakan ini menjelaskan data apa saja yang kami kumpulkan melalui website ini, bagaimana data tersebut digunakan, dan bagaimana Anda dapat menghubungi kami terkait data Anda.",
+      "sections": [
+        {
+          "title": "1. Data yang Kami Kumpulkan",
+          "body": "Kami dapat mengumpulkan nama, alamat email, nomor WhatsApp, username Instagram, dan isi pesan yang Anda kirimkan secara sukarela melalui formulir kontak, halaman layanan, atau fitur demo kampanye di website ini. Kami juga mengumpulkan data teknis non-pribadi seperti jenis perangkat dan halaman yang dikunjungi melalui alat analitik pihak ketiga."
+        },
+        {
+          "title": "2. Cara Kami Menggunakan Data",
+          "body": "Data yang Anda berikan digunakan untuk merespons pertanyaan Anda, menindaklanjuti permintaan konsultasi melalui WhatsApp atau email, dan meningkatkan layanan kami. Kami tidak menjual atau menyewakan data pribadi Anda kepada pihak ketiga mana pun."
+        },
+        {
+          "title": "3. Meta Pixel, Google Analytics & Cookies",
+          "body": "Website ini menggunakan Meta Pixel (Facebook/Instagram) dan Google Analytics untuk mengukur efektivitas kampanye iklan dan memahami bagaimana pengunjung berinteraksi dengan website kami. Alat ini dapat menyimpan cookie di perangkat Anda dan mengirimkan data interaksi (misalnya kunjungan halaman atau klik tombol WhatsApp) ke Meta Platforms, Inc. dan Google LLC sesuai dengan kebijakan privasi masing-masing penyedia. Anda dapat menonaktifkan cookie melalui pengaturan browser Anda."
+        },
+        {
+          "title": "4. Berbagi Data dengan Pihak Ketiga",
+          "body": "Ketika Anda menghubungi kami melalui WhatsApp, percakapan tersebut diproses melalui platform WhatsApp/Meta sesuai dengan kebijakan privasi mereka. Kami tidak membagikan data pribadi Anda kepada pihak ketiga lain untuk tujuan pemasaran tanpa persetujuan Anda."
+        },
+        {
+          "title": "5. Keamanan Data",
+          "body": "Kami menerapkan langkah-langkah wajar untuk melindungi data yang Anda berikan dari akses, perubahan, atau pengungkapan yang tidak sah. Namun, tidak ada metode transmisi data melalui internet yang sepenuhnya aman."
+        },
+        {
+          "title": "6. Hak Anda",
+          "body": "Anda berhak meminta akses, koreksi, atau penghapusan data pribadi Anda yang kami simpan, sesuai dengan Undang-Undang Perlindungan Data Pribadi (UU PDP) yang berlaku di Indonesia. Untuk mengajukan permintaan ini, silakan hubungi kami melalui email di bawah."
+        },
+        {
+          "title": "7. Perubahan Kebijakan",
+          "body": "Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Perubahan akan diumumkan melalui halaman ini beserta tanggal pembaruan terbaru."
+        },
+        {
+          "title": "8. Hubungi Kami",
+          "body": "Jika Anda memiliki pertanyaan mengenai Kebijakan Privasi ini, silakan hubungi kami di nakhasolution@gmail.com."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Syarat & Ketentuan Layanan",
+      "intro": "Dengan mengakses dan menggunakan website Nakha Solution, Anda dianggap menyetujui syarat dan ketentuan berikut.",
+      "sections": [
+        {
+          "title": "1. Layanan Kami",
+          "body": "Nakha Solution menyediakan layanan CCTV, Digital Marketing Tools, Device Bundling, Campaign Activation Platform, Web Development, dan Business Application sebagaimana dijelaskan pada halaman layanan kami. Detail, harga, dan spesifikasi paket dapat berubah sewaktu-waktu tanpa pemberitahuan sebelumnya."
+        },
+        {
+          "title": "2. Konsultasi & Pemesanan",
+          "body": "Pengiriman formulir kontak atau pesan WhatsApp melalui website ini merupakan permintaan konsultasi awal dan bukan merupakan kontrak yang mengikat secara hukum. Kesepakatan kerja sama, harga final, dan lingkup pekerjaan akan dituangkan secara terpisah antara Nakha Solution dan klien."
+        },
+        {
+          "title": "3. Kekayaan Intelektual",
+          "body": "Seluruh konten pada website ini, termasuk teks, logo, gambar, dan studi kasus portofolio, adalah milik Nakha Solution atau digunakan dengan izin dari klien terkait, dan dilindungi oleh hukum kekayaan intelektual yang berlaku."
+        },
+        {
+          "title": "4. Batasan Tanggung Jawab",
+          "body": "Nakha Solution berupaya menyajikan informasi yang akurat di website ini, namun tidak menjamin bahwa seluruh informasi selalu bebas dari kesalahan. Kami tidak bertanggung jawab atas kerugian yang timbul dari penggunaan informasi pada website ini di luar konteks layanan resmi yang telah disepakati."
+        },
+        {
+          "title": "5. Tautan Pihak Ketiga",
+          "body": "Website ini dapat menampilkan tautan menuju website klien atau mitra (misalnya contoh portofolio). Kami tidak bertanggung jawab atas konten atau kebijakan privasi dari website pihak ketiga tersebut."
+        },
+        {
+          "title": "6. Hukum yang Berlaku",
+          "body": "Syarat dan Ketentuan ini diatur oleh hukum Republik Indonesia. Setiap perselisihan akan diselesaikan secara musyawarah, atau apabila diperlukan, melalui jalur hukum yang berlaku di Indonesia."
+        },
+        {
+          "title": "7. Hubungi Kami",
+          "body": "Untuk pertanyaan mengenai Syarat & Ketentuan ini, silakan hubungi kami di nakhasolution@gmail.com."
+        }
+      ]
+    }
   }
 }

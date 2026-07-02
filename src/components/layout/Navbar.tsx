@@ -8,15 +8,11 @@ import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
-
-declare global {
-  interface Window {
-    fbq: any;
-  }
-}
-
+import { buildWhatsAppLink } from "@/lib/whatsapp";
 const Navbar = () => {
   const t = useTranslations("Navbar");
+  const infoT = useTranslations("ContactInfo");
+  const whatsappUrl = buildWhatsAppLink(infoT("phone"), "Halo Nakha Solution, saya ingin berkonsultasi.");
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -60,7 +56,7 @@ const Navbar = () => {
     },
     { name: t("portfolio"), href: "/#portfolio" },
     { name: t("about"), href: "/#about" },
-    { name: t("contact"), href: "https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20ingin%20berkonsultasi." },
+    { name: t("contact"), href: whatsappUrl },
   ];
 
   return (
@@ -149,7 +145,7 @@ const Navbar = () => {
               <LanguageSwitcher />
               <ThemeToggle />
               <a
-                href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20ingin%20berkonsultasi."
+                href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#0052CC] text-white px-6 py-2 rounded-xl text-[14px] font-bold hover:bg-[#0747A6] hover:shadow-lg hover:shadow-blue-200 transition-all active:scale-95 whitespace-nowrap"
@@ -213,7 +209,7 @@ const Navbar = () => {
               </div>
               <div className="pt-2 px-2 pb-4">
                 <a
-                  href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20ingin%20berkonsultasi."
+                  href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center bg-[#0052CC] text-white py-4 rounded-xl font-bold shadow-lg"

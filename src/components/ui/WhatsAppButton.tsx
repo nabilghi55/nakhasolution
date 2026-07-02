@@ -2,13 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-
-declare global {
-  interface Window {
-    fbq: any;
-  }
-}
-
+import { buildWhatsAppLink } from "@/lib/whatsapp";
 const WhatsAppButton = () => {
   const infoT = useTranslations("ContactInfo");
   const navT = useTranslations("Navbar");
@@ -22,19 +16,14 @@ const WhatsAppButton = () => {
     }
   };
   
-  // Format phone number
-  let waNumber = infoT("phone").replace(/\D/g, '');
-  if (waNumber.startsWith('0')) {
-    waNumber = '62' + waNumber.slice(1);
-  }
-
-  const whatsappUrl = `https://wa.me/${waNumber}?text=Halo%20Nakha%20Solution,%20saya%20ingin%20berkonsultasi.`;
+  const whatsappUrl = buildWhatsAppLink(infoT("phone"), "Halo Nakha Solution, saya ingin berkonsultasi.");
 
   return (
     <motion.a
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleWhatsAppClick}
       initial={{ y: 50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 1, type: "spring", stiffness: 260, damping: 20 }}

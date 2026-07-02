@@ -3,13 +3,7 @@
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-
-declare global {
-  interface Window {
-    fbq: any;
-  }
-}
-
+import { buildWhatsAppLink } from "@/lib/whatsapp";
 const Contact = () => {
   const t = useTranslations("Contact");
   const infoT = useTranslations("ContactInfo");
@@ -47,16 +41,9 @@ const Contact = () => {
     // Construct WhatsApp Message
     // "Halo Nakha Solution saya ingin bla bla"
     const textMessage = `Halo Nakha Solution,\n\nSaya ${name}.\n\nTerkait: ${subjectText}\n\n${formData.message}`;
-    
-    // Phone number from dictionary (clean it to remove non-numeric chars except +)
-    // Assuming the phone number is something like "081166016611", we convert to "6281166016611"
-    let waNumber = infoT("phone").replace(/\D/g, '');
-    if (waNumber.startsWith('0')) {
-      waNumber = '62' + waNumber.slice(1);
-    }
-    
-    const whatsappUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(textMessage)}`;
-    
+
+    const whatsappUrl = buildWhatsAppLink(infoT("phone"), textMessage);
+
     // Open in new tab
     window.open(whatsappUrl, '_blank');
   };

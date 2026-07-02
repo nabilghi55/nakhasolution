@@ -3,16 +3,16 @@
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { 
-  Search, 
-  Filter, 
-  RefreshCw, 
-  Trophy, 
-  CheckCircle2, 
-  Users, 
+import { buildWhatsAppLink } from "@/lib/whatsapp";
+import {
+  Search,
+  Filter,
+  RefreshCw,
+  Trophy,
+  CheckCircle2,
+  Users,
   ChevronRight,
-  Loader2,
-  Camera
+  Loader2
 } from "lucide-react";
 
 const InstagramIcon = ({ size = 24 }: { size?: number }) => (
@@ -32,15 +32,10 @@ const InstagramIcon = ({ size = 24 }: { size?: number }) => (
     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
   </svg>
 );
-
-declare global {
-  interface Window {
-    fbq: any;
-  }
-}
-
 const CampaignDemo = () => {
   const t = useTranslations("Services.campaignDemo");
+  const infoT = useTranslations("ContactInfo");
+  const whatsappUrl = buildWhatsAppLink(infoT("phone"), "Halo Nakha Solution, saya tertarik dengan Instagram Picker Platform.");
   const [step, setStep] = useState(0); // 0: Start, 1: Fetching, 2: Filtered, 3: Drawing, 4: Winner
   const [fetchCount, setFetchCount] = useState(0);
 
@@ -164,7 +159,7 @@ const CampaignDemo = () => {
                       <p className="text-sm md:text-base text-slate-500 dark:text-slate-400">Ready to fetch data from your latest score guessing post.</p>
                     </div>
                     <button
-                      onClick={() => setStep(1)}
+                      onClick={handleStartDemo}
                       className="group flex items-center justify-center gap-3 w-full md:w-auto px-8 md:px-10 py-4 md:py-5 bg-pink-600 hover:bg-pink-700 text-white rounded-2xl font-black text-base md:text-lg shadow-xl shadow-pink-500/20 transition-all mx-auto"
                     >
                       <span className="whitespace-nowrap">{t("steps.fetch")}</span>
@@ -304,10 +299,11 @@ const CampaignDemo = () => {
                         <RefreshCw size={18} className="shrink-0" />
                         <span className="whitespace-nowrap">{t("steps.reset")}</span>
                       </button>
-                      <a 
-                        href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20tertarik%20dengan%20Instagram%20Picker%20Platform."
+                      <a
+                        href={whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={handleWhatsAppClick}
                         className="flex items-center justify-center gap-2 w-full sm:w-auto px-6 md:px-8 py-3.5 md:py-4 bg-blue-600 text-white rounded-2xl font-black shadow-lg shadow-blue-500/20 hover:scale-105 transition-all"
                       >
                         <CheckCircle2 size={18} className="shrink-0" />
@@ -361,9 +357,10 @@ const CampaignDemo = () => {
             </div>
           </div>
           <a
-            href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20tertarik%20dengan%20Instagram%20Picker%20Platform."
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleWhatsAppClick}
             className="w-full md:w-auto px-8 md:px-10 py-4 md:py-5 bg-white text-pink-600 rounded-2xl font-black text-base md:text-lg hover:scale-105 transition-transform shadow-xl text-center"
           >
             <span className="whitespace-nowrap">{t("cta")}</span>

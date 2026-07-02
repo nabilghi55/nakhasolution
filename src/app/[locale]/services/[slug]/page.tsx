@@ -9,15 +9,10 @@ import Footer from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import CctvCatalog from "@/components/sections/CctvCatalog";
-
-declare global {
-  interface Window {
-    fbq: any;
-  }
-}
-
+import { buildWhatsAppLink } from "@/lib/whatsapp";
 const ServiceDetailPage = () => {
   const t = useTranslations("Services");
+  const infoT = useTranslations("ContactInfo");
   const params = useParams();
   const slug = params.slug as string;
 
@@ -138,7 +133,7 @@ const ServiceDetailPage = () => {
                       {t("consultDesc")}
                     </p>
                     <a
-                      href="https://wa.me/6281166016611?text=Halo%20Nakha%20Solution,%20saya%20ingin%20berkonsultasi."
+                      href={buildWhatsAppLink(infoT("phone"), "Halo Nakha Solution, saya ingin berkonsultasi.")}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={handleWhatsAppClick}
