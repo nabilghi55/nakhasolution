@@ -12,7 +12,8 @@ import {
   MessageCircle, 
   ShieldCheck, 
   Layers, 
-  Wrench 
+  Wrench,
+  CheckCircle2
 } from "lucide-react";
 
 interface PackageItem {
@@ -41,55 +42,38 @@ export default function CctvCatalog({ catalog }: CctvCatalogProps) {
 
   if (!catalog) return null;
 
-  // Helper to map package item text to a visual icon
   const getItemIcon = (text: string) => {
     const lower = text.toLowerCase();
     if (lower.includes("kamera") || lower.includes("camera")) {
-      return <Camera className="text-blue-500 shrink-0" size={18} />;
+      return <Camera className="text-blue-600 dark:text-blue-400 shrink-0" size={18} />;
     }
     if (lower.includes("dvr")) {
-      return <Monitor className="text-blue-500 shrink-0" size={18} />;
+      return <Monitor className="text-blue-600 dark:text-blue-400 shrink-0" size={18} />;
     }
     if (lower.includes("hdd") || lower.includes("harddisk") || lower.includes("hard disk")) {
-      return <HardDrive className="text-blue-500 shrink-0" size={18} />;
+      return <HardDrive className="text-blue-600 dark:text-blue-400 shrink-0" size={18} />;
     }
     if (lower.includes("psu") || lower.includes("power supply") || lower.includes("adaptor")) {
-      return <Zap className="text-blue-500 shrink-0" size={18} />;
+      return <Zap className="text-blue-600 dark:text-blue-400 shrink-0" size={18} />;
     }
     if (lower.includes("kabel") || lower.includes("cable")) {
-      return <Layers className="text-blue-500 shrink-0" size={18} />;
+      return <Layers className="text-blue-600 dark:text-blue-400 shrink-0" size={18} />;
     }
-    return <Wrench className="text-blue-500 shrink-0" size={18} />;
+    return <Wrench className="text-blue-600 dark:text-blue-400 shrink-0" size={18} />;
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  } as const;
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 15 } },
-  } as const;
-
   return (
-    <section className="py-20 md:py-28 bg-slate-50 dark:bg-slate-900/40 border-t border-slate-100 dark:border-slate-900 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="py-20 md:py-28 bg-slate-50/70 dark:bg-slate-900/40 border-t border-slate-200/80 dark:border-slate-900 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
           >
-            <span className="px-4 py-1.5 rounded-full text-xs font-black tracking-wider uppercase bg-blue-100 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400">
+            <span className="px-4 py-1.5 rounded-full text-xs font-black tracking-wider uppercase bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
               PRICING & BUNDLES
             </span>
           </motion.div>
@@ -98,8 +82,8 @@ export default function CctvCatalog({ catalog }: CctvCatalogProps) {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mt-6 mb-6 leading-tight"
+            transition={{ delay: 0.1 }}
+            className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mt-6 mb-4 tracking-tight"
           >
             {catalog.packageTitle}
           </motion.h2>
@@ -108,66 +92,58 @@ export default function CctvCatalog({ catalog }: CctvCatalogProps) {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-slate-600 dark:text-slate-400"
+            transition={{ delay: 0.2 }}
+            className="text-base md:text-lg text-slate-600 dark:text-slate-400"
           >
             {catalog.packageSubtitle}
           </motion.p>
         </div>
 
         {/* Packages Grid */}
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 mb-16 md:mb-24"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-8 mb-16 md:mb-24 items-stretch">
           {catalog.packages.map((pkg, idx) => {
-            // Build custom WhatsApp text for this package
             const waMessage = `Halo Nakha Solution, saya tertarik untuk berkonsultasi / memesan paket CCTV:\n\n*${pkg.name}*\nHarga: *${pkg.price}*\n\nMohon info selengkapnya.`;
             const waUrl = buildWhatsAppLink(infoT("phone"), waMessage);
-
-            // Highlight the middle package (8 cameras) as "Most Popular" or "Best Value"
             const isFeatured = idx === 1;
 
             return (
               <motion.div
                 key={idx}
-                variants={cardVariants}
-                className={`relative flex flex-col justify-between rounded-[32px] p-8 lg:p-10 transition-all duration-300 ${
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.15 }}
+                className={`relative flex flex-col justify-between rounded-[32px] p-8 lg:p-9 transition-all duration-300 ${
                   isFeatured 
-                    ? "bg-slate-900 dark:bg-blue-950/20 text-white border-2 border-blue-500 shadow-xl shadow-blue-500/10 scale-105 md:-translate-y-2 z-10" 
-                    : "bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 text-slate-950 dark:text-white shadow-sm hover:shadow-lg hover:-translate-y-1"
+                    ? "bg-slate-900 text-white dark:bg-slate-900 border-2 border-blue-500 shadow-2xl shadow-blue-500/20 md:-translate-y-2 z-10" 
+                    : "glass-card text-slate-950 dark:text-white border border-slate-200/80 dark:border-slate-800"
                 }`}
               >
                 {isFeatured && (
-                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-black bg-blue-500 text-white uppercase tracking-wider shadow-md">
-                    Best Value
-                  </span>
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full text-xs font-black bg-gradient-to-r from-blue-600 to-indigo-600 text-white uppercase tracking-wider shadow-lg">
+                    Rekomendasi Terbaik
+                  </div>
                 )}
 
                 <div>
-                  <h3 className="text-xl md:text-2xl font-black mb-3">{pkg.name}</h3>
-                  <div className="flex items-baseline gap-1 my-6">
+                  <h3 className="text-xl md:text-2xl font-black mb-2 tracking-tight">{pkg.name}</h3>
+                  <div className="my-5">
                     <span className="text-3xl lg:text-4xl font-black tracking-tight text-blue-600 dark:text-blue-400">
                       {pkg.price}
                     </span>
                   </div>
 
-                  <div className={`h-px w-full my-6 ${isFeatured ? "bg-slate-800" : "bg-slate-100 dark:bg-slate-900"}`} />
+                  <div className={`h-px w-full my-6 ${isFeatured ? "bg-slate-800" : "bg-slate-100 dark:bg-slate-800/80"}`} />
 
                   <p className={`text-xs font-bold uppercase tracking-wider mb-4 ${isFeatured ? "text-slate-400" : "text-slate-500"}`}>
                     {catalog.includedLabel}
                   </p>
 
-                  <ul className="space-y-4 mb-8">
+                  <ul className="space-y-3.5 mb-8">
                     {pkg.items.map((item, itemIdx) => (
-                      <li key={itemIdx} className="flex items-start gap-3">
-                        <div className="mt-0.5 shrink-0">
-                          {getItemIcon(item)}
-                        </div>
-                        <span className={`text-sm font-medium ${isFeatured ? "text-slate-300" : "text-slate-600 dark:text-slate-300"}`}>
+                      <li key={itemIdx} className="flex items-center gap-3">
+                        {getItemIcon(item)}
+                        <span className={`text-sm font-semibold ${isFeatured ? "text-slate-300" : "text-slate-700 dark:text-slate-300"}`}>
                           {item}
                         </span>
                       </li>
@@ -181,68 +157,58 @@ export default function CctvCatalog({ catalog }: CctvCatalogProps) {
                   rel="noopener noreferrer"
                   className={`w-full py-4 rounded-2xl font-black text-center text-sm transition-all duration-300 flex items-center justify-center gap-2 ${
                     isFeatured
-                      ? "bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/20 active:scale-[0.98]"
-                      : "bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800/80 text-slate-900 dark:text-white border border-transparent dark:border-slate-800 active:scale-[0.98]"
+                      ? "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-xl shadow-blue-500/30 active:scale-95"
+                      : "bg-slate-900 text-white dark:bg-slate-800 hover:bg-blue-600 dark:hover:bg-blue-600 text-white active:scale-95"
                   }`}
                 >
                   <MessageCircle size={18} />
-                  {catalog.ctaText}
+                  <span>{catalog.ctaText}</span>
                 </a>
               </motion.div>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Notes & Terms Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="bg-white dark:bg-slate-950/80 border border-slate-200/80 dark:border-slate-800/80 rounded-[32px] p-8 md:p-12 relative overflow-hidden backdrop-blur-md shadow-sm"
+          className="glass-panel border border-slate-200/80 dark:border-slate-800/80 rounded-[32px] p-8 md:p-10 relative overflow-hidden shadow-sm"
         >
-          {/* Subtle Decorative element */}
-          <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
-
           <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
-            {/* Header info */}
             <div className="md:w-1/3 shrink-0">
-              <div className="flex items-center gap-3 text-blue-500 mb-4">
+              <div className="flex items-center gap-3 text-blue-600 dark:text-blue-400 mb-3">
                 <ShieldCheck size={28} />
                 <h4 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-wider">
                   Info & Garansi
                 </h4>
               </div>
-              <p className="text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
+              <p className="text-sm text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
                 Detail ketentuan garansi, paket pemasangan, serta estimasi biaya tambahan di luar paket standar.
               </p>
             </div>
 
-            {/* Content info */}
-            <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+            <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
               {catalog.notes.map((note, idx) => {
                 const isImportant = note.toUpperCase().includes("TIDAK") || note.toLowerCase().includes("tidak termasuk");
                 
                 return (
                   <div 
                     key={idx} 
-                    className={`flex items-start gap-4 p-5 rounded-2xl border ${
+                    className={`flex items-start gap-3 p-4 rounded-2xl border ${
                       isImportant
-                        ? "bg-blue-50/50 dark:bg-blue-950/10 border-blue-100/80 dark:border-blue-900/30"
-                        : "bg-slate-50/50 dark:bg-slate-900/40 border-slate-100 dark:border-slate-800/60"
+                        ? "bg-amber-500/10 border-amber-500/20 text-slate-900 dark:text-amber-200"
+                        : "bg-slate-50 dark:bg-slate-900/40 border-slate-100 dark:border-slate-800/80 text-slate-700 dark:text-slate-300"
                     }`}
                   >
                     <Info 
-                      size={20} 
+                      size={18} 
                       className={`shrink-0 mt-0.5 ${
-                        isImportant ? "text-blue-500" : "text-slate-400 dark:text-slate-500"
+                        isImportant ? "text-amber-600 dark:text-amber-400" : "text-blue-600 dark:text-blue-400"
                       }`} 
                     />
-                    <p className={`text-sm leading-relaxed font-semibold ${
-                      isImportant
-                        ? "text-slate-900 dark:text-blue-200"
-                        : "text-slate-700 dark:text-slate-300"
-                    }`}>
+                    <p className="text-xs leading-relaxed font-semibold">
                       {note}
                     </p>
                   </div>
