@@ -1,29 +1,34 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import "../globals.css";
+import "../detail.css";
 import Script from "next/script";
 
-import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const plexSans = IBM_Plex_Sans({
+  variable: "--font-plex-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: "variable",
+});
+
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "Nakha Solution | Digital Transformation Partner in Sumatra",
-  description: "Nakha Solution is a leading technology transformation provider based in Padang. We offer CCTV, Web Development, Digital Marketing, and Business Applications.",
+  title: "Nakha Solution | Technology Systems for Business",
+  description: "Nakha Solution designs and operates CCTV, websites, campaign tools, business applications, and office technology for businesses in Padang and Sumatra.",
   keywords: "Nakha Solution, IT Consultant Padang, Web Development Sumatra, CCTV Installation Padang, Digital Marketing Agency, Software Development Padang",
   openGraph: {
-  
-    title: "Nakha Solution | Your Best Digital Partner",
-    description: "Empowering businesses with smart, integrated, and sustainable IT solutions.",
+    title: "Nakha Solution | Technology Systems for Business",
+    description: "CCTV, websites, campaign tools, business applications, and office technology for businesses in Padang and Sumatra.",
     url: "https://nakhasolution.com",
     siteName: "Nakha Solution",
     locale: "id_ID",
@@ -53,8 +58,8 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      suppressHydrationWarning
-      className={`${poppins.variable} h-full antialiased`}
+      className={`${plexSans.variable} ${plexMono.variable} h-full antialiased`}
+      data-scroll-behavior="smooth"
     >
       <head>
         {/* Google tag (gtag.js) */}
@@ -88,9 +93,10 @@ export default async function RootLayout({
           `}
         </Script>
       </head>
-      <body className="min-h-full flex flex-col font-sans bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 transition-colors duration-300">
+      <body className="min-h-full flex flex-col font-sans">
         {/* Meta Pixel NoScript */}
         <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img 
             height="1" 
             width="1" 
@@ -100,15 +106,8 @@ export default async function RootLayout({
           />
         </noscript>
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-            <WhatsAppButton />
-          </ThemeProvider>
+          {children}
+          <WhatsAppButton />
         </NextIntlClientProvider>
       </body>
     </html>

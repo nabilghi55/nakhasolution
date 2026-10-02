@@ -1,26 +1,30 @@
 "use client";
 
+import { useLocale } from "next-intl";
+import { Link } from "@/i18n/routing";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CampaignDemo from "@/components/sections/CampaignDemo";
-import { Link } from "@/i18n/routing";
-import { ArrowLeft } from "lucide-react";
 
 export default function InstagramPickerDemoPage() {
+  const isEnglish = useLocale() === "en";
   return (
-    <div className="flex min-h-screen flex-col bg-white dark:bg-slate-950">
+    <div className="demo-page">
       <Navbar />
-      <main className="flex-grow pt-24 md:pt-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-6">
-          <Link 
-            href="/services/campaign-activation" 
-            className="inline-flex items-center text-sm font-bold text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white transition-colors mb-4 group"
-          >
-            <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" />
-            Kembali ke Campaign Platform
-          </Link>
+      <main className="demo-main">
+        <div className="detail-shell">
+          <div className="demo-breadcrumb">
+            <Link href="/services/campaign-activation" className="detail-back-link">
+              <span aria-hidden="true">←</span>
+              {isEnglish ? "Back to campaign system" : "Kembali ke sistem campaign"}
+            </Link>
+          </div>
+          <div className="demo-heading">
+            <h1>{isEnglish ? "Instagram Comment Picker" : "Instagram Comment Picker"}</h1>
+            <p>{isEnglish ? "A local simulation that demonstrates the selection flow with sample data. No Instagram request is sent." : "Simulasi lokal untuk memperlihatkan alur pemilihan dengan data contoh. Tidak ada request Instagram yang dikirim."}</p>
+          </div>
+          <CampaignDemo />
         </div>
-        <CampaignDemo />
       </main>
       <Footer />
     </div>

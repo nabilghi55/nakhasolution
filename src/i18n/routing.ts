@@ -11,8 +11,9 @@ export const routing = defineRouting({
   // Don't show locale in URL
   localePrefix: 'never',
 
-  // Disable locale detection to force defaultLocale
-  localeDetection: false
+  // Keep the URL clean while allowing the language switcher to persist its
+  // selection in the next-intl locale cookie.
+  localeDetection: true
 });
  
 // Lightweight wrappers around Next.js' navigation APIs

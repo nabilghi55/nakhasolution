@@ -5,17 +5,19 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "contact": "Contact",
-    "talk": "Let's Talk"
+    "talk": "Schedule a Call",
+    "menu": "Menu",
+    "close": "Close"
   },
   "Hero": {
-    "badge": "Innovative Digital Partner",
-    "titlePrefix": "Your Best Partner for",
-    "subtitle": "We don't just build software. We engineer growth. Nakha Solution transforms your visionary ideas into high-performance digital products that lead the market.",
-    "ctaPrimary": "Start Your Project",
-    "ctaSecondary": "Explore Services",
-    "clients": "100+ Clients",
-    "clutch": "Highly Rated on Clutch",
-    "growth": "Growth Rate"
+    "badge": "Digital system partner / Padang",
+    "titlePrefix": "Digital systems that work as one.",
+    "subtitle": "Nakha Solution brings infrastructure, software, and digital activation together for businesses across Sumatra.",
+    "ctaPrimary": "Schedule a Consultation",
+    "ctaSecondary": "View the Service System",
+    "clients": "Clients and Projects",
+    "clutch": "Client Portfolio",
+    "growth": "Project Status"
   },
   "Typewriter": {
     "words": [
@@ -29,25 +31,31 @@
   },
   "About": {
     "badge": "About Nakha Solution",
-    "title": "We Are More Than Just A Tech Company",
-    "description": "Nakha Solution is a leading technology transformation provider based in Padang, West Sumatra. We bridge the technology gap through smart, integrated, and sustainable IT solutions. Committed to delivering the right and appropriate solutions, we help your business achieve maximum efficiency through a professional and personalized approach.",
+    "title": "Technology should fit the way your business works.",
+    "description": "Based in Padang, we help businesses choose, build, and operate technology that fits their day-to-day process.",
     "missionTitle": "Our Mission",
-    "missionDesc": "To provide integrated services and solutions that are right and appropriate to customers' business needs by ensuring efficient, smart, and sustainable technology implementation. We strive to continuously innovate in every aspect of our services, from initial consultation to post-implementation technical support, to ensure maximum customer satisfaction and long-term business growth.",
+    "missionDesc": "We design, implement, and support technology that matches each client's workflow and operating capacity.",
     "visionTitle": "Our Vision",
-    "visionDesc": "To become the largest Digital Transformation Partner Company in Sumatra in supporting better customer business achievement. We aspire to be the standard of excellence in the information technology industry, known for our integrity, our quality of service, and our positive contribution to the development of the digital economy in the Sumatra region and beyond.",
+    "visionDesc": "We aim to become Sumatra's primary digital transformation partner through precise, transparent, and maintainable work.",
     "cultureTitle": "Our Culture",
-    "cultureDesc": "A diverse team of passionate experts dedicated to continuous learning and customer success. We uphold the values of collaboration, transparency, and professional responsibility. At Nakha Solution, we believe that the individual growth of our team members is the key to providing extraordinary added value for every client we serve.",
-    "yearsExcellence": "Handled Clients"
+    "cultureDesc": "We work across disciplines, explain our decisions clearly, and continue supporting systems after implementation.",
+    "yearsExcellence": "Handled Clients",
+    "mapLabel": "Nakha Solution workflow from requirement to support",
+    "mapNeeds": "Requirement",
+    "mapDesign": "Design",
+    "mapDeploy": "Deploy",
+    "mapSupport": "Support"
   },
   "Services": {
-    "badge": "Our Expertise",
-    "title": "RIGHT SOLUTIONS FOR GREAT BUSINESS",
-    "description": "We offer a wide range of services designed to help businesses thrive in today's competitive landscape. Our team of experts is ready to take your project to the next level.",
+    "badge": "Service Index",
+    "title": "One partner, six capabilities.",
+    "description": "Choose one service or combine several into a system that matches your business operations.",
     "items": {
       "cctv": {
         "title": "CCTV",
         "desc": "Providing CCTV network solutions to ensure the safety and monitoring of your business. Our services include consultation on needs, strategic placement planning, and installation of high-quality hardware that can be accessed in real-time from anywhere via your mobile device. We ensure your security system runs smoothly with reliable technical support.",
         "slug": "cctv",
+        "summary": "Camera placement planning, installation, storage, and monitoring access for business sites.",
         "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=1200",
         "features": [
           "24/7 Real-time Monitoring",
@@ -114,6 +122,7 @@
         "title": "Digital Marketing Tools",
         "desc": "Integrated and efficient digital marketing tool solutions supporting Social Media Management, Multimedia projects, and Broadcast engines. We help your business reach a wider audience through marketing automation and deep analytics, allowing you to make more accurate data-driven decisions in your digital marketing campaigns.",
         "slug": "digital-marketing",
+        "summary": "Tools for social media operations, multimedia production, broadcast, and campaign measurement.",
         "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
         "features": [
           "Unified Social Media Management",
@@ -128,6 +137,7 @@
         "title": "Device Bundling",
         "desc": "Solutions for office electronic device needs with competitive offers and bundling according to your business needs. We provide complete packages ranging from computers, networking devices, to productivity software that are pre-configured and ready to use. With our service, you no longer need to worry about device compatibility or the complexities of IT infrastructure procurement.",
         "slug": "device-bundling",
+        "summary": "Computers, network equipment, printers, and software supplied as a configured business package.",
         "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200",
         "features": [
           "High-Performance Laptop & Desktop Bundles",
@@ -140,22 +150,24 @@
       },
       "campaign-activation": {
         "title": "Campaign Activation Platform",
-        "desc": "Data-driven campaign activation platform helping media and brands run giveaways, World Cup score guessing, engagement campaigns, and audience interaction transparently, automatically, and measurably through features like comment picker, live draw system, analytics dashboard, and AI-based participant filtering. Our platform is designed to increase audience trust while making it easier for your team to manage mass interactions efficiently.",
+        "desc": "A campaign activation platform for giveaways, score prediction, and audience interaction through comment picker, live draw, participant forms, and campaign result summaries.",
         "slug": "campaign-activation",
+        "summary": "Giveaway, comment picker, live draw, score prediction, and campaign reporting systems.",
         "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
         "features": [
           "Automated Comment Picker",
           "Transparent Live Draw System",
-          "AI-Based Participant Filtering",
-          "Real-time Analytics Dashboard",
+          "Rule-based Participant Filtering",
+          "Campaign Result Summary",
           "Multi-platform Social Media Integration",
           "Comprehensive Campaign Reporting"
         ]
       },
       "web-development": {
         "title": "Web Development",
-        "desc": "Realizing business websites according to your needs and desires for business development efficiency. We build websites that are not only beautiful to look at but also fast, secure, and search engine optimized (SEO). From company profiles to complex e-commerce platforms, our development team uses the latest technology to ensure your website becomes a valuable digital asset for business growth.",
+        "desc": "Websites built around your content, consultation path, and team workflow. The format can be a company profile, catalogue, e-commerce site, or internal web system.",
         "slug": "web-development",
+        "summary": "Company profiles, catalogues, e-commerce, and web systems built around business requirements.",
         "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200",
         "features": [
           "Modern & Responsive UI/UX Design",
@@ -163,13 +175,14 @@
           "Content Management System (CMS)",
           "E-commerce & Payment Integration",
           "Regular Maintenance & Updates",
-          "High-Level Website Security"
+          "Access settings and updates"
         ]
       },
       "business-application": {
         "title": "Business Application",
         "desc": "Solutions for integrated software and application needs to support your business accurately, safely, and efficiently. We develop custom applications tailored to your company's specific workflow, helping to automate routine tasks, increase data accuracy, and speed up the decision-making process. With an integrated system, all departments within your company can work more synergistically.",
         "slug": "business-application",
+        "summary": "Custom applications for inventory, operations, CRM, ERP, and internal workflows.",
         "image": "https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=1200",
         "features": [
           "Custom ERP & CRM Applications",
@@ -181,10 +194,10 @@
         ]
       }
     },
-    "learnMore": "Learn More",
+    "learnMore": "Open service details",
     "ready": "Ready to start your next project?",
     "readyDesc": "Contact us today for a free consultation and let's discuss how we can help your business grow.",
-    "cta": "Contact Us Now",
+    "cta": "Discuss your requirements",
     "backToHome": "Back to Home",
     "whyChoose": "Why Choose Our Services?",
     "consultTitle": "Consult Your Needs Now",
@@ -195,8 +208,8 @@
       "steps": {
         "match": "Final Score: Brazil 2 - 1 France",
         "fetch": "Fetch Instagram Comments",
-        "fetching": "Fetching 5,420 comments...",
-        "filtered": "124 Correct Predictions Found",
+        "fetching": "Preparing sample data...",
+        "filtered": "Sample matches found",
         "draw": "Start Winner Draw",
         "winner": "Congratulation! Winner Found",
         "reset": "Try Another Match"
@@ -221,12 +234,12 @@
     }
   },
   "Portfolio": {
-    "badge": "Case Studies",
-    "title": "Our Masterpieces",
-    "description": "We take pride in every project we deliver. Here are some of our most impactful collaborations.",
-    "launch": "Launch Website",
-    "viewProject": "Read Case Study",
-    "viewMore": "View More Projects",
+    "badge": "Selected Work",
+    "title": "Projects we have already built.",
+    "description": "Three active websites for a law firm, a contractor, and an Umrah travel service.",
+    "launch": "Open website",
+    "viewProject": "Read project details",
+    "viewMore": "View project archive",
     "backToHome": "Back to Home",
     "caseStudy": "Case Study",
     "challenge": "The Challenge",
@@ -236,33 +249,33 @@
       "raya": {
         "title": "Raya Law Firm",
         "slug": "raya-law-firm",
-        "desc": "A professional and elegant landing page for a law firm, featuring service listings, attorney profiles, and a contact system. We designed every visual element to reflect authority and trust, ensuring that every potential client feels confident in their legal choice from the first visit.",
+        "desc": "A law firm website that brings practice areas, lawyer profiles, and the consultation path into one place.",
         "challengeText": "Raya Law Firm needed a strong online presence to establish credibility and attract new clients. Their previous digital footprint was non-existent, making it difficult for potential clients to find information about their legal services and attorney expertise.",
         "solutionText": "We designed and developed a modern, fast, and SEO-optimized website using Next.js. The site features a clean, professional aesthetic appropriate for a law firm, with clear sections for practice areas, attorney profiles, and an easy-to-use consultation request form.",
-        "impactText": "The new website successfully established Raya Law Firm's digital authority. They saw a 40% increase in online consultation requests within the first three months, and their search engine ranking improved significantly for local legal services."
+        "impactText": "The active site now places practice areas, lawyer profiles, and the consultation path in one place. Any further business impact should be assessed from the client's own data."
       },
       "putra": {
         "title": "Putra Wijaya Mandiri",
         "slug": "putra-wijaya-mandiri",
-        "desc": "Corporate website for a general contractor company, showcasing construction projects and industrial services. Our primary focus was to showcase the scale and quality of the work completed through a stunning visual portfolio, providing tangible proof of the company's capability in handling large infrastructure projects.",
+        "desc": "A corporate portfolio that organizes construction projects and industrial services for B2B prospects.",
         "challengeText": "As a growing general contractor, Putra Wijaya Mandiri struggled to showcase their extensive portfolio of industrial and construction projects to potential large-scale clients. They needed a corporate platform that communicated reliability, scale, and professionalism.",
         "solutionText": "We built a robust corporate website focusing on visual storytelling. We implemented a dynamic project portfolio section that allows them to categorize and display high-quality images and details of their completed projects. The site is fully responsive and optimized for B2B client acquisition.",
-        "impactText": "The platform has become their primary tool for pitching to new clients. It significantly reduced the time spent sending offline portfolios, and the professional digital presence helped them secure two major industrial contracts shortly after launch."
+        "impactText": "The active portfolio can be used when introducing projects and industrial services to B2B prospects. Any further commercial impact should be assessed from the client's own data."
       },
       "alfajr": {
         "title": "Alfajr Umroh",
         "slug": "alfajr-umroh",
-        "desc": "A comprehensive travel and tour website specifically for Umrah services, featuring package details and booking information. We integrated a transparent information system to make it easier for pilgrims to plan their spiritual journey, creating a sense of safety and comfort through a user-friendly interface.",
+        "desc": "An Umrah service website that brings packages, travel information, and customer inquiries into one place.",
         "challengeText": "Alfajr Umroh faced challenges in managing customer inquiries and explaining complex Umrah packages manually. They needed a centralized digital platform where prospective pilgrims could easily browse packages, view itineraries, and understand the requirements.",
         "solutionText": "We developed a comprehensive travel portal tailored for Umrah services. The website features detailed package listings, day-by-day itineraries, transparent pricing, and an integrated inquiry system. We focused on a user-friendly interface that builds trust and provides clear information.",
-        "impactText": "The website streamlined their customer service operations, reducing repetitive inquiries by 60%. The clear presentation of packages led to a higher conversion rate, making it easier for pilgrims to choose and commit to their spiritual journey."
+        "impactText": "The active site now brings packages, travel information, and customer questions into one place. Any further conversion or operations impact should be assessed from the client's own data."
       }
     }
   },
   "Contact": {
-    "badge": "Contact Us",
-    "title": "Let's Build Something Amazing Together",
-    "description": "Have a question or a project in mind? We'd love to hear from you. Fill out the form and our team will get back to you quickly.",
+    "badge": "Start with the real problem",
+    "title": "Tell us what needs to work better.",
+    "description": "Write a short brief. The submit button opens WhatsApp with your project context so the discussion can begin immediately.",
     "emailLabel": "Email Us",
     "phoneLabel": "Call Us",
     "addressLabel": "Visit Us",
@@ -272,11 +285,11 @@
       "email": "Email Address",
       "subject": "Subject",
       "message": "Message",
-      "placeholderFirstName": "John",
-      "placeholderLastName": "Doe",
-      "placeholderEmail": "john@example.com",
-      "placeholderMessage": "How can we help you?",
-      "send": "Send Message",
+      "placeholderFirstName": "First name",
+      "placeholderLastName": "Last name",
+      "placeholderEmail": "name@company.com",
+      "placeholderMessage": "Describe the requirement, current issue, or system in use.",
+      "send": "Open WhatsApp conversation",
       "subjects": {
         "general": "General Inquiry",
         "proposal": "Project Proposal",
@@ -286,7 +299,7 @@
     }
   },
   "Footer": {
-    "desc": "A leading technology transformation solution provider based in Padang, West Sumatra. Committed to providing IT solutions that are right and appropriate for your business.",
+    "desc": "A Padang-based technology partner for business infrastructure, software, and digital activation.",
     "quickLinks": "Quick Links",
     "ourServices": "Our Services",
     "contactUs": "Contact Us",
@@ -309,7 +322,7 @@
       "sections": [
         {
           "title": "1. Data We Collect",
-          "body": "We may collect your name, email address, WhatsApp number, Instagram username, and message content that you voluntarily submit through our contact form, service pages, or campaign demo features on this website. We also collect non-personal technical data such as device type and pages visited through third-party analytics tools."
+          "body": "We may collect your name, email address, WhatsApp number, and message content that you voluntarily submit through our contact form or WhatsApp links on this website. We may also collect non-personal technical data such as device type and pages visited through third-party analytics tools."
         },
         {
           "title": "2. How We Use Your Data",
