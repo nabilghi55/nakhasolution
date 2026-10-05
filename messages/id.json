@@ -53,31 +53,64 @@
     "items": {
       "cctv": {
         "title": "CCTV",
-        "desc": "Memberikan solusi jaringan CCTV untuk menjamin keselamatan dan pemantauan bisnis Anda. Layanan kami mencakup konsultasi kebutuhan, perencanaan titik pasang yang strategis, hingga instalasi perangkat keras berkualitas tinggi yang dapat diakses secara real-time dari mana saja melalui perangkat mobile Anda. Kami memastikan sistem keamanan Anda berjalan tanpa hambatan dengan dukungan teknis yang handal.",
+        "desc": "Pantau area bisnis selama 24 jam dari ponsel, baik saat Anda berada di lokasi maupun di luar. Nakha Solution membantu memilih kamera, menentukan titik pemasangan, menyiapkan penyimpanan rekaman, dan menghubungkan seluruh sistem agar mudah dipantau.",
         "slug": "cctv",
-        "summary": "Perencanaan titik kamera, instalasi, penyimpanan, dan akses pemantauan untuk area bisnis.",
+        "summary": "Pantau area bisnis 24 jam, simpan rekaman, dan akses kamera dari ponsel.",
         "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=1200",
         "features": [
-          "Pemantauan Real-time 24/7",
-          "Kamera Kualitas High-Definition (HD)",
-          "Akses Remote via Smartphone",
-          "Penyimpanan Cloud & Lokal Aman",
-          "Deteksi Gerak & Notifikasi Pintar",
-          "Instalasi Profesional & Rapi"
+          "Mengawasi titik penting di area bisnis selama 24 jam.",
+          "Menyimpan rekaman beresolusi tinggi untuk membantu penelusuran insiden.",
+          "Memantau aktivitas operasional dari ponsel saat Anda tidak berada di lokasi.",
+          "Menentukan kombinasi kamera dan cakupan area sesuai kebutuhan bisnis."
         ],
+        "detail": {
+          "benefitTitle": "Apa yang Anda dapat dari sistem CCTV?",
+          "benefitIntro": "Sistem disusun berdasarkan area yang perlu diawasi, kualitas rekaman yang dibutuhkan, serta cara tim Anda mengakses hasil pemantauan.",
+          "typesLabel": "JENIS KAMERA",
+          "typesTitle": "Pilih bentuk kamera sesuai area pemasangan",
+          "typesIntro": "Jenis kamera ditentukan setelah tim kami memahami sudut pandang, jarak pantau, dan kondisi lokasi.",
+          "types": [
+            "CCTV Dome",
+            "CCTV Bullet",
+            "CCTV PTZ",
+            "CCTV 360 derajat"
+          ],
+          "faqTitle": "Pertanyaan sebelum pemasangan",
+          "faqIntro": "Jawaban singkat untuk hal yang paling sering ditanyakan sebelum konsultasi.",
+          "faq": [
+            {
+              "question": "Di mana saya bisa mendapatkan rincian harga CCTV?",
+              "answer": "Rincian harga lengkap tersedia melalui konsultasi WhatsApp. Tim kami akan menyesuaikannya dengan jumlah titik, jenis kamera, dan kondisi lokasi."
+            },
+            {
+              "question": "Apakah saya bisa memilih CCTV di luar paket yang tersedia?",
+              "answer": "Bisa. Merek, jumlah, dan jenis kamera dapat disesuaikan dengan kebutuhan bisnis Anda."
+            },
+            {
+              "question": "Berapa jumlah minimal kamera untuk pemasangan?",
+              "answer": "Pemasangan dimulai dari minimal dua kamera yang terhubung dalam satu sistem."
+            },
+            {
+              "question": "Bagaimana cara memulai pemasangan CCTV?",
+              "answer": "Klik tombol Konsultasikan sistem CCTV. Tim Nakha Solution akan menghubungi Anda untuk membahas lokasi, jumlah kamera, dan kebutuhan pemantauan."
+            }
+          ],
+          "ctaTitle": "Sudah tahu area yang perlu dipantau?",
+          "ctaText": "Konsultasikan sistem CCTV"
+        },
         "catalog": {
           "title": "Paket CCTV Hikvision Tanpa Audio",
-          "subtitle": "Solusi keamanan lengkap dengan perangkat berkualitas tinggi dari Hikvision.",
+          "subtitle": "Rincian perangkat dan harga awal untuk pemasangan CCTV di area bisnis Anda.",
           "notes": [
-            "Harga paket TIDAK termasuk Monitor",
-            "Penambahan kabel CCTV Rp 8.000/meter",
-            "Garansi tidak termasuk kabel cctv, adaptor, power supply",
-            "Garansi tidak berlaku akibat bencana alam, konsleting, kelalaian pengguna dan terkena cairan."
+            "Harga paket belum termasuk monitor.",
+            "Tambahan kabel CCTV dikenakan biaya Rp 8.000 per meter.",
+            "Garansi tidak mencakup kabel CCTV, adaptor, dan power supply.",
+            "Garansi tidak berlaku untuk kerusakan akibat bencana alam, korsleting, kelalaian pengguna, atau cairan."
           ],
-          "packageTitle": "Pilihan Paket CCTV",
-          "packageSubtitle": "Pilih paket yang sesuai dengan kebutuhan pengawasan area Anda.",
-          "includedLabel": "Satu paket :",
-          "ctaText": "Pesan Paket Ini",
+          "packageTitle": "Pilih paket sesuai jumlah titik",
+          "packageSubtitle": "Setiap paket mencantumkan perangkat dan panjang kabel awal. Monitor belum termasuk.",
+          "includedLabel": "Isi paket:",
+          "ctaText": "Tanyakan paket ini",
           "packages": [
             {
               "name": "Paket 4 Kamera CCTV",
@@ -120,78 +153,250 @@
       },
       "digital-marketing": {
         "title": "Digital Marketing Tools",
-        "desc": "Solusi Tools digital marketing terintegrasi dan efisien dalam mendukung Social Media Management, Multimedia project, dan Broadcast engine. Kami membantu bisnis Anda untuk menjangkau audiens yang lebih luas melalui automasi pemasaran dan analitik yang mendalam, memungkinkan Anda untuk membuat keputusan berbasis data yang lebih akurat dalam kampanye pemasaran digital Anda.",
+        "desc": "Kelola publikasi media sosial, broadcast promosi, giveaway, dan pembacaan hasil kampanye dalam satu alur kerja. Tim pemasaran dapat menjadwalkan pekerjaan, membagikan materi, lalu melihat saluran mana yang menghasilkan respons.",
         "slug": "digital-marketing",
-        "summary": "Perangkat kerja untuk pengelolaan media sosial, produksi multimedia, broadcast, dan pengukuran kampanye.",
+        "summary": "Jadwalkan konten, bagikan promosi, dan baca hasil kampanye dalam satu alur kerja.",
         "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
         "features": [
-          "Manajemen Social Media Terpadu",
-          "Optimasi Konten Multimedia",
-          "Sistem Broadcast Otomatis",
-          "Analitik Performa Campaign",
-          "Tools Riset Target Audiens",
-          "Efisiensi Workflow Marketing"
-        ]
+          "Menjadwalkan publikasi konten agar kalender pemasaran lebih teratur.",
+          "Mendistribusikan promosi melalui WhatsApp dan email sesuai daftar penerima.",
+          "Membaca klik, tingkat pembukaan, dan konversi dari setiap kampanye.",
+          "Menghubungkan pekerjaan tim kreatif dengan persetujuan manajer pemasaran."
+        ],
+        "detail": {
+          "benefitTitle": "Satu alur untuk pekerjaan pemasaran harian",
+          "benefitIntro": "Pilih alat berdasarkan pekerjaan yang ingin dirapikan, mulai dari penyusunan kalender konten hingga pembacaan hasil kampanye.",
+          "typesLabel": "PERANGKAT PEMASARAN",
+          "typesTitle": "Gunakan alat yang sesuai dengan cara tim bekerja",
+          "typesIntro": "Setiap modul dapat digunakan untuk kebutuhan tertentu atau dirangkai menjadi satu proses pemasaran.",
+          "types": [
+            "Broadcast WhatsApp dan email",
+            "Social media management",
+            "Analitik kampanye",
+            "Alur kerja multimedia",
+            "Giveaway dan comment picker"
+          ],
+          "faqTitle": "Pertanyaan sebelum memilih alat",
+          "faqIntro": "Hal yang perlu dipastikan sebelum menentukan kanal, integrasi, dan alur kampanye.",
+          "faq": [
+            {
+              "question": "Apakah broadcast WhatsApp mengikuti ketentuan platform?",
+              "answer": "Pengiriman menggunakan jalur resmi dan tetap mengikuti kebijakan pesan, persetujuan penerima, serta ketentuan platform yang berlaku."
+            },
+            {
+              "question": "Bisakah asal prospek dilacak?",
+              "answer": "Bisa. UTM tracking dapat digunakan untuk melihat kampanye dan kanal yang membawa kunjungan atau prospek."
+            },
+            {
+              "question": "Apakah alatnya dapat digunakan oleh tim nonteknis?",
+              "answer": "Antarmuka disusun untuk pekerjaan pemasaran sehari-hari, seperti menjadwalkan konten, melihat respons, dan membaca laporan."
+            },
+            {
+              "question": "Platform apa yang dapat dipakai untuk comment picker?",
+              "answer": "Kebutuhan comment picker dapat disiapkan untuk kampanye Instagram atau TikTok, termasuk penyaringan komentar dan data peserta sesuai aturan kampanye."
+            }
+          ],
+          "ctaTitle": "Pekerjaan pemasaran mana yang ingin dirapikan lebih dulu?",
+          "ctaText": "Bahas kebutuhan marketing tools"
+        }
       },
       "device-bundling": {
         "title": "Device Bundling",
-        "desc": "Solusi kebutuhan perangkat elektronik perkantoran dengan penawaran kompetitif dan bundling sesuai kebutuhan bisnis Anda. Kami menyediakan paket lengkap mulai dari komputer, perangkat jaringan, hingga perangkat lunak produktivitas yang sudah dikonfigurasi dan siap pakai. Dengan layanan kami, Anda tidak perlu lagi khawatir tentang kompatibilitas perangkat atau kerumitan dalam pengadaan infrastruktur IT.",
+        "desc": "Pengadaan perangkat kerja dan infrastruktur IT dalam satu paket yang disesuaikan dengan kebutuhan operasional. Perangkat dipilih, diperiksa kompatibilitasnya, lalu dikonfigurasi agar siap digunakan saat tiba di kantor Anda.",
         "slug": "device-bundling",
-        "summary": "Pengadaan komputer, jaringan, printer, dan perangkat lunak dalam paket yang sudah disesuaikan dan dikonfigurasi.",
+        "summary": "Pengadaan perangkat kantor yang sudah dipilih, dicocokkan, dan dikonfigurasi.",
         "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200",
         "features": [
-          "Paket Laptop & Desktop Performa Tinggi",
-          "Peralatan Jaringan & Server",
-          "Printer & Scanner Multifungsi",
-          "Lisensi Software Original",
-          "Garansi Resmi & Support On-site",
-          "Opsi pengadaan sesuai kebutuhan"
-        ]
+          "Memastikan perangkat dalam satu paket dapat digunakan bersama tanpa kendala kompatibilitas.",
+          "Menyiapkan konfigurasi awal agar perangkat dapat langsung digunakan.",
+          "Menyatukan pengadaan beberapa kategori perangkat melalui satu proses.",
+          "Mendampingi pengelolaan garansi dan kebutuhan purna jual."
+        ],
+        "detail": {
+          "benefitTitle": "Perangkat datang dalam kondisi siap kerja",
+          "benefitIntro": "Paket disusun dari kebutuhan pengguna, aplikasi yang dipakai, kondisi jaringan, dan anggaran pengadaan.",
+          "typesLabel": "KATEGORI PERANGKAT",
+          "typesTitle": "Lengkapi perangkat kantor melalui satu pengadaan",
+          "typesIntro": "Merek, spesifikasi, dan jumlah unit ditentukan setelah kebutuhan tiap tim dipetakan.",
+          "types": [
+            "Laptop, PC, dan AIO",
+            "Ponsel dan tablet",
+            "Printer kantor",
+            "Data dan server",
+            "Smart TV dan monitor",
+            "AC kantor",
+            "Panel surya"
+          ],
+          "faqTitle": "Pertanyaan sebelum pengadaan",
+          "faqIntro": "Jawaban singkat mengenai cakupan perangkat, harga, dan nilai tambah paket.",
+          "faq": [
+            {
+              "question": "Perlengkapan kantor apa saja yang dapat disediakan?",
+              "answer": "Perangkat keras teknologi informasi dan komunikasi dapat disusun sebagai satu solusi sesuai kebutuhan operasional bisnis Anda."
+            },
+            {
+              "question": "Apa keuntungan membeli melalui Nakha Solution?",
+              "answer": "Anda dapat mengurus beberapa kategori perangkat melalui satu proses, termasuk pemilihan, pengecekan kompatibilitas, dan konfigurasi awal."
+            },
+            {
+              "question": "Apa yang dimaksud dengan nilai tambah?",
+              "answer": "Nilai tambah disepakati saat konsultasi. Bentuknya dapat berupa paket konektivitas, dashboard pemantauan, atau sistem informasi sederhana yang mendukung perangkat pilihan."
+            },
+            {
+              "question": "Mengapa tidak ada daftar harga tetap?",
+              "answer": "Harga bergantung pada merek, spesifikasi, jumlah unit, dan konfigurasi yang dibutuhkan. Rincian biaya disusun setelah kebutuhan pengadaan dipastikan."
+            }
+          ],
+          "ctaTitle": "Punya daftar perangkat yang perlu disiapkan?",
+          "ctaText": "Konsultasikan device bundling"
+        }
       },
       "campaign-activation": {
         "title": "Campaign Activation Platform",
-        "desc": "Platform campaign activation untuk menjalankan giveaway, tebak skor, dan interaksi audiens melalui alur comment picker, live draw, formulir peserta, serta ringkasan hasil campaign.",
+        "desc": "Jalankan giveaway, tebak skor, dan aktivasi audiens tanpa memeriksa peserta satu per satu. Aturan kampanye diterapkan pada data peserta, pengundian dapat ditampilkan secara langsung, dan hasilnya dirangkum untuk tim Anda.",
         "slug": "campaign-activation",
-        "summary": "Sistem giveaway, comment picker, live draw, tebak skor, dan pelaporan interaksi kampanye.",
+        "summary": "Kelola peserta, terapkan aturan, lakukan pengundian, dan rangkum hasil kampanye.",
         "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
         "features": [
-          "Comment Picker Otomatis",
-          "Sistem Live Draw Transparan",
-          "Filtering Peserta Berdasarkan Aturan Campaign",
-          "Ringkasan Hasil Campaign",
-          "Integrasi Multi-platform Sosmed",
-          "Laporan Campaign Lengkap & Akurat"
-        ]
+          "Menyaring peserta berdasarkan kata kunci, tag, atau aturan kampanye.",
+          "Menjalankan pengundian yang dapat ditampilkan saat aktivasi berlangsung.",
+          "Mengumpulkan prediksi dan data peserta melalui formulir kampanye.",
+          "Menyimpan pemenang dan ringkasan hasil untuk kebutuhan evaluasi."
+        ],
+        "detail": {
+          "benefitTitle": "Aturan kampanye diterapkan sejak awal",
+          "benefitIntro": "Tim menentukan mekanisme, syarat peserta, dan hasil yang perlu dicatat sebelum aktivasi dibuka.",
+          "typesLabel": "FORMAT AKTIVASI",
+          "typesTitle": "Pilih format interaksi yang cocok untuk audiens",
+          "typesIntro": "Format dapat digunakan sendiri atau digabungkan sesuai mekanisme kampanye.",
+          "types": [
+            "Comment picker",
+            "Tebak skor interaktif",
+            "Live draw",
+            "Formulir peserta"
+          ],
+          "faqTitle": "Pertanyaan sebelum kampanye dibuka",
+          "faqIntro": "Pastikan sumber data, aturan penyaringan, dan cara menampilkan hasil sudah jelas.",
+          "faq": [
+            {
+              "question": "Aturan peserta apa saja yang dapat dipakai?",
+              "answer": "Penyaringan dapat mengikuti kata kunci komentar, jumlah tag teman, atau data peserta lain yang disepakati dalam mekanisme kampanye."
+            },
+            {
+              "question": "Apakah pengundian dapat ditampilkan secara langsung?",
+              "answer": "Bisa. Alur live draw disiapkan agar proses pemilihan pemenang dapat ditampilkan saat aktivasi berlangsung."
+            },
+            {
+              "question": "Apakah kampanye tebak skor dapat menghitung poin?",
+              "answer": "Bisa. Aturan poin dapat ditentukan dari kecocokan skor atau hasil pertandingan, lalu ditampilkan dalam papan klasemen."
+            },
+            {
+              "question": "Apa yang diterima setelah kampanye selesai?",
+              "answer": "Tim Anda mendapatkan data pemenang dan ringkasan hasil sesuai informasi yang dikumpulkan selama kampanye."
+            }
+          ],
+          "ctaTitle": "Sudah punya mekanisme kampanye?",
+          "ctaText": "Bahas format aktivasi"
+        }
       },
       "web-development": {
         "title": "Web Development",
-        "desc": "Membangun website bisnis berdasarkan kebutuhan konten, alur konsultasi, dan cara kerja tim Anda. Bentuknya dapat berupa profil perusahaan, katalog, e-commerce, atau sistem web internal.",
+        "desc": "Rancang website yang menjadi rujukan resmi bagi calon pelanggan, mitra, atau pengguna layanan Anda. Struktur halaman, konten, dan fitur disusun mengikuti tujuan bisnis serta cara tim mengelolanya setelah website terbit.",
         "slug": "web-development",
-        "summary": "Website profil perusahaan, katalog, e-commerce, dan sistem web yang dibangun mengikuti kebutuhan bisnis.",
+        "summary": "Website profesional yang disusun mengikuti tujuan bisnis, konten, dan cara tim bekerja.",
         "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200",
         "features": [
-          "Desain UI/UX Modern & Responsif",
-          "Optimasi SEO & Kecepatan",
-          "Sistem Manajemen Konten (CMS)",
-          "Integrasi E-commerce & Payment",
-          "Maintenance & Update Berkala",
-          "Pengaturan akses dan pembaruan"
-        ]
+          "Menampilkan profil, layanan, dan kontak perusahaan dalam satu rujukan resmi.",
+          "Menyesuaikan tata letak untuk layar komputer, tablet, dan ponsel.",
+          "Menyusun struktur halaman agar mudah dipahami pengguna dan mesin pencari.",
+          "Memberi tim akses untuk memperbarui artikel atau produk melalui CMS."
+        ],
+        "detail": {
+          "benefitTitle": "Website yang dapat dipakai, bukan sekadar dipajang",
+          "benefitIntro": "Tujuan, audiens, materi konten, dan alur pengelolaan dibahas sebelum desain dan pengembangan dimulai.",
+          "typesLabel": "PILIHAN WEBSITE",
+          "typesTitle": "Pilih bentuk website berdasarkan pekerjaannya",
+          "typesIntro": "Cakupan fitur dan waktu pengerjaan mengikuti jenis website serta kesiapan materi dari tim Anda.",
+          "types": [
+            "Company profile",
+            "Portal e-government",
+            "Custom web application",
+            "Marketplace dan e-commerce"
+          ],
+          "faqTitle": "Pertanyaan sebelum pengembangan",
+          "faqIntro": "Hal utama yang memengaruhi jadwal, biaya, dan pengelolaan website setelah terbit.",
+          "faq": [
+            {
+              "question": "Berapa lama waktu pembuatan website?",
+              "answer": "Rata-rata pengerjaan memerlukan 1 hingga 12 minggu, tergantung kompleksitas fitur dan kesiapan materi konten."
+            },
+            {
+              "question": "Apakah biaya sudah termasuk domain dan hosting?",
+              "answer": "Domain dan hosting termasuk untuk tahun pertama. Biaya perpanjangan berikutnya akan diinformasikan sesuai kebutuhan website."
+            },
+            {
+              "question": "Bagaimana jika website mengalami kendala?",
+              "answer": "Kendala atau bug yang disebabkan oleh pekerjaan teknis tim kami mendapat garansi selama enam bulan setelah website berjalan."
+            },
+            {
+              "question": "Apakah tim kami bisa memperbarui konten sendiri?",
+              "answer": "Bisa. CMS dapat disiapkan agar tim Anda dapat memperbarui artikel, halaman, atau produk tanpa mengubah kode."
+            }
+          ],
+          "ctaTitle": "Website seperti apa yang perlu diterbitkan?",
+          "ctaText": "Bahas kebutuhan website"
+        }
       },
       "business-application": {
         "title": "Business Application",
-        "desc": "Solusi kebutuhan software dan aplikasi yang terintegrasi untuk pendukung bisnis Anda dengan tepat, aman, dan efisien. Kami mengembangkan aplikasi kustom yang disesuaikan dengan alur kerja spesifik perusahaan Anda, membantu mengotomasi tugas-tugas rutin, meningkatkan akurasi data, dan mempercepat proses pengambilan keputusan. Dengan sistem yang terintegrasi, seluruh departemen dalam perusahaan Anda dapat bekerja lebih sinergis.",
+        "desc": "Hubungkan data dan pekerjaan antarbagian perusahaan melalui aplikasi yang mengikuti alur operasional Anda. Sistem dapat dimulai dari satu kebutuhan, seperti kasir atau stok, lalu dikembangkan ke modul lain saat bisnis bertumbuh.",
         "slug": "business-application",
-        "summary": "Aplikasi kustom untuk inventaris, operasional, CRM, ERP, dan alur kerja internal perusahaan.",
-        "image": "https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=1200",
+        "summary": "Aplikasi untuk menghubungkan transaksi, stok, SDM, keuangan, dan pekerjaan operasional.",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
         "features": [
-          "Aplikasi ERP & CRM Custom",
-          "Sistem Inventaris & Pergudangan",
-          "Dashboard Manajemen Bisnis",
-          "Integrasi Database Aman",
-          "Akses Multi-platform (Web/Mobile)",
-          "Otomasi Proses Bisnis Internal"
-        ]
+          "Mengurangi pencatatan data berulang antarbagian perusahaan.",
+          "Mengotomatisasi pekerjaan rutin yang sebelumnya dikerjakan manual.",
+          "Menyediakan laporan operasional untuk membantu keputusan manajemen.",
+          "Menambah modul secara bertahap mengikuti kebutuhan bisnis."
+        ],
+        "detail": {
+          "benefitTitle": "Mulai dari proses yang paling perlu dibenahi",
+          "benefitIntro": "Alur kerja dipetakan lebih dulu agar aplikasi mengikuti pekerjaan tim, bukan memaksa tim mengikuti sistem yang tidak sesuai.",
+          "typesLabel": "MODUL BISNIS",
+          "typesTitle": "Rangkai modul sesuai alur operasional perusahaan",
+          "typesIntro": "Setiap modul dapat berdiri sendiri atau dihubungkan melalui integrasi data.",
+          "types": [
+            "ERP",
+            "Point of Sale",
+            "Stock Management",
+            "HRIS",
+            "Omni Channel",
+            "Marketing Tools",
+            "Nakha Ads"
+          ],
+          "faqTitle": "Pertanyaan sebelum implementasi",
+          "faqIntro": "Cakupan modul, kesiapan data, dan kebutuhan integrasi menentukan bentuk proyek.",
+          "faq": [
+            {
+              "question": "Apakah aplikasi bisnis hanya untuk perusahaan besar?",
+              "answer": "Tidak. Implementasi dapat dimulai dari modul dasar yang paling dibutuhkan, lalu ditambah saat proses bisnis berkembang."
+            },
+            {
+              "question": "Berapa lama proses implementasi?",
+              "answer": "Waktu implementasi bervariasi, mulai dari satu hingga enam bulan untuk sistem ERP, tergantung kompleksitas proses dan kesiapan data."
+            },
+            {
+              "question": "Apakah tim kami mendapat pelatihan?",
+              "answer": "Ya. Implementasi mencakup pelatihan dan uji penerimaan pengguna agar tim memahami alur kerja sistem."
+            },
+            {
+              "question": "Bisakah sistem dihubungkan dengan aplikasi lain?",
+              "answer": "Bisa. Kebutuhan integrasi dengan POS, HRIS, e-commerce, atau perangkat IoT dibahas berdasarkan sistem yang sudah digunakan perusahaan Anda."
+            }
+          ],
+          "ctaTitle": "Proses bisnis mana yang paling mendesak dibenahi?",
+          "ctaText": "Petakan kebutuhan aplikasi"
+        }
       }
     },
     "learnMore": "Buka detail layanan",
@@ -236,7 +441,7 @@
   "Portfolio": {
     "badge": "Pekerjaan Terpilih",
     "title": "Proyek yang sudah kami kerjakan.",
-    "description": "Tiga situs aktif untuk firma hukum, kontraktor, dan layanan perjalanan umrah.",
+    "description": "Empat proyek website untuk dua firma hukum, kontraktor, dan layanan perjalanan umrah.",
     "launch": "Buka situs",
     "viewProject": "Baca rincian proyek",
     "viewMore": "Lihat arsip proyek",
@@ -269,6 +474,14 @@
         "challengeText": "Alfajr Umroh menghadapi tantangan dalam mengelola pertanyaan pelanggan dan menjelaskan paket Umroh yang kompleks secara manual. Mereka membutuhkan platform digital terpusat di mana calon jamaah dapat dengan mudah menelusuri paket, melihat rencana perjalanan, dan memahami persyaratan.",
         "solutionText": "Kami mengembangkan portal perjalanan komprehensif yang disesuaikan untuk layanan Umroh. Situs web ini menampilkan daftar paket terperinci, rencana perjalanan hari demi hari, harga transparan, dan sistem pertanyaan yang terintegrasi. Kami berfokus pada antarmuka yang ramah pengguna yang membangun kepercayaan dan memberikan informasi yang jelas.",
         "impactText": "Hasil yang dapat dilihat saat ini adalah paket, informasi perjalanan, dan jalur pertanyaan yang tersusun dalam satu situs. Data konversi dan operasional lanjutan perlu dinilai dari data milik klien."
+      },
+      "justitia": {
+        "title": "Justitia Law Firm",
+        "slug": "justitia-law-firm",
+        "desc": "Situs firma hukum yang menyusun layanan, profil, proyek, berita, artikel, dan jalur konsultasi dalam tampilan responsif.",
+        "challengeText": "Informasi firma hukum perlu tetap jelas dan mudah dijangkau pada desktop, laptop, maupun smartphone, termasuk navigasi, ringkasan layanan, serta jalur konsultasi.",
+        "solutionText": "Kami menyusun halaman dengan hierarki yang tegas, navigasi yang menyesuaikan ukuran layar, tampilan profil utama, ringkasan layanan, dan tombol konsultasi yang tetap terlihat pada setiap ukuran.",
+        "impactText": "Hasilnya adalah antarmuka responsif dengan susunan yang konsisten pada tiga ukuran layar. Dampak komersial lanjutan perlu dinilai dari data milik klien."
       }
     }
   },

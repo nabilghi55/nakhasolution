@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 const Hero = () => {
   const t = useTranslations("Hero");
@@ -36,18 +37,25 @@ const Hero = () => {
             preserveAspectRatio="none"
             aria-hidden="true"
           >
-            <path d="M0 95 H330 C400 95 405 165 480 188" fill="none" stroke="#aaa69d" strokeWidth="1" />
-            <path d="M1200 95 H870 C800 95 795 165 720 188" fill="none" stroke="#aaa69d" strokeWidth="1" />
-            <path d="M0 342 H330 C400 342 405 272 480 242" fill="none" stroke="#aaa69d" strokeWidth="1" />
-            <path d="M1200 342 H870 C800 342 795 272 720 242" fill="none" stroke="#aaa69d" strokeWidth="1" />
-            <path d="M365 95 C418 95 423 162 480 188" fill="none" stroke="#cf4b32" strokeWidth="2" />
-            <path d="M835 95 C782 95 777 162 720 188" fill="none" stroke="#cf4b32" strokeWidth="2" />
-            <path d="M365 342 C418 342 423 276 480 242" fill="none" stroke="#cf4b32" strokeWidth="2" />
-            <path d="M835 342 C782 342 777 276 720 242" fill="none" stroke="#cf4b32" strokeWidth="2" />
-            <circle cx="330" cy="95" r="4" fill="#11110f" />
-            <circle cx="870" cy="95" r="4" fill="#11110f" />
-            <circle cx="330" cy="342" r="4" fill="#11110f" />
-            <circle cx="870" cy="342" r="4" fill="#11110f" />
+            <path className="hero-path hero-path-base hero-path-one" pathLength="1" d="M0 95 H330 C400 95 405 165 480 188" />
+            <path className="hero-path hero-path-base hero-path-two" pathLength="1" d="M1200 95 H870 C800 95 795 165 720 188" />
+            <path className="hero-path hero-path-base hero-path-three" pathLength="1" d="M0 342 H330 C400 342 405 272 480 242" />
+            <path className="hero-path hero-path-base hero-path-four" pathLength="1" d="M1200 342 H870 C800 342 795 272 720 242" />
+
+            <path className="hero-path hero-path-accent hero-path-one" pathLength="1" d="M365 95 C418 95 423 162 480 188" />
+            <path className="hero-path hero-path-accent hero-path-two" pathLength="1" d="M835 95 C782 95 777 162 720 188" />
+            <path className="hero-path hero-path-accent hero-path-three" pathLength="1" d="M365 342 C418 342 423 276 480 242" />
+            <path className="hero-path hero-path-accent hero-path-four" pathLength="1" d="M835 342 C782 342 777 276 720 242" />
+
+            <path className="hero-path-packet hero-path-one" pathLength="1" d="M365 95 C418 95 423 162 480 188" />
+            <path className="hero-path-packet hero-path-two" pathLength="1" d="M835 95 C782 95 777 162 720 188" />
+            <path className="hero-path-packet hero-path-three" pathLength="1" d="M365 342 C418 342 423 276 480 242" />
+            <path className="hero-path-packet hero-path-four" pathLength="1" d="M835 342 C782 342 777 276 720 242" />
+
+            <circle className="hero-node hero-node-one" cx="330" cy="95" r="4" />
+            <circle className="hero-node hero-node-two" cx="870" cy="95" r="4" />
+            <circle className="hero-node hero-node-three" cx="330" cy="342" r="4" />
+            <circle className="hero-node hero-node-four" cx="870" cy="342" r="4" />
           </svg>
 
           <span className="system-chip system-chip-one">CCTV</span>
@@ -61,10 +69,12 @@ const Hero = () => {
               <Image
                 src="/assets/logo.png"
                 alt="Nakha Solution"
-                width={126}
-                height={78}
-                className="hero-hub-logo"
+                width={96}
+                height={59}
+                className="hero-hub-logo brightness-0"
+                style={{ width: "96px", height: "auto" }}
                 priority
+                unoptimized
               />
             </div>
             <span className="hub-index">NS / 01</span>
@@ -84,7 +94,7 @@ const Hero = () => {
               onClick={handleWhatsAppClick}
               className="button-dark"
             >
-              <span className="button-signal" aria-hidden="true" />
+              <WhatsAppIcon size={18} />
               {t("ctaPrimary")}
             </a>
             <a href="#services" className="button-line">

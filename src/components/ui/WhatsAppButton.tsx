@@ -21,7 +21,7 @@ const WhatsAppButton = () => {
       target="_blank"
       rel="noopener noreferrer"
       onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-6 z-50 hidden min-h-[52px] min-w-[52px] items-center justify-center gap-2.5 rounded-lg border border-white/15 bg-[#11110f] px-4 text-[13px] font-semibold text-white shadow-[0_12px_30px_rgba(17,17,15,0.24)] transition-transform hover:-translate-y-0.5 sm:flex"
+      className="fixed bottom-6 right-6 z-50 hidden min-h-[52px] min-w-[52px] items-center justify-center gap-2.5 rounded-lg border border-blue-500 bg-blue-600 px-4 text-[13px] font-semibold text-white shadow-[0_12px_30px_rgba(37,99,235,0.22)] transition-[background-color,transform] hover:-translate-y-0.5 hover:bg-blue-700 sm:flex"
       aria-label="Open WhatsApp consultation"
     >
       <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">

@@ -53,31 +53,64 @@
     "items": {
       "cctv": {
         "title": "CCTV",
-        "desc": "Providing CCTV network solutions to ensure the safety and monitoring of your business. Our services include consultation on needs, strategic placement planning, and installation of high-quality hardware that can be accessed in real-time from anywhere via your mobile device. We ensure your security system runs smoothly with reliable technical support.",
+        "desc": "Monitor your business site around the clock from your phone, whether you are on site or away. Nakha Solution helps you select the cameras, plan each installation point, set up recording storage, and connect the system for straightforward access.",
         "slug": "cctv",
-        "summary": "Camera placement planning, installation, storage, and monitoring access for business sites.",
+        "summary": "Monitor your site around the clock, keep the recordings, and access every camera from your phone.",
         "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=1200",
         "features": [
-          "24/7 Real-time Monitoring",
-          "High-Definition (HD) Quality Cameras",
-          "Remote Access via Smartphone",
-          "Secure Cloud & Local Storage",
-          "Motion Detection & Smart Alerts",
-          "Professional & Neat Installation"
+          "Monitor key points across your business site around the clock.",
+          "Keep high-resolution recordings to support incident review.",
+          "Check day-to-day operations from your phone while you are away.",
+          "Match the camera combination and viewing coverage to your site."
         ],
+        "detail": {
+          "benefitTitle": "What will your CCTV system cover?",
+          "benefitIntro": "The system is planned around the areas you need to watch, the recording quality you need, and the way your team will access the footage.",
+          "typesLabel": "CAMERA TYPES",
+          "typesTitle": "Choose the camera form for each installation area",
+          "typesIntro": "We recommend the camera type after reviewing the viewing angle, monitoring distance, and site conditions.",
+          "types": [
+            "Dome CCTV",
+            "Bullet CCTV",
+            "PTZ CCTV",
+            "360-degree CCTV"
+          ],
+          "faqTitle": "Questions before installation",
+          "faqIntro": "Short answers to the questions clients usually ask before a consultation.",
+          "faq": [
+            {
+              "question": "Where can I get the full CCTV pricing details?",
+              "answer": "Full pricing is available through a WhatsApp consultation. Our team will match it to the number of points, camera types, and site conditions."
+            },
+            {
+              "question": "Can I choose CCTV equipment outside the listed packages?",
+              "answer": "Yes. The brand, quantity, and camera types can be adjusted to suit your business needs."
+            },
+            {
+              "question": "What is the minimum number of cameras for an installation?",
+              "answer": "Installation starts from two cameras connected within one system."
+            },
+            {
+              "question": "How do I start a CCTV installation?",
+              "answer": "Select Consult about CCTV below. The Nakha Solution team will contact you to discuss the site, camera count, and monitoring needs."
+            }
+          ],
+          "ctaTitle": "Already know which areas need monitoring?",
+          "ctaText": "Consult about CCTV"
+        },
         "catalog": {
           "title": "Hikvision CCTV Package (No Audio)",
-          "subtitle": "Complete security solution with high-quality devices from Hikvision.",
+          "subtitle": "Device details and starting prices for CCTV installation at your business site.",
           "notes": [
-            "Package price does NOT include Monitor",
-            "Additional CCTV cable Rp 8,000/meter",
-            "Warranty does not cover CCTV cable, adapter, power supply",
-            "Warranty is void due to natural disasters, short circuit, user negligence, and liquid damage."
+            "Package prices do not include a monitor.",
+            "Additional CCTV cable costs Rp 8,000 per meter.",
+            "The warranty does not cover CCTV cable, adapters, or power supplies.",
+            "The warranty does not cover damage caused by natural disasters, electrical short circuits, user negligence, or liquids."
           ],
-          "packageTitle": "CCTV Package Options",
-          "packageSubtitle": "Choose a package that suits your area surveillance needs.",
-          "includedLabel": "One package includes:",
-          "ctaText": "Order This Package",
+          "packageTitle": "Choose a package by camera count",
+          "packageSubtitle": "Each package lists the devices and initial cable length. A monitor is not included.",
+          "includedLabel": "Package contents:",
+          "ctaText": "Ask about this package",
           "packages": [
             {
               "name": "4-Camera CCTV Package",
@@ -120,78 +153,250 @@
       },
       "digital-marketing": {
         "title": "Digital Marketing Tools",
-        "desc": "Integrated and efficient digital marketing tool solutions supporting Social Media Management, Multimedia projects, and Broadcast engines. We help your business reach a wider audience through marketing automation and deep analytics, allowing you to make more accurate data-driven decisions in your digital marketing campaigns.",
+        "desc": "Manage social media publishing, promotional broadcasts, giveaways, and campaign results in one workflow. Your marketing team can schedule the work, distribute the material, and see which channels generate a response.",
         "slug": "digital-marketing",
-        "summary": "Tools for social media operations, multimedia production, broadcast, and campaign measurement.",
+        "summary": "Schedule content, distribute promotions, and review campaign results in one workflow.",
         "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
         "features": [
-          "Unified Social Media Management",
-          "Multimedia Content Optimization",
-          "Automated Broadcast Systems",
-          "Campaign Performance Analytics",
-          "Target Audience Research Tools",
-          "Marketing Workflow Efficiency"
-        ]
+          "Schedule content so the marketing calendar stays organized.",
+          "Distribute promotions through WhatsApp and email to the intended lists.",
+          "Review clicks, open rates, and conversions for each campaign.",
+          "Connect the creative team's work with marketing manager approvals."
+        ],
+        "detail": {
+          "benefitTitle": "One workflow for day-to-day marketing work",
+          "benefitIntro": "Choose the tools around the work you need to organize, from content planning to campaign reporting.",
+          "typesLabel": "MARKETING TOOLS",
+          "typesTitle": "Use the tools that match your team's workflow",
+          "typesIntro": "Each module can handle a specific need or connect with the others as one marketing process.",
+          "types": [
+            "WhatsApp and email broadcast",
+            "Social media management",
+            "Campaign analytics",
+            "Multimedia workflow",
+            "Giveaway and comment picker"
+          ],
+          "faqTitle": "Questions before choosing the tools",
+          "faqIntro": "Confirm the channels, integrations, and campaign workflow before selecting a setup.",
+          "faq": [
+            {
+              "question": "Does WhatsApp broadcast follow platform policies?",
+              "answer": "Messages use official routes and remain subject to messaging policies, recipient consent, and the current platform requirements."
+            },
+            {
+              "question": "Can we track where a lead came from?",
+              "answer": "Yes. UTM tracking can show which campaign and channel brought a visit or lead."
+            },
+            {
+              "question": "Can a nontechnical marketing team use the tools?",
+              "answer": "The interface is arranged around everyday tasks such as scheduling content, reviewing responses, and reading reports."
+            },
+            {
+              "question": "Which platforms can be used with the comment picker?",
+              "answer": "Comment picker campaigns can be prepared for Instagram or TikTok, including comment and participant filtering based on the campaign rules."
+            }
+          ],
+          "ctaTitle": "Which marketing task should be organized first?",
+          "ctaText": "Discuss marketing tools"
+        }
       },
       "device-bundling": {
         "title": "Device Bundling",
-        "desc": "Solutions for office electronic device needs with competitive offers and bundling according to your business needs. We provide complete packages ranging from computers, networking devices, to productivity software that are pre-configured and ready to use. With our service, you no longer need to worry about device compatibility or the complexities of IT infrastructure procurement.",
+        "desc": "Procure workplace devices and IT infrastructure in one package shaped around your operations. The devices are selected, checked for compatibility, and configured so they are ready to use when they reach your office.",
         "slug": "device-bundling",
-        "summary": "Computers, network equipment, printers, and software supplied as a configured business package.",
+        "summary": "Office devices selected, matched, and configured through one procurement process.",
         "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200",
         "features": [
-          "High-Performance Laptop & Desktop Bundles",
-          "Network & Server Equipment",
-          "Multifunction Printers & Scanners",
-          "Original Software Licenses",
-          "Official Warranty & On-site Support",
-          "Attractive Installment & Rental Options"
-        ]
+          "Make sure the devices in each package work together without compatibility issues.",
+          "Prepare the initial configuration so the devices can be used right away.",
+          "Combine several device categories in one procurement process.",
+          "Support warranty handling and after-sales requirements."
+        ],
+        "detail": {
+          "benefitTitle": "Devices arrive ready for work",
+          "benefitIntro": "Each package is based on its users, required applications, network conditions, and procurement budget.",
+          "typesLabel": "DEVICE CATEGORIES",
+          "typesTitle": "Complete the office setup through one procurement",
+          "typesIntro": "Brands, specifications, and quantities are set after the requirements of each team are mapped.",
+          "types": [
+            "Laptops, PCs, and AIOs",
+            "Phones and tablets",
+            "Office printers",
+            "Data and servers",
+            "Smart TVs and monitors",
+            "Office air conditioning",
+            "Solar panels"
+          ],
+          "faqTitle": "Questions before procurement",
+          "faqIntro": "Short answers about device coverage, pricing, and added value within a package.",
+          "faq": [
+            {
+              "question": "Which office devices can be supplied?",
+              "answer": "Information and communications technology hardware can be assembled as one solution around your operational needs."
+            },
+            {
+              "question": "What is the benefit of buying through Nakha Solution?",
+              "answer": "You can handle several device categories through one process, including selection, compatibility checks, and initial configuration."
+            },
+            {
+              "question": "What does added value mean in this service?",
+              "answer": "Added value is agreed during consultation. It can include a connectivity package, monitoring dashboard, or a simple information system that supports the selected devices."
+            },
+            {
+              "question": "Why is there no fixed price list?",
+              "answer": "Pricing depends on the brands, specifications, quantities, and required configuration. The cost breakdown is prepared after the procurement needs are confirmed."
+            }
+          ],
+          "ctaTitle": "Do you have a list of devices to prepare?",
+          "ctaText": "Consult about device bundling"
+        }
       },
       "campaign-activation": {
         "title": "Campaign Activation Platform",
-        "desc": "A campaign activation platform for giveaways, score prediction, and audience interaction through comment picker, live draw, participant forms, and campaign result summaries.",
+        "desc": "Run giveaways, score predictions, and audience activations without checking participants one by one. Campaign rules are applied to participant data, draws can be shown live, and the results are summarized for your team.",
         "slug": "campaign-activation",
-        "summary": "Giveaway, comment picker, live draw, score prediction, and campaign reporting systems.",
+        "summary": "Manage participants, apply the rules, run the draw, and summarize campaign results.",
         "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
         "features": [
-          "Automated Comment Picker",
-          "Transparent Live Draw System",
-          "Rule-based Participant Filtering",
-          "Campaign Result Summary",
-          "Multi-platform Social Media Integration",
-          "Comprehensive Campaign Reporting"
-        ]
+          "Filter participants by keywords, tags, or campaign rules.",
+          "Run a draw that can be shown while the activation is live.",
+          "Collect predictions and participant details through campaign forms.",
+          "Keep the winners and result summary for review."
+        ],
+        "detail": {
+          "benefitTitle": "Set the campaign rules from the start",
+          "benefitIntro": "The team defines the mechanism, participant requirements, and results to record before the activation opens.",
+          "typesLabel": "ACTIVATION FORMATS",
+          "typesTitle": "Choose an interaction format for the audience",
+          "typesIntro": "Each format can be used on its own or combined with others to match the campaign mechanism.",
+          "types": [
+            "Comment picker",
+            "Interactive score prediction",
+            "Live draw",
+            "Participant form"
+          ],
+          "faqTitle": "Questions before the campaign opens",
+          "faqIntro": "Confirm the data source, filtering rules, and result presentation before launch.",
+          "faq": [
+            {
+              "question": "Which participant rules can be applied?",
+              "answer": "Filtering can use comment keywords, the number of friend tags, or other participant data agreed in the campaign mechanism."
+            },
+            {
+              "question": "Can the draw be shown live?",
+              "answer": "Yes. The live draw flow can be prepared so the winner selection is shown while the activation is running."
+            },
+            {
+              "question": "Can a score prediction campaign calculate points?",
+              "answer": "Yes. Points can be based on the exact score or match result, then displayed in a leaderboard."
+            },
+            {
+              "question": "What do we receive after the campaign ends?",
+              "answer": "Your team receives the winner data and result summary based on the information collected during the campaign."
+            }
+          ],
+          "ctaTitle": "Already have a campaign mechanism?",
+          "ctaText": "Discuss the activation format"
+        }
       },
       "web-development": {
         "title": "Web Development",
-        "desc": "Websites built around your content, consultation path, and team workflow. The format can be a company profile, catalogue, e-commerce site, or internal web system.",
+        "desc": "Build a website that serves as an official reference for prospective customers, partners, or service users. Its pages, content, and features are organized around the business goal and the way your team will manage it after launch.",
         "slug": "web-development",
-        "summary": "Company profiles, catalogues, e-commerce, and web systems built around business requirements.",
+        "summary": "A professional website shaped around the business goal, content, and team workflow.",
         "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200",
         "features": [
-          "Modern & Responsive UI/UX Design",
-          "SEO & Speed Optimization",
-          "Content Management System (CMS)",
-          "E-commerce & Payment Integration",
-          "Regular Maintenance & Updates",
-          "Access settings and updates"
-        ]
+          "Present the company profile, services, and contact details in one official place.",
+          "Adapt the layout for desktop, tablet, and phone screens.",
+          "Structure pages so people and search engines can understand the content.",
+          "Give the team access to update articles or products through a CMS."
+        ],
+        "detail": {
+          "benefitTitle": "A website to use, not just display",
+          "benefitIntro": "The goal, audience, content material, and management workflow are discussed before design and development begin.",
+          "typesLabel": "WEBSITE OPTIONS",
+          "typesTitle": "Choose the website format by the work it needs to do",
+          "typesIntro": "Feature scope and delivery time depend on the website type and the readiness of your team's materials.",
+          "types": [
+            "Company profile",
+            "E-government portal",
+            "Custom web application",
+            "Marketplace and e-commerce"
+          ],
+          "faqTitle": "Questions before development",
+          "faqIntro": "The main factors affecting the schedule, cost, and website management after launch.",
+          "faq": [
+            {
+              "question": "How long does website development take?",
+              "answer": "Development usually takes 1 to 12 weeks, depending on feature complexity and the readiness of the content materials."
+            },
+            {
+              "question": "Does the cost include a domain and hosting?",
+              "answer": "The domain and hosting are included for the first year. Renewal costs will be shared based on the website requirements."
+            },
+            {
+              "question": "What happens if the website has a problem?",
+              "answer": "Issues or bugs caused by our technical work are covered by a six-month warranty after the website goes live."
+            },
+            {
+              "question": "Can our team update the content?",
+              "answer": "Yes. A CMS can be prepared so your team can update articles, pages, or products without changing the code."
+            }
+          ],
+          "ctaTitle": "What kind of website needs to go live?",
+          "ctaText": "Discuss website requirements"
+        }
       },
       "business-application": {
         "title": "Business Application",
-        "desc": "Solutions for integrated software and application needs to support your business accurately, safely, and efficiently. We develop custom applications tailored to your company's specific workflow, helping to automate routine tasks, increase data accuracy, and speed up the decision-making process. With an integrated system, all departments within your company can work more synergistically.",
+        "desc": "Connect data and work across the company through applications that follow your operational flow. The system can begin with one need, such as point of sale or inventory, then expand into other modules as the business grows.",
         "slug": "business-application",
-        "summary": "Custom applications for inventory, operations, CRM, ERP, and internal workflows.",
-        "image": "https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=1200",
+        "summary": "Applications that connect transactions, inventory, people, finance, and operational work.",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
         "features": [
-          "Custom ERP & CRM Applications",
-          "Inventory & Warehouse Systems",
-          "Business Management Dashboards",
-          "Secure Database Integration",
-          "Multi-platform Access (Web/Mobile)",
-          "Internal Business Process Automation"
-        ]
+          "Reduce repeated data entry across company departments.",
+          "Automate routine work that was previously handled by hand.",
+          "Provide operational reports to support management decisions.",
+          "Add modules gradually as the business requirements grow."
+        ],
+        "detail": {
+          "benefitTitle": "Start with the process that needs attention first",
+          "benefitIntro": "We map the workflow first so the application follows how the team works instead of forcing the team into the wrong system.",
+          "typesLabel": "BUSINESS MODULES",
+          "typesTitle": "Combine modules around the company's operations",
+          "typesIntro": "Each module can operate on its own or connect through data integrations.",
+          "types": [
+            "ERP",
+            "Point of Sale",
+            "Stock Management",
+            "HRIS",
+            "Omni Channel",
+            "Marketing Tools",
+            "Nakha Ads"
+          ],
+          "faqTitle": "Questions before implementation",
+          "faqIntro": "Module scope, data readiness, and integration requirements determine the shape of the project.",
+          "faq": [
+            {
+              "question": "Are business applications only for large companies?",
+              "answer": "No. Implementation can start with the basic module you need most, then expand as the business process grows."
+            },
+            {
+              "question": "How long does implementation take?",
+              "answer": "Implementation time varies. An ERP project can take one to six months, depending on process complexity and data readiness."
+            },
+            {
+              "question": "Will our team receive training?",
+              "answer": "Yes. Implementation includes training and user acceptance testing so the team understands the system workflow."
+            },
+            {
+              "question": "Can the system connect with our other applications?",
+              "answer": "Yes. Integration with POS, HRIS, e-commerce, or IoT devices is planned around the systems your company already uses."
+            }
+          ],
+          "ctaTitle": "Which business process needs attention first?",
+          "ctaText": "Map the application needs"
+        }
       }
     },
     "learnMore": "Open service details",
@@ -236,7 +441,7 @@
   "Portfolio": {
     "badge": "Selected Work",
     "title": "Projects we have already built.",
-    "description": "Three active websites for a law firm, a contractor, and an Umrah travel service.",
+    "description": "Four website projects for two law firms, a contractor, and an Umrah travel service.",
     "launch": "Open website",
     "viewProject": "Read project details",
     "viewMore": "View project archive",
@@ -269,6 +474,14 @@
         "challengeText": "Alfajr Umroh faced challenges in managing customer inquiries and explaining complex Umrah packages manually. They needed a centralized digital platform where prospective pilgrims could easily browse packages, view itineraries, and understand the requirements.",
         "solutionText": "We developed a comprehensive travel portal tailored for Umrah services. The website features detailed package listings, day-by-day itineraries, transparent pricing, and an integrated inquiry system. We focused on a user-friendly interface that builds trust and provides clear information.",
         "impactText": "The active site now brings packages, travel information, and customer questions into one place. Any further conversion or operations impact should be assessed from the client's own data."
+      },
+      "justitia": {
+        "title": "Justitia Law Firm",
+        "slug": "justitia-law-firm",
+        "desc": "A law firm website that organizes services, profiles, projects, news, articles, and the consultation path in a responsive interface.",
+        "challengeText": "The firm's information needed to remain clear and accessible on desktop, laptop, and smartphone screens, including navigation, service summaries, and the consultation path.",
+        "solutionText": "We structured the page with clear hierarchy, navigation that adapts to screen width, a prominent profile presentation, service summaries, and consultation actions that remain visible at each size.",
+        "impactText": "The result is a responsive interface with consistent structure across three screen sizes. Any further commercial impact should be assessed from the client's own data."
       }
     }
   },

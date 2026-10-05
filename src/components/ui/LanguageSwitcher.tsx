@@ -20,7 +20,7 @@ export default function LanguageSwitcher() {
 
   return (
     <div
-      className="inline-grid h-11 grid-cols-2 overflow-hidden rounded-md border border-[#c9c6bf] bg-[#f1f0ed]"
+      className="inline-grid h-11 grid-cols-2 overflow-hidden rounded-md border border-slate-300 bg-slate-50"
       role="group"
       aria-label="Language"
     >
@@ -32,7 +32,7 @@ export default function LanguageSwitcher() {
           disabled={isPending}
           aria-pressed={locale === language}
           className={`min-w-11 px-3 font-mono text-[11px] font-medium uppercase transition-colors ${
-            locale === language ? "bg-[#11110f] text-white" : "text-[#4f4d48] hover:bg-[#e2e0da]"
+            locale === language ? "bg-blue-600 text-white" : "text-slate-600 hover:bg-blue-50"
           }`}
         >
           {language}

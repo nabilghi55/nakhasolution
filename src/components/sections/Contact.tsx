@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 const Contact = () => {
   const t = useTranslations("Contact");
@@ -112,7 +113,7 @@ const Contact = () => {
           </div>
 
           <button type="submit" className="button-light contact-submit">
-            <span className="button-signal" aria-hidden="true" />
+            <WhatsAppIcon size={18} />
             {t("form.send")}
           </button>
         </form>

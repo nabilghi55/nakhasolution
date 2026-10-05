@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import DetailHero from "@/components/detail/DetailHero";
 import CctvCatalog, { type CatalogData } from "@/components/sections/CctvCatalog";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 interface ServiceItem {
   title: string;
@@ -15,6 +16,22 @@ interface ServiceItem {
   slug: string;
   image: string;
   features: string[];
+  detail?: {
+    benefitTitle: string;
+    benefitIntro: string;
+    typesLabel: string;
+    typesTitle: string;
+    typesIntro: string;
+    types: string[];
+    faqTitle: string;
+    faqIntro: string;
+    faq: Array<{
+      question: string;
+      answer: string;
+    }>;
+    ctaTitle: string;
+    ctaText: string;
+  };
   catalog?: CatalogData;
 }
 
@@ -46,6 +63,8 @@ export default function ServiceDetailPage() {
     infoT("phone"),
     `Halo Nakha Solution, saya ingin membahas layanan ${service.title}.`,
   );
+  const faqIndex = service.catalog ? "04" : "03";
+  const ctaIndex = service.catalog ? "05" : service.detail ? "04" : "02";
 
   const handleWhatsAppClick = () => {
     if (typeof window !== "undefined" && window.fbq) {
@@ -77,8 +96,8 @@ export default function ServiceDetailPage() {
             <div className="detail-section-head">
               <p className="detail-kicker">01 / SCOPE</p>
               <div>
-                <h2>{t("whyChoose")}</h2>
-                <p>{service.desc}</p>
+                <h2>{service.detail?.benefitTitle ?? t("whyChoose")}</h2>
+                <p>{service.detail?.benefitIntro ?? service.desc}</p>
               </div>
             </div>
 
@@ -93,13 +112,62 @@ export default function ServiceDetailPage() {
           </div>
         </section>
 
+        {service.detail ? (
+          <section className="detail-section detail-product-section">
+            <div className="detail-shell">
+              <div className="detail-section-head">
+                <p className="detail-kicker">02 / {service.detail.typesLabel}</p>
+                <div>
+                  <h2>{service.detail.typesTitle}</h2>
+                  <p>{service.detail.typesIntro}</p>
+                </div>
+              </div>
+
+              <div className="detail-type-list">
+                {service.detail.types.map((type, index) => (
+                  <div className="detail-type-row" key={type}>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <h3>{type}</h3>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
+
         {service.catalog ? <CctvCatalog catalog={service.catalog} /> : null}
+
+        {service.detail ? (
+          <section className="detail-section detail-faq-section">
+            <div className="detail-shell detail-faq-layout">
+              <div className="detail-faq-intro">
+                <p className="detail-kicker">{faqIndex} / FAQ</p>
+                <h2>{service.detail.faqTitle}</h2>
+                <p>{service.detail.faqIntro}</p>
+              </div>
+
+              <div className="detail-faq-list">
+                {service.detail.faq.map((item, index) => (
+                  <details className="detail-faq-item" key={item.question}>
+                    <summary>
+                      <span>{String(index + 1).padStart(2, "0")}</span>
+                      <strong>{item.question}</strong>
+                    </summary>
+                    <p>{item.answer}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
 
         <section className="detail-cta-band">
           <div className="detail-shell detail-cta-layout">
             <div>
-              <p className="detail-kicker">02 / NEXT CONVERSATION</p>
-              <h2>{t("consultTitle")}</h2>
+              <p className="detail-kicker">
+                {ctaIndex} / NEXT CONVERSATION
+              </p>
+              <h2>{service.detail?.ctaTitle ?? t("consultTitle")}</h2>
             </div>
             <a
               href={whatsappUrl}
@@ -108,7 +176,8 @@ export default function ServiceDetailPage() {
               onClick={handleWhatsAppClick}
               className="detail-cta-link"
             >
-              {t("cta")}
+              <WhatsAppIcon size={17} />
+              {service.detail?.ctaText ?? t("cta")}
             </a>
           </div>
         </section>

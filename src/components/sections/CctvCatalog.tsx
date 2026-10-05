@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 interface PackageItem {
   name: string;
@@ -33,7 +34,7 @@ export default function CctvCatalog({ catalog }: CctvCatalogProps) {
     <section className="detail-section" aria-labelledby="package-title">
       <div className="detail-shell">
         <div className="detail-section-head">
-          <p className="detail-kicker">02 / CONFIGURATION</p>
+          <p className="detail-kicker">03 / CONFIGURATION</p>
           <div>
             <h2 id="package-title">{catalog.packageTitle}</h2>
             <p>{catalog.packageSubtitle}</p>
@@ -55,6 +56,7 @@ export default function CctvCatalog({ catalog }: CctvCatalogProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
+                    <WhatsAppIcon size={16} />
                     {catalog.ctaText}
                   </a>
                 </div>

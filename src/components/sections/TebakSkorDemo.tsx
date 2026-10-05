@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
 import type { FormEvent } from "react";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 interface Score { home: string; away: string; }
 interface Match { id: number; home: string; away: string; result: [number, number]; }
@@ -134,7 +135,7 @@ export default function TebakSkorDemo() {
               <div className="demo-data-cell">{isEnglish ? "MATCHES" : "PERTANDINGAN"}<br />{matches.length}</div>
               <div className="demo-data-cell">{isEnglish ? "MODE" : "MODE"}<br />SAMPLE</div>
             </div>
-            <div className="demo-control-row"><button className="demo-button secondary" type="button" onClick={reset}>{isEnglish ? "Run again" : "Ulangi"}</button><a className="demo-button" href={whatsapp} target="_blank" rel="noopener noreferrer">{isEnglish ? "Discuss real campaign" : "Bahas campaign nyata"}</a></div>
+            <div className="demo-control-row"><button className="demo-button secondary" type="button" onClick={reset}>{isEnglish ? "Run again" : "Ulangi"}</button><a className="demo-button" href={whatsapp} target="_blank" rel="noopener noreferrer"><WhatsAppIcon size={16} />{isEnglish ? "Discuss real campaign" : "Bahas campaign nyata"}</a></div>
           </div>
         )}
       </div>

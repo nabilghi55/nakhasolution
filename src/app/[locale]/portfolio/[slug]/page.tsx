@@ -20,15 +20,17 @@ const projectImages: Record<string, string> = {
   raya: "/assets/backgroundportofolio/RAYA-1.webp",
   putra: "/assets/backgroundportofolio/PWM3.webp",
   alfajr: "/assets/backgroundportofolio/ALFJR2.webp",
+  justitia: "/assets/backgroundportofolio/JUSTITIA-LAW-FIRM.png",
 };
 
 const projectLogos: Record<string, string> = {
   raya: "/assets/logoportofolio/logorayalawfirm.webp",
   putra: "/assets/logoportofolio/logo-pwm.webp",
   alfajr: "/assets/logoportofolio/logoalfajr.png",
+  justitia: "/assets/logoportofolio/logojustitia.webp",
 };
 
-const projectLinks: Record<string, string> = {
+const projectLinks: Partial<Record<string, string>> = {
   raya: "https://rayalawfirm.vercel.app/",
   putra: "https://putrawijayamandiri.id/",
   alfajr: "https://alfajrumroh.co.id/",
@@ -77,7 +79,7 @@ export default function PortfolioDetailPage() {
           description={project.desc}
           image={image}
           imageAlt={`${project.title} project preview`}
-          mediaLabel={`${project.title} / live project`}
+          mediaLabel={`${project.title} / ${externalLink ? "live project" : "project preview"}`}
           logo={logo}
           backHref="/#portfolio"
           backLabel={t("backToHome")}
@@ -103,17 +105,19 @@ export default function PortfolioDetailPage() {
           </div>
         </section>
 
-        <section className="detail-section">
-          <div className="detail-shell detail-cta-layout">
-            <div>
-              <p className="detail-kicker">02 / LIVE REFERENCE</p>
-              <h2>{t("launch")}</h2>
+        {externalLink && (
+          <section className="detail-section">
+            <div className="detail-shell detail-cta-layout">
+              <div>
+                <p className="detail-kicker">02 / LIVE REFERENCE</p>
+                <h2>{t("launch")}</h2>
+              </div>
+              <a className="detail-cta-link" href={externalLink} target="_blank" rel="noopener noreferrer">
+                {t("launch")}
+              </a>
             </div>
-            <a className="detail-cta-link" href={externalLink} target="_blank" rel="noopener noreferrer">
-              {t("launch")}
-            </a>
-          </div>
-        </section>
+          </section>
+        )}
       </main>
       <Footer />
     </div>

@@ -4,6 +4,7 @@ import { useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import DetailSignalRail from "@/components/detail/DetailSignalRail";
 import CampaignDemo from "@/components/sections/CampaignDemo";
 
 export default function InstagramPickerDemoPage() {
@@ -12,6 +13,9 @@ export default function InstagramPickerDemoPage() {
     <div className="demo-page">
       <Navbar />
       <main className="demo-main">
+        <div className="detail-standalone-signal">
+          <DetailSignalRail start="LOCAL" end="DEMO" labels={["SAMPLE", "RULE", "RESULT"]} />
+        </div>
         <div className="detail-shell">
           <div className="demo-breadcrumb">
             <Link href="/services/campaign-activation" className="detail-back-link">
@@ -20,7 +24,10 @@ export default function InstagramPickerDemoPage() {
             </Link>
           </div>
           <div className="demo-heading">
-            <h1>{isEnglish ? "Instagram Comment Picker" : "Instagram Comment Picker"}</h1>
+            <div>
+              <p className="detail-eyebrow">CAMPAIGN TOOL / 01</p>
+              <h1>{isEnglish ? "Instagram Comment Picker" : "Instagram Comment Picker"}</h1>
+            </div>
             <p>{isEnglish ? "A local simulation that demonstrates the selection flow with sample data. No Instagram request is sent." : "Simulasi lokal untuk memperlihatkan alur pemilihan dengan data contoh. Tidak ada request Instagram yang dikirim."}</p>
           </div>
           <CampaignDemo />

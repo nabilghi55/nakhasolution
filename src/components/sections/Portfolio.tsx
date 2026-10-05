@@ -4,10 +4,23 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 
+interface PortfolioProject {
+  key: string;
+  title: string;
+  slug: string;
+  description: string;
+  image: string;
+  logo: string;
+  link?: string;
+  tags: string[];
+  mediaFit?: "cover" | "contain";
+  logoShape?: "horizontal" | "square";
+}
+
 const Portfolio = () => {
   const t = useTranslations("Portfolio");
 
-  const projects = [
+  const projects: PortfolioProject[] = [
     {
       key: "raya",
       title: "Raya Law Firm",
@@ -38,6 +51,17 @@ const Portfolio = () => {
       link: "https://alfajrumroh.co.id/",
       tags: ["Travel", "Package catalogue"],
     },
+    {
+      key: "justitia",
+      title: "Justitia Law Firm",
+      slug: t("projects.justitia.slug"),
+      description: t("projects.justitia.desc"),
+      image: "/assets/backgroundportofolio/JUSTITIA-LAW-FIRM.png",
+      logo: "/assets/logoportofolio/logojustitia.webp",
+      tags: ["Legal", "Responsive website"],
+      mediaFit: "contain",
+      logoShape: "square",
+    },
   ];
 
   return (
@@ -54,7 +78,7 @@ const Portfolio = () => {
         <div className="project-list">
           {projects.map((project, index) => (
             <article className="project-row" key={project.key}>
-              <div className="project-media">
+              <div className={`project-media${project.mediaFit === "contain" ? " project-media--contain" : ""}`}>
                 <Image
                   src={project.image}
                   alt={`${project.title} project preview`}
@@ -65,7 +89,7 @@ const Portfolio = () => {
 
               <div className="project-copy">
                 <p className="technical-label">Project / {String(index + 1).padStart(2, "0")}</p>
-                <div className="project-logo">
+                <div className={`project-logo${project.logoShape === "square" ? " project-logo--square" : ""}`}>
                   <Image src={project.logo} alt={`${project.title} logo`} fill sizes="132px" />
                 </div>
                 <h3>{project.title}</h3>
@@ -74,10 +98,12 @@ const Portfolio = () => {
                   {project.tags.map((tag) => <li key={tag}>{tag}</li>)}
                 </ul>
                 <div className="project-actions">
-                  <a className="button-dark" href={project.link} target="_blank" rel="noopener noreferrer">
-                    {t("launch")}
-                  </a>
-                  <Link className="button-line" href={`/portfolio/${project.slug}`}>
+                  {project.link && (
+                    <a className="button-dark" href={project.link} target="_blank" rel="noopener noreferrer">
+                      {t("launch")}
+                    </a>
+                  )}
+                  <Link className={project.link ? "button-line" : "button-dark"} href={`/portfolio/${project.slug}`}>
                     {t("viewProject")}
                   </Link>
                 </div>

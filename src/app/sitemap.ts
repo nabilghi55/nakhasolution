@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'raya-law-firm',
     'putra-wijaya-mandiri',
     'alfajr-umroh',
+    'justitia-law-firm',
   ];
 
   const routes = [

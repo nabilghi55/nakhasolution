@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import DetailSignalRail from "@/components/detail/DetailSignalRail";
 
 interface DetailHeroProps {
   index: string;
@@ -32,12 +34,14 @@ export default function DetailHero({
         <span>{index}</span>
       </div>
 
+      <DetailSignalRail />
+
       <div className="detail-hero-layout">
         <div className="detail-hero-copy">
-          <a href={backHref} className="detail-back-link">
+          <Link href={backHref} className="detail-back-link">
             <span aria-hidden="true">←</span>
             {backLabel}
-          </a>
+          </Link>
           <p className="detail-eyebrow">{eyebrow}</p>
           <h1 id="detail-title">{title}</h1>
           <p className="detail-lead">{description}</p>

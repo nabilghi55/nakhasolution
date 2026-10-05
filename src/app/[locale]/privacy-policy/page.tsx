@@ -2,6 +2,7 @@
 import { getTranslations } from "next-intl/server";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import DetailSignalRail from "@/components/detail/DetailSignalRail";
 
 interface LegalSection { title: string; body: string; }
 
@@ -13,6 +14,9 @@ export default async function PrivacyPolicyPage() {
     <div className="detail-page">
       <Navbar />
       <main className="legal-main">
+        <div className="detail-standalone-signal">
+          <DetailSignalRail start="DOCUMENT" end="CURRENT" labels={["SCOPE", "POLICY", "REFERENCE"]} />
+        </div>
         <div className="detail-shell">
           <header className="legal-header">
             <div>

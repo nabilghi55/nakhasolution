@@ -6,6 +6,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import DetailHero from "@/components/detail/DetailHero";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 export default function CampaignActivationLanding() {
   const locale = useLocale();
@@ -16,28 +17,35 @@ export default function CampaignActivationLanding() {
     desc: string;
     image: string;
     features: string[];
+    detail: {
+      benefitTitle: string;
+      benefitIntro: string;
+      typesTitle: string;
+      typesIntro: string;
+      types: string[];
+      faqTitle: string;
+      faqIntro: string;
+      faq: Array<{
+        question: string;
+        answer: string;
+      }>;
+      ctaTitle: string;
+      ctaText: string;
+    };
   };
   const isEnglish = locale === "en";
   const copy = isEnglish
     ? {
         eyebrow: "Campaign system",
-        productsTitle: "Choose the interaction your campaign needs.",
-        productsDesc: "Two focused demos show how the system can support a campaign brief without pretending to be live production data.",
-        useTitle: "Built around the campaign brief.",
-        useDesc: "The same structure can be adapted for a giveaway, a score prediction, or an audience interaction flow.",
-        useCases: ["Giveaway and comment selection", "Score prediction and points", "Audience registration", "Campaign result summary"],
+        productsTitle: "Try the campaign flow before launch",
+        productsDesc: "These two demos show how comments, predictions, participant details, and campaign rules move through the system.",
         demo: "Open demo",
-        talk: "Discuss this system",
       }
     : {
         eyebrow: "Sistem campaign",
-        productsTitle: "Pilih interaksi yang dibutuhkan campaign Anda.",
-        productsDesc: "Dua demo terarah memperlihatkan alur sistem tanpa menyamar sebagai data produksi yang sedang berjalan.",
-        useTitle: "Dibangun dari brief campaign.",
-        useDesc: "Struktur yang sama dapat disesuaikan untuk giveaway, tebak skor, atau alur interaksi audiens.",
-        useCases: ["Giveaway dan pemilihan komentar", "Tebak skor dan akumulasi poin", "Registrasi audiens", "Ringkasan hasil campaign"],
+        productsTitle: "Coba alur campaign sebelum digunakan",
+        productsDesc: "Dua demo ini menunjukkan cara komentar, prediksi, data peserta, dan aturan campaign diproses dalam sistem.",
         demo: "Buka demo",
-        talk: "Diskusikan sistem ini",
       };
   const whatsapp = buildWhatsAppLink(infoT("phone"), isEnglish
     ? "Hello Nakha Solution, I want to discuss a campaign activation system."
@@ -95,7 +103,7 @@ export default function CampaignActivationLanding() {
                     </div>
                     <div className="campaign-product-actions">
                       <Link className="detail-secondary-link" href={product.href}>{copy.demo}</Link>
-                      <a className="detail-cta-link" href={whatsapp} target="_blank" rel="noopener noreferrer">{copy.talk}</a>
+                      <a className="detail-cta-link" href={whatsapp} target="_blank" rel="noopener noreferrer"><WhatsAppIcon size={17} />{service.detail.ctaText}</a>
                     </div>
                   </div>
                 </article>
@@ -109,8 +117,8 @@ export default function CampaignActivationLanding() {
             <div className="detail-section-head">
               <p className="detail-kicker">02 / SYSTEM NOTES</p>
               <div>
-                <h2>{copy.useTitle}</h2>
-                <p>{copy.useDesc}</p>
+                <h2>{service.detail.benefitTitle}</h2>
+                <p>{service.detail.benefitIntro}</p>
               </div>
             </div>
             <div className="detail-index-list">
@@ -122,9 +130,12 @@ export default function CampaignActivationLanding() {
               ))}
             </div>
             <div className="detail-notes">
-              <div><h3>{copy.useTitle}</h3></div>
+              <div>
+                <h3>{service.detail.typesTitle}</h3>
+                <p className="detail-meta">{service.detail.typesIntro}</p>
+              </div>
               <ol className="detail-notes-list">
-                {copy.useCases.map((item, index) => (
+                {service.detail.types.map((item, index) => (
                   <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>
                 ))}
               </ol>
@@ -132,10 +143,31 @@ export default function CampaignActivationLanding() {
           </div>
         </section>
 
+        <section className="detail-section detail-faq-section">
+          <div className="detail-shell detail-faq-layout">
+            <div className="detail-faq-intro">
+              <p className="detail-kicker">03 / FAQ</p>
+              <h2>{service.detail.faqTitle}</h2>
+              <p>{service.detail.faqIntro}</p>
+            </div>
+            <div className="detail-faq-list">
+              {service.detail.faq.map((item, index) => (
+                <details className="detail-faq-item" key={item.question}>
+                  <summary>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <strong>{item.question}</strong>
+                  </summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="detail-cta-band">
           <div className="detail-shell detail-cta-layout">
-            <div><p className="detail-kicker">03 / NEXT CONVERSATION</p><h2>{copy.talk}</h2></div>
-            <a className="detail-cta-link" href={whatsapp} target="_blank" rel="noopener noreferrer">{t("cta")}</a>
+            <div><p className="detail-kicker">04 / NEXT CONVERSATION</p><h2>{service.detail.ctaTitle}</h2></div>
+            <a className="detail-cta-link" href={whatsapp} target="_blank" rel="noopener noreferrer"><WhatsAppIcon size={17} />{service.detail.ctaText}</a>
           </div>
         </section>
       </main>

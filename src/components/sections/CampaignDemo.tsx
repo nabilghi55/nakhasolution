@@ -3,6 +3,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 const sampleComments = ["@peserta_01", "@peserta_02", "@peserta_03", "@peserta_04", "@peserta_05", "@peserta_06", "@peserta_07", "@peserta_08"];
 
@@ -81,7 +82,7 @@ export default function CampaignDemo() {
             <div className="demo-result"><span className="demo-result-label">{isEnglish ? "Sample winner" : "Pemenang contoh"}</span><strong>{winner}</strong></div>
             <div className="demo-control-row">
               <button className="demo-button secondary" type="button" onClick={reset}>{isEnglish ? "Run again" : "Undi lagi"}</button>
-              <a className="demo-button" href={whatsapp} target="_blank" rel="noopener noreferrer">{isEnglish ? "Discuss a real setup" : "Bahas kebutuhan nyata"}</a>
+              <a className="demo-button" href={whatsapp} target="_blank" rel="noopener noreferrer"><WhatsAppIcon size={16} />{isEnglish ? "Discuss a real setup" : "Bahas kebutuhan nyata"}</a>
             </div>
           </div>
         )}
