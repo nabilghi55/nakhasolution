@@ -26,6 +26,11 @@ export const metadata: Metadata = {
   title: "Nakha Solution | Technology Systems for Business",
   description: "Nakha Solution designs and operates CCTV, websites, campaign tools, business applications, and office technology for businesses in Padang and Sumatra.",
   keywords: "Nakha Solution, IT Consultant Padang, Web Development Sumatra, CCTV Installation Padang, Digital Marketing Agency, Software Development Padang",
+  icons: {
+    icon: "/assets/logoblack.png",
+    shortcut: "/assets/logoblack.png",
+    apple: "/assets/logoblack.png",
+  },
   openGraph: {
     title: "Nakha Solution | Technology Systems for Business",
     description: "CCTV, websites, campaign tools, business applications, and office technology for businesses in Padang and Sumatra.",
@@ -33,6 +38,7 @@ export const metadata: Metadata = {
     siteName: "Nakha Solution",
     locale: "id_ID",
     type: "website",
+    images: [{ url: "/assets/logoblack.png" }],
   },
 };
 

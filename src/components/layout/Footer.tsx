@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="footer-main">
           <div className="footer-brand">
             <Link href="/" className="footer-brand-logo" aria-label="Nakha Solution home">
-              <Image src="/assets/logo.png" alt="" fill sizes="72px" />
+              <Image src="/assets/logoblack.png" alt="Nakha Solution" fill sizes="72px" className="object-contain" />
             </Link>
             <div>
               <strong>NAKHA SOLUTION</strong>

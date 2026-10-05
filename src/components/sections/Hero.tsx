@@ -67,14 +67,13 @@ const Hero = () => {
           <div className="hero-hub" aria-label="Nakha Solution system hub">
             <div className="hero-hub-core">
               <Image
-                src="/assets/logo.png"
+                src="/assets/logoblack.png"
                 alt="Nakha Solution"
-                width={96}
-                height={59}
-                className="hero-hub-logo brightness-0"
-                style={{ width: "96px", height: "auto" }}
+                width={120}
+                height={74}
+                className="hero-hub-logo"
+                style={{ width: "104px", height: "auto" }}
                 priority
-                unoptimized
               />
             </div>
             <span className="hub-index">NS / 01</span>
