@@ -3,6 +3,10 @@
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/routing";
 import { useTransition } from "react";
+import { posRouteList } from "@/content/pos-routes";
+
+// Pages that exist only in Indonesian; switching to English from them goes to the English homepage.
+const indonesianOnlyPaths = new Set<string>(posRouteList.map((route) => route.path));
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
@@ -13,8 +17,9 @@ export default function LanguageSwitcher() {
   const changeLanguage = (nextLocale: "id" | "en") => {
     if (nextLocale === locale) return;
 
+    const target = nextLocale !== "id" && indonesianOnlyPaths.has(pathname) ? "/" : pathname;
     startTransition(() => {
-      router.replace(pathname, { locale: nextLocale });
+      router.replace(target, { locale: nextLocale });
     });
   };
 

@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import DetailHero from "@/components/detail/DetailHero";
 import CctvCatalog, { type CatalogData } from "@/components/sections/CctvCatalog";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import { trackEvent } from "@/lib/analytics";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 interface ServiceItem {
@@ -37,7 +38,6 @@ interface ServiceItem {
 
 export default function ServiceDetailPage() {
   const t = useTranslations("Services");
-  const infoT = useTranslations("ContactInfo");
   const params = useParams();
   const slug = params.slug as string;
   const services = t.raw("items") as Record<string, ServiceItem>;
@@ -60,19 +60,13 @@ export default function ServiceDetailPage() {
   }
 
   const whatsappUrl = buildWhatsAppLink(
-    infoT("phone"),
     `Halo Nakha Solution, saya ingin membahas layanan ${service.title}.`,
   );
   const faqIndex = service.catalog ? "04" : "03";
   const ctaIndex = service.catalog ? "05" : service.detail ? "04" : "02";
 
   const handleWhatsAppClick = () => {
-    if (typeof window !== "undefined" && window.fbq) {
-      window.fbq("track", "Lead", {
-        content_name: `WhatsApp Inquiry for ${service.title}`,
-        content_category: "Service Detail Page",
-      });
-    }
+    trackEvent("click_whatsapp", { placement: "service_detail_cta", service: slug });
   };
 
   return (

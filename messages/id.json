@@ -7,7 +7,13 @@
     "contact": "Kontak",
     "talk": "Jadwalkan Diskusi",
     "menu": "Menu",
-    "close": "Tutup"
+    "close": "Tutup",
+    "posGroup": "Aplikasi Kasir & POS",
+    "posNote": "Sistem custom untuk usaha di Padang",
+    "servicesNote": "Solusi digital terintegrasi untuk bisnis Anda",
+    "servicesIndex": "Indeks Layanan",
+    "servicesIndexMobile": "Lihat Indeks Layanan",
+    "pagesLanguageNote": ""
   },
   "Hero": {
     "badge": "Digital system partner / Padang",
@@ -522,7 +528,6 @@
   },
   "ContactInfo": {
     "email": "nakhasolution@gmail.com",
-    "phone": "081166016611",
     "address": "Padang, Sumatera Barat, Indonesia"
   },
   "Legal": {

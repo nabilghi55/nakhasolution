@@ -1,10 +1,13 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import NextLink from "next/link";
 import { Link } from "@/i18n/routing";
+import { posRouteList } from "@/content/pos-routes";
 
 const Services = () => {
   const t = useTranslations("Services");
+  const navT = useTranslations("Navbar");
 
   const services = [
     "cctv",
@@ -40,6 +43,22 @@ const Services = () => {
             </Link>
           ))}
         </div>
+
+        <nav className="pos-home-strip" aria-labelledby="pos-home-strip-title">
+          <p id="pos-home-strip-title">
+            {navT("posGroup")} <span>{navT("pagesLanguageNote")}</span>
+          </p>
+          <ul>
+            {posRouteList.map((route) => (
+              <li key={route.key}>
+                <NextLink href={route.path}>
+                  <span className="pos-index">{route.code}</span>
+                  {route.navLabel}
+                </NextLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </section>
   );

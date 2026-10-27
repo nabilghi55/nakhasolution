@@ -1,26 +1,22 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import { trackEvent } from "@/lib/analytics";
+import { whatsappMessageForPath } from "@/content/pos-routes";
+
+const DEFAULT_MESSAGE = "Halo Nakha Solution, saya ingin berkonsultasi.";
 
 const WhatsAppButton = () => {
-  const infoT = useTranslations("ContactInfo");
-
-  const handleWhatsAppClick = () => {
-    if (typeof window !== "undefined" && window.fbq) {
-      window.fbq("track", "Lead", {
-        content_name: "WhatsApp Inquiry from Floating Button",
-        content_category: "Support",
-      });
-    }
-  };
+  const pathname = usePathname() ?? "/";
+  const message = whatsappMessageForPath(pathname) ?? DEFAULT_MESSAGE;
 
   return (
     <a
-      href={buildWhatsAppLink(infoT("phone"), "Halo Nakha Solution, saya ingin berkonsultasi.")}
+      href={buildWhatsAppLink(message)}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={handleWhatsAppClick}
+      onClick={() => trackEvent("click_whatsapp", { placement: "floating_button" })}
       className="fixed bottom-6 right-6 z-50 hidden min-h-[52px] min-w-[52px] items-center justify-center gap-2.5 rounded-lg border border-blue-500 bg-blue-600 px-4 text-[13px] font-semibold text-white shadow-[0_12px_30px_rgba(37,99,235,0.22)] transition-[background-color,transform] hover:-translate-y-0.5 hover:bg-blue-700 sm:flex"
       aria-label="Open WhatsApp consultation"
     >

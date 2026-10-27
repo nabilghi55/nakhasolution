@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { useMemo, useState } from "react";
 import type { FormEvent } from "react";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
@@ -23,7 +23,6 @@ const emptyScores = (): Record<number, Score> => ({
 
 export default function TebakSkorDemo() {
   const isEnglish = useLocale() === "en";
-  const infoT = useTranslations("ContactInfo");
   const [step, setStep] = useState<0 | 1 | 2 | 3>(0);
   const [scores, setScores] = useState<Record<number, Score>>(emptyScores);
   const [username, setUsername] = useState("");
@@ -70,7 +69,7 @@ export default function TebakSkorDemo() {
     setError("");
   };
 
-  const whatsapp = buildWhatsAppLink(infoT("phone"), isEnglish
+  const whatsapp = buildWhatsAppLink(isEnglish
     ? "Hello Nakha Solution, I want to discuss a score prediction campaign."
     : "Halo Nakha Solution, saya ingin membahas campaign tebak skor.");
 

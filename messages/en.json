@@ -7,7 +7,13 @@
     "contact": "Contact",
     "talk": "Schedule a Call",
     "menu": "Menu",
-    "close": "Close"
+    "close": "Close",
+    "posGroup": "Cashier & POS Apps",
+    "posNote": "Indonesian-language pages for businesses in Padang",
+    "servicesNote": "Integrated digital solutions for your business",
+    "servicesIndex": "Service index",
+    "servicesIndexMobile": "View service index",
+    "pagesLanguageNote": "(ID)"
   },
   "Hero": {
     "badge": "Digital system partner / Padang",
@@ -522,7 +528,6 @@
   },
   "ContactInfo": {
     "email": "nakhasolution@gmail.com",
-    "phone": "081166016611",
     "address": "Padang, West Sumatra, Indonesia"
   },
   "Legal": {

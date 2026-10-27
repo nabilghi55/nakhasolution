@@ -1,9 +1,11 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 "use client";
 
 import Image from "next/image";
+import NextLink from "next/link";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import { displayPhone, e164Phone } from "@/lib/whatsapp";
+import { posRouteList } from "@/content/pos-routes";
 
 const Footer = () => {
   const t = useTranslations("Footer");
@@ -28,19 +30,29 @@ const Footer = () => {
             <div>
               <h3>{t("quickLinks")}</h3>
               <ul>
-                <li><a href="/#about">{navT("about")}</a></li>
-                <li><a href="/#services">{navT("services")}</a></li>
-                <li><a href="/#portfolio">{navT("portfolio")}</a></li>
-                <li><a href="/#contact">{navT("contact")}</a></li>
+                <li><Link href="/#about">{navT("about")}</Link></li>
+                <li><Link href="/#services">{navT("services")}</Link></li>
+                <li><Link href="/#portfolio">{navT("portfolio")}</Link></li>
+                <li><Link href="/#contact">{navT("contact")}</Link></li>
                 <li><a href="https://instagram.com/nakha.solution" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                 <li><a href="https://tiktok.com/@nakha.solution" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3>{navT("posGroup")}</h3>
+              <ul>
+                {posRouteList.map((route) => (
+                  <li key={route.key}>
+                    <NextLink href={route.path}>{route.navLabel}</NextLink>
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
               <h3>{t("contactUs")}</h3>
               <ul>
                 <li><a href={`mailto:${infoT("email")}`}>{infoT("email")}</a></li>
-                <li><a href={`tel:${infoT("phone")}`}>{infoT("phone")}</a></li>
+                <li><a href={`tel:${e164Phone()}`}>{displayPhone()}</a></li>
                 <li><span>{infoT("address")}</span></li>
               </ul>
             </div>

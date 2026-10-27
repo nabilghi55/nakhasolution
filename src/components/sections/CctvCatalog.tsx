@@ -1,6 +1,5 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
@@ -26,8 +25,6 @@ interface CctvCatalogProps {
 }
 
 export default function CctvCatalog({ catalog }: CctvCatalogProps) {
-  const infoT = useTranslations("ContactInfo");
-
   if (!catalog) return null;
 
   return (
@@ -52,7 +49,7 @@ export default function CctvCatalog({ catalog }: CctvCatalogProps) {
                   <p className="detail-package-price">{pkg.price}</p>
                   <a
                     className="detail-package-link"
-                    href={buildWhatsAppLink(infoT("phone"), message)}
+                    href={buildWhatsAppLink(message)}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

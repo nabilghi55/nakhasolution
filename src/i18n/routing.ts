@@ -3,17 +3,21 @@ import {createNavigation} from 'next-intl/navigation';
  
 export const routing = defineRouting({
   // A list of all locales that are supported
-  locales: ['en', 'id'],
+  locales: ['id', 'en'],
  
   // Used when no locale matches
   defaultLocale: 'id',
   
-  // Don't show locale in URL
-  localePrefix: 'never',
+  // Indonesian stays at "/", English gets "/en". Distinct URLs per language are
+  // what makes hreflang and canonical tags valid for search engines.
+  localePrefix: 'as-needed',
 
-  // Keep the URL clean while allowing the language switcher to persist its
-  // selection in the next-intl locale cookie.
-  localeDetection: true
+  // Every visitor (and crawler) gets the language the URL names. The switcher
+  // changes the URL instead of relying on cookies or Accept-Language.
+  localeDetection: false,
+
+  // hreflang is emitted per page through metadata, because some pages are Indonesian-only.
+  alternateLinks: false
 });
  
 // Lightweight wrappers around Next.js' navigation APIs

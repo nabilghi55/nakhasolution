@@ -1,11 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import "../globals.css";
 import "../detail.css";
+import "../pos.css";
 import Script from "next/script";
+import { isIndexable, siteConfig } from "@/config/site";
 
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
@@ -22,24 +24,44 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500", "600"],
 });
 
+// Site-wide defaults. Canonical, hreflang, and Open Graph URLs are set per page
+// (see buildPageMetadata) so no page inherits the homepage canonical by accident.
 export const metadata: Metadata = {
-  title: "Nakha Solution | Technology Systems for Business",
-  description: "Nakha Solution designs and operates CCTV, websites, campaign tools, business applications, and office technology for businesses in Padang and Sumatra.",
-  keywords: "Nakha Solution, IT Consultant Padang, Web Development Sumatra, CCTV Installation Padang, Digital Marketing Agency, Software Development Padang",
+  metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.name,
+  title: "Nakha Solution | Software House & Solusi Digital di Padang",
+  description:
+    "Nakha Solution membantu bisnis di Padang dan Sumatera Barat membangun aplikasi kasir, POS, manajemen stok, website, dan sistem operasional custom.",
   icons: {
-    icon: "/assets/logoblack.png",
-    shortcut: "/assets/logoblack.png",
-    apple: "/assets/logoblack.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
-    title: "Nakha Solution | Technology Systems for Business",
-    description: "CCTV, websites, campaign tools, business applications, and office technology for businesses in Padang and Sumatra.",
-    url: "https://nakhasolution.com",
-    siteName: "Nakha Solution",
-    locale: "id_ID",
+    siteName: siteConfig.name,
     type: "website",
-    images: [{ url: "/assets/logoblack.png" }],
+    locale: "id_ID",
+    images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: "Nakha Solution, Padang" }],
   },
+  twitter: { card: "summary_large_image", images: [siteConfig.ogImage] },
+  robots: isIndexable
+    ? { index: true, follow: true }
+    : { index: false, follow: false, googleBot: { index: false, follow: false } },
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+    other: process.env.BING_SITE_VERIFICATION
+      ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION }
+      : undefined,
+  },
+  formatDetection: { telephone: false },
+};
+
+export const viewport: Viewport = {
+  themeColor: siteConfig.themeColor,
 };
 
 export default async function RootLayout({
@@ -56,6 +78,7 @@ export default async function RootLayout({
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
+  setRequestLocale(locale);
  
   // Providing all messages to the client
   // side is the easiest way to get started

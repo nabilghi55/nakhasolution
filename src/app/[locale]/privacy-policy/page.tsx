@@ -1,10 +1,19 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/routing";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import DetailSignalRail from "@/components/detail/DetailSignalRail";
+import { buildPageMetadata, isLocale } from "@/lib/seo";
 
 interface LegalSection { title: string; body: string; }
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale: raw } = await params;
+  const locale = isLocale(raw) ? raw : "id";
+  const t = await getTranslations({ locale, namespace: "Legal" });
+  return buildPageMetadata({ locale, path: "/privacy-policy", title: t("privacy.title"), description: t("privacy.intro") });
+}
 
 export default async function PrivacyPolicyPage() {
   const t = await getTranslations("Legal");
@@ -30,7 +39,7 @@ export default async function PrivacyPolicyPage() {
             <aside>
               <p className="detail-kicker">DOCUMENT / 01</p>
               <p>{t("privacy.title")}</p>
-              <a href="/" className="detail-secondary-link">{t("backToHome")}</a>
+              <Link href="/" className="detail-secondary-link">{t("backToHome")}</Link>
             </aside>
             <div>
               {sections.map((section) => (

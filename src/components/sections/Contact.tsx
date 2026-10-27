@@ -2,7 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
+import { buildWhatsAppLink, displayPhone, e164Phone } from "@/lib/whatsapp";
+import { trackEvent } from "@/lib/analytics";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 const Contact = () => {
@@ -25,18 +26,13 @@ const Contact = () => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
-    if (typeof window !== "undefined" && window.fbq) {
-      window.fbq("track", "Lead", {
-        content_name: "WhatsApp Inquiry from Contact Form",
-        content_category: "Contact Form",
-      });
-    }
-
     const subjectText = formData.subject || t("form.subjects.general");
+    trackEvent("submit_consultation", { placement: "contact_form", topic: subjectText });
+
     const name = `${formData.firstName} ${formData.lastName}`.trim();
     const textMessage = `Halo Nakha Solution,\n\nSaya ${name}.\n\nTopik: ${subjectText}\n\n${formData.message}`;
 
-    window.open(buildWhatsAppLink(infoT("phone"), textMessage), "_blank", "noopener,noreferrer");
+    window.open(buildWhatsAppLink(textMessage), "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -52,9 +48,9 @@ const Contact = () => {
               <span>{t("emailLabel")}</span>
               <span>{infoT("email")}</span>
             </a>
-            <a className="contact-line" href={`tel:${infoT("phone")}`}>
+            <a className="contact-line" href={`tel:${e164Phone()}`}>
               <span>{t("phoneLabel")}</span>
-              <span>{infoT("phone")}</span>
+              <span>{displayPhone()}</span>
             </a>
             <div className="contact-line">
               <span>{t("addressLabel")}</span>

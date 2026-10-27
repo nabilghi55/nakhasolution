@@ -11,7 +11,6 @@ import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 export default function CampaignActivationLanding() {
   const locale = useLocale();
   const t = useTranslations("Services");
-  const infoT = useTranslations("ContactInfo");
   const service = t.raw("items.campaign-activation") as {
     title: string;
     desc: string;
@@ -47,7 +46,7 @@ export default function CampaignActivationLanding() {
         productsDesc: "Dua demo ini menunjukkan cara komentar, prediksi, data peserta, dan aturan campaign diproses dalam sistem.",
         demo: "Buka demo",
       };
-  const whatsapp = buildWhatsAppLink(infoT("phone"), isEnglish
+  const whatsapp = buildWhatsAppLink(isEnglish
     ? "Hello Nakha Solution, I want to discuss a campaign activation system."
     : "Halo Nakha Solution, saya ingin membahas sistem campaign activation.");
 

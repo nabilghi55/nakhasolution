@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
@@ -10,7 +10,6 @@ const sampleComments = ["@peserta_01", "@peserta_02", "@peserta_03", "@peserta_0
 export default function CampaignDemo() {
   const locale = useLocale();
   const isEnglish = locale === "en";
-  const t = useTranslations("ContactInfo");
   const [step, setStep] = useState<"idle" | "loading" | "filtered" | "winner">("idle");
   const [winner, setWinner] = useState(sampleComments[2]);
 
@@ -26,7 +25,6 @@ export default function CampaignDemo() {
     setStep("winner");
   };
   const whatsapp = buildWhatsAppLink(
-    t("phone"),
     isEnglish ? "Hello Nakha Solution, I want to discuss a comment picker system." : "Halo Nakha Solution, saya ingin membahas sistem comment picker.",
   );
 

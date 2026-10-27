@@ -1,12 +1,16 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 "use client";
 
 import Image from "next/image";
+// Plain next/link for Indonesian-only pages: their unprefixed path is already the Indonesian URL.
+import NextLink from "next/link";
 import { useEffect, useRef, useState } from "react";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import { trackEvent } from "@/lib/analytics";
+import { posRouteList } from "@/content/pos-routes";
 import {
   ChevronDown,
   Video,
@@ -21,7 +25,6 @@ import {
 const Navbar = () => {
   const t = useTranslations("Navbar");
   const servicesT = useTranslations("Services");
-  const infoT = useTranslations("ContactInfo");
 
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -30,10 +33,7 @@ const Navbar = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const whatsappUrl = buildWhatsAppLink(
-    infoT("phone"),
-    "Halo Nakha Solution, saya ingin menjadwalkan konsultasi.",
-  );
+  const whatsappUrl = buildWhatsAppLink("Halo Nakha Solution, saya ingin menjadwalkan konsultasi.");
 
   useEffect(() => {
     const closeOnEscape = (event: KeyboardEvent) => {
@@ -62,13 +62,16 @@ const Navbar = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    if (typeof window !== "undefined" && window.fbq) {
-      window.fbq("track", "Lead", {
-        content_name: "WhatsApp Inquiry from Navbar",
-        content_category: "Navigation",
-      });
-    }
+    trackEvent("click_whatsapp", { placement: "navbar" });
   };
+
+  // Indonesian-only pages for the Padang market; always linked in Indonesian.
+  const posLinks = posRouteList.map((route) => ({
+    key: route.key,
+    href: route.path,
+    code: route.code,
+    title: route.navLabel,
+  }));
 
   const servicesList = [
     {
@@ -132,7 +135,7 @@ const Navbar = () => {
         className="pointer-events-auto relative mx-auto flex h-[66px] max-w-[1460px] items-center justify-between rounded-[14px] border border-slate-200 bg-white px-3 shadow-[0_8px_30px_rgba(30,64,175,0.08)] sm:px-5"
         aria-label="Primary navigation"
       >
-        <a
+        <Link
           href="/"
           className="flex min-h-11 items-center gap-2.5 rounded-md px-1 text-slate-950 no-underline"
         >
@@ -147,16 +150,16 @@ const Navbar = () => {
           <span className="hidden text-[13px] font-semibold tracking-[-0.02em] sm:inline">
             NAKHA SOLUTION
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-1 lg:flex">
-          <a
+          <Link
             href="/#home"
             className="flex min-h-11 items-center rounded-md px-3.5 text-[13px] font-medium text-slate-700 no-underline transition-colors hover:bg-blue-50 hover:text-blue-700"
           >
             {t("home")}
-          </a>
+          </Link>
 
           {/* Services Dropdown Trigger */}
           <div
@@ -191,11 +194,34 @@ const Navbar = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
+                {/* Priority group: POS and stock pages */}
+                <div className="mb-2.5 rounded-xl border border-slate-900 p-3">
+                  <div className="mb-2 flex items-baseline justify-between gap-3 px-1">
+                    <span className="text-[13px] font-semibold text-slate-950">
+                      {t("posGroup")} <span className="font-mono text-[11px] font-medium text-slate-500">{t("pagesLanguageNote")}</span>
+                    </span>
+                    <span className="text-[11px] text-slate-600">{t("posNote")}</span>
+                  </div>
+                  <div className="grid grid-cols-3 gap-1.5">
+                    {posLinks.map((item) => (
+                      <NextLink
+                        key={item.key}
+                        href={item.href}
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="flex min-h-11 flex-col justify-center rounded-lg border border-slate-200 px-3 py-2 no-underline transition-colors hover:border-blue-300 hover:bg-blue-50"
+                      >
+                        <span className="font-mono text-[10px] text-blue-700">{item.code}</span>
+                        <span className="text-[12.5px] font-semibold leading-snug text-slate-900">{item.title}</span>
+                      </NextLink>
+                    ))}
+                  </div>
+                </div>
+
                 <div className="grid grid-cols-2 gap-2">
                   {servicesList.map((service) => {
                     const Icon = service.icon;
                     return (
-                      <a
+                      <Link
                         key={service.key}
                         href={service.href}
                         onClick={() => setIsDropdownOpen(false)}
@@ -208,50 +234,50 @@ const Navbar = () => {
                           <div className="flex items-center gap-1 text-[13px] font-semibold text-slate-900 group-hover:text-blue-700">
                             <span>{service.title}</span>
                           </div>
-                          <p className="mt-0.5 line-clamp-2 text-[11px] leading-relaxed text-slate-500">
+                          <p className="mt-0.5 line-clamp-2 text-[11px] leading-relaxed text-slate-600">
                             {service.summary}
                           </p>
                         </div>
-                      </a>
+                      </Link>
                     );
                   })}
                 </div>
 
                 <div className="mt-2.5 flex items-center justify-between border-t border-slate-100 px-3 pt-2.5">
-                  <span className="text-[11px] text-slate-400 font-medium">
-                    Solusi digital terintegrasi untuk bisnis Anda
+                  <span className="text-[11px] text-slate-600 font-medium">
+                    {t("servicesNote")}
                   </span>
-                  <a
+                  <Link
                     href="/#services"
                     onClick={() => setIsDropdownOpen(false)}
-                    className="flex items-center gap-1.5 text-[12px] font-semibold text-blue-700 no-underline hover:text-blue-800 hover:underline"
+                    className="flex min-h-11 items-center gap-1.5 text-[12px] font-semibold text-blue-700 no-underline hover:text-blue-800 hover:underline"
                   >
-                    <span>Indeks Layanan</span>
+                    <span>{t("servicesIndex")}</span>
                     <ArrowRight className="h-3.5 w-3.5" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             )}
           </div>
 
-          <a
+          <Link
             href="/#portfolio"
             className="flex min-h-11 items-center rounded-md px-3.5 text-[13px] font-medium text-slate-700 no-underline transition-colors hover:bg-blue-50 hover:text-blue-700"
           >
             {t("portfolio")}
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#about"
             className="flex min-h-11 items-center rounded-md px-3.5 text-[13px] font-medium text-slate-700 no-underline transition-colors hover:bg-blue-50 hover:text-blue-700"
           >
             {t("about")}
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#contact"
             className="flex min-h-11 items-center rounded-md px-3.5 text-[13px] font-medium text-slate-700 no-underline transition-colors hover:bg-blue-50 hover:text-blue-700"
           >
             {t("contact")}
-          </a>
+          </Link>
         </div>
 
         {/* CTA & Language Switcher */}
@@ -287,14 +313,14 @@ const Navbar = () => {
             className="absolute left-0 right-0 top-[calc(100%+8px)] max-h-[85vh] overflow-y-auto rounded-[14px] border border-slate-200 bg-white p-3 shadow-[0_18px_45px_rgba(30,64,175,0.14)] lg:hidden"
           >
             <div className="grid divide-y divide-slate-100">
-              <a
+              <Link
                 href="/#home"
                 onClick={() => setIsOpen(false)}
                 className="flex min-h-12 items-center justify-between px-2 text-[15px] font-medium text-slate-950 no-underline"
               >
                 <span>{t("home")}</span>
-                <span className="font-mono text-[10px] text-slate-400">01</span>
-              </a>
+                <span className="font-mono text-[10px] text-slate-500">01</span>
+              </Link>
 
               {/* Mobile Services Accordion */}
               <div className="py-1">
@@ -308,7 +334,7 @@ const Navbar = () => {
                     {t("services")}
                   </span>
                   <div className="flex items-center gap-2">
-                    <span className="font-mono text-[10px] text-slate-400">02</span>
+                    <span className="font-mono text-[10px] text-slate-500">02</span>
                     <ChevronDown
                       className={`h-4 w-4 text-slate-500 transition-transform duration-200 ${
                         isMobileServicesOpen ? "rotate-180" : ""
@@ -319,64 +345,82 @@ const Navbar = () => {
 
                 {isMobileServicesOpen && (
                   <div className="my-1.5 ml-2 mr-1 grid gap-1 rounded-xl bg-slate-50 p-2 border border-slate-100">
+                    <p className="px-2.5 pt-1 text-[12px] font-semibold text-slate-950">
+                      {t("posGroup")} <span className="font-mono text-[10px] font-medium text-slate-500">{t("pagesLanguageNote")}</span>
+                    </p>
+                    {posLinks.map((item) => (
+                      <NextLink
+                        key={item.key}
+                        href={item.href}
+                        onClick={() => {
+                          setIsOpen(false);
+                          setIsMobileServicesOpen(false);
+                        }}
+                        className="flex min-h-11 items-center gap-2.5 rounded-lg border border-slate-200 bg-white px-2.5 py-2 text-[13px] font-semibold text-slate-900 no-underline hover:text-blue-700"
+                      >
+                        <span className="w-12 font-mono text-[10px] font-medium text-blue-700">{item.code}</span>
+                        <span>{item.title}</span>
+                      </NextLink>
+                    ))}
+                    <div className="my-1 border-t border-slate-200" />
                     {servicesList.map((service) => {
                       const Icon = service.icon;
                       return (
-                        <a
+                        <Link
                           key={service.key}
                           href={service.href}
                           onClick={() => {
                             setIsOpen(false);
                             setIsMobileServicesOpen(false);
                           }}
-                          className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-[13px] font-medium text-slate-700 no-underline hover:bg-white hover:text-blue-700"
+                          className="flex min-h-11 items-center gap-2.5 rounded-lg px-2.5 py-2 text-[13px] font-medium text-slate-700 no-underline hover:bg-white hover:text-blue-700"
                         >
                           <div className="flex h-7 w-7 items-center justify-center rounded-md bg-white text-blue-600 border border-slate-200/80">
                             <Icon className="h-3.5 w-3.5" />
                           </div>
                           <span>{service.title}</span>
-                        </a>
+                        </Link>
                       );
                     })}
-                    <a
+                    <Link
                       href="/#services"
                       onClick={() => {
                         setIsOpen(false);
                         setIsMobileServicesOpen(false);
                       }}
-                      className="mt-1 flex items-center justify-between rounded-lg bg-blue-50 px-2.5 py-2 text-[12px] font-semibold text-blue-700 no-underline"
+                      className="mt-1 flex min-h-11 items-center justify-between rounded-lg bg-blue-50 px-2.5 py-2 text-[12px] font-semibold text-blue-700 no-underline"
                     >
-                      <span>Lihat Indeks Layanan</span>
+                      <span>{t("servicesIndexMobile")}</span>
                       <ArrowRight className="h-3.5 w-3.5" />
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>
 
-              <a
+              <Link
                 href="/#portfolio"
                 onClick={() => setIsOpen(false)}
                 className="flex min-h-12 items-center justify-between px-2 text-[15px] font-medium text-slate-950 no-underline"
               >
                 <span>{t("portfolio")}</span>
-                <span className="font-mono text-[10px] text-slate-400">03</span>
-              </a>
-              <a
+                <span className="font-mono text-[10px] text-slate-500">03</span>
+              </Link>
+              <Link
                 href="/#about"
                 onClick={() => setIsOpen(false)}
                 className="flex min-h-12 items-center justify-between px-2 text-[15px] font-medium text-slate-950 no-underline"
               >
                 <span>{t("about")}</span>
-                <span className="font-mono text-[10px] text-slate-400">04</span>
-              </a>
-              <a
+                <span className="font-mono text-[10px] text-slate-500">04</span>
+              </Link>
+              <Link
                 href="/#contact"
                 onClick={() => setIsOpen(false)}
                 className="flex min-h-12 items-center justify-between px-2 text-[15px] font-medium text-slate-950 no-underline"
               >
                 <span>{t("contact")}</span>
-                <span className="font-mono text-[10px] text-slate-400">05</span>
-              </a>
+                <span className="font-mono text-[10px] text-slate-500">05</span>
+              </Link>
             </div>
 
             <div className="mt-3 flex items-center justify-between gap-3 border-t border-slate-200 pt-3">
@@ -403,4 +447,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

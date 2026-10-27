@@ -3,20 +3,15 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import { trackEvent } from "@/lib/analytics";
 import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 const Hero = () => {
   const t = useTranslations("Hero");
   const portfolioT = useTranslations("Portfolio");
-  const infoT = useTranslations("ContactInfo");
 
   const handleWhatsAppClick = () => {
-    if (typeof window !== "undefined" && window.fbq) {
-      window.fbq("track", "Lead", {
-        content_name: "WhatsApp Inquiry from Hero",
-        content_category: "Hero Section",
-      });
-    }
+    trackEvent("click_whatsapp", { placement: "home_hero" });
   };
 
   return (
@@ -87,7 +82,7 @@ const Hero = () => {
           <p>{t("subtitle")}</p>
           <div className="hero-actions">
             <a
-              href={buildWhatsAppLink(infoT("phone"), "Halo Nakha Solution, saya ingin menjadwalkan konsultasi.")}
+              href={buildWhatsAppLink("Halo Nakha Solution, saya ingin menjadwalkan konsultasi.")}
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
