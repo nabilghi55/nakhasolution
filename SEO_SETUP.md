@@ -4,6 +4,7 @@
 
 - Production domain: `https://www.nakhasolution.id` (HTTPS, www). Set in `src/config/site.ts` (`siteConfig.url`).
 - The apex `nakhasolution.id` redirects to `www` through Vercel > Settings > Domains (www is the primary domain). Do not add a host redirect in `next.config.ts`: the opposite direction would create a redirect loop. If the primary domain is ever switched to the apex, change `siteConfig.url` in the same deploy.
+- Production deployments redirect every `*.vercel.app` host (e.g. `nakhasolution.vercel.app`) with 308 to `https://www.nakhasolution.id` (`next.config.ts`). The old vercel.app copy had been indexed as the "official" site. Preview deployments keep their vercel.app URLs and stay noindex.
 - Every page sets its own canonical, hreflang, Open Graph, and Twitter tags through `buildPageMetadata` in `src/lib/seo.ts`. The root layout deliberately sets no canonical, so no page inherits the homepage canonical.
 
 ## Languages and URLs
